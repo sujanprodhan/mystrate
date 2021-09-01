@@ -235,24 +235,35 @@ class SidebarContent extends Component {
               </li>
 
               <li>
-                <Link to="/serviceprovidercontract" className="">
-                  <i  className='bx bxs-wrench'></i>
-                  <span>{this.props.t("Service Provider")}</span>
-                </Link>
-              </li>
-
-              <li>
                 <Link to="/settingpage" className="">
                   <i  className='bx bxs-wrench'></i>
                   <span>{this.props.t("Setting")}</span>
                 </Link>
               </li>
-
               
 
-              
+              <li className="menu-title">{this.props.t("Project")}</li>
 
-              
+              <li>
+                <Link to="/login-height-apartment" className="">
+                  <span>{this.props.t("Loging Height Apartment")}</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/vista-condominium" className="">
+                  <span>{this.props.t("Vista Condominium")}</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/sain-john-residency" className="">
+                  <span>{this.props.t("Sain John Residency")}</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/max-hilton-tower" className="">
+                  <span>{this.props.t("Maxhilton Tower")}</span>
+                </Link>
+              </li>
 
               
 

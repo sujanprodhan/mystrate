@@ -12,6 +12,7 @@ import { Dropdown, DropdownToggle, DropdownMenu } from "reactstrap"
 
 // Import menuDropdown
 import LanguageDropdown from "../CommonForBoth/TopbarDropdown/LanguageDropdown"
+import CustomDropDownNav from "../CommonForBoth/TopbarDropdown/Customdropdownnav"
 import NotificationDropdown from "../CommonForBoth/TopbarDropdown/NotificationDropdown"
 import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu"
 import RightSidebar from '../CommonForBoth/RightSidebar'
@@ -316,11 +317,11 @@ class Header extends Component {
                 </div>
               </div>
 
-              <LanguageDropdown />
+              <CustomDropDownNav />
 
               
 
-              <div className="dropdown d-none d-lg-inline-block ms-1">
+              {/* <div className="dropdown d-none d-lg-inline-block ms-1">
                 <button
                   type="button"
                   onClick={this.toggleFullscreen}
@@ -329,7 +330,7 @@ class Header extends Component {
                 >
                   <i className="bx bx-fullscreen"></i>
                 </button>
-              </div>
+              </div> */}
 
               <NotificationDropdown />
               <ProfileMenu />

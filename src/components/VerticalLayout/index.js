@@ -80,9 +80,17 @@ class Layout extends Component {
     }
   }
   toggleMenuCallback = () => {
+    // var body = document.body;
+    // body.classList.toggle("vertical-collpsed");
+    // body.classList.toggle("sidebar-enable");
     var body = document.body;
+    if (window.screen.width <= 768) {
+    body.classList.toggle("sidebar-enable");
+    } else {
     body.classList.toggle("vertical-collpsed");
     body.classList.toggle("sidebar-enable");
+    }
+
   }
 
   render() {

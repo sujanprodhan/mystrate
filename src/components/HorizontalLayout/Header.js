@@ -11,6 +11,8 @@ import { Row, Col, Dropdown, DropdownToggle, DropdownMenu } from "reactstrap"
 
 // Import menuDropdown
 import LanguageDropdown from "../CommonForBoth/TopbarDropdown/LanguageDropdown";
+import CustomDropDownNav from "../CommonForBoth/TopbarDropdown/Customdropdownnav";
+
 import NotificationDropdown from "../CommonForBoth/TopbarDropdown/NotificationDropdown";
 import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu";
 import RightSidebar from '../CommonForBoth/RightSidebar';
@@ -117,6 +119,7 @@ class Header extends Component {
                     <img src={logoDark} alt="" height="17" />
                   </span>
                 </Link>
+               
 
                 <Link to="/" className="logo logo-light">
                   <span className="logo-sm">
@@ -345,7 +348,7 @@ class Header extends Component {
                 </div>
               </div>
 
-              <LanguageDropdown />
+              <CustomDropDownNav />
 
               <Dropdown
                 className="d-none d-lg-inline-block ms-1"
@@ -354,13 +357,14 @@ class Header extends Component {
                   this.setState({ socialDrp: !this.state.socialDrp })
                 }}
               >
-                <DropdownToggle
+                {/* <DropdownToggle
                   className="btn header-item noti-icon"
                   caret
                   tag="button"
                 >
                   <i className="bx bx-customize" />
-                </DropdownToggle>
+                </DropdownToggle> */}
+
                 <DropdownMenu className="dropdown-menu-lg dropdown-menu-end">
                   <div className="px-lg-2">
                     <Row className="no-gutters">
