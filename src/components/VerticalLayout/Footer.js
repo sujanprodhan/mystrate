@@ -7,10 +7,10 @@ const Footer = () => {
       <footer className="footer">
         <div className="container-fluid">
           <Row>
-            <Col sm={6}>{new Date().getFullYear()} © Mystrate.</Col>
+            <Col sm={6}>{new Date().getFullYear()} © Mystrata.</Col>
             <Col sm={6}>
               <div className="text-sm-end d-none d-sm-block">
-                Design & Develop by Mystrate
+              A community project by www.jmbmalaysia.org
               </div>
             </Col>
           </Row>

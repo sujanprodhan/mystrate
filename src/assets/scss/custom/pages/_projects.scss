@@ -12,3 +12,24 @@
   }
   
 }
+
+.custom-dropdown-nav{
+  background-color: $sidebar-dark-bg;
+  color: $white;
+  border-radius: 15px;
+  height: 28px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  color: rgba($white, 0.7);
+  i{
+    margin-left: 5px;
+  }
+  &:hover{
+    color: rgba($white, 1);
+  }
+}

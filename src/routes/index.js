@@ -202,6 +202,13 @@ import BlogList from "../pages/Blog/BlogList/index"
 import BlogGrid from "../pages/Blog/BlogGrid/index"
 import BlogDetails from "../pages/Blog/BlogDetails"
 
+//Project List menu 
+LoginHeightAprtment 
+import LoginHeightAprtment from "../pages/ProjectLists/LoginHeightAprtment.js";
+import VistaCondominium from "../pages/ProjectLists/VistaCondominium.js";
+import SainJohnResidency from "../pages/ProjectLists/SainJohnResidency.js";
+import MaxhiltonTower from "../pages/ProjectLists/MaxhiltonTower.js";
+
 const authProtectedRoutes = [
   { path: "/dashboard", component: Dashboard },
   { path: "/dashboard-saas", component: DashboardSaas },
@@ -384,6 +391,13 @@ const authProtectedRoutes = [
   { path: "/pages-timeline", component: PagesTimeline },
   { path: "/pages-faqs", component: PagesFaqs },
   { path: "/pages-pricing", component: PagesPricing },
+
+
+    //Projects List
+    { path: "/login-height-apartment", component: LoginHeightAprtment },
+    { path: "/vista-condominium", component: VistaCondominium },
+    { path: "/sain-john-residency", component: SainJohnResidency },
+    { path: "/max-hilton-tower", component: MaxhiltonTower },
 
   // this route should be at the end of all other routes
   { path: "/", exact: true, component: () => <Redirect to="/dashboard" /> },
