@@ -18,11 +18,10 @@
   color: $white;
   border-radius: 15px;
   height: 28px;
-  padding: 0px 30px;
+  padding:0 30px;
   display: flex;
   align-items: center;
   text-align: center;
-  font-size: 12px;
   margin-top: 20px;
   cursor: pointer;
   color: rgba($white, 0.7);
@@ -31,5 +30,13 @@
   }
   &:hover{
     color: rgba($white, 1);
+  }
+}
+
+.custom-datepick{
+  .react-datepicker__input-container {
+    position: relative;
+    display: inline-block;
+    width: auto !important;
   }
 }
