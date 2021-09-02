@@ -1,45 +1,26 @@
-import React, { Component } from "react"
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from "reactstrap"
+import React, { useState, forwardRef } from "react"
+//Import Date Picker
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
 
-class CustomDropDownNav extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      menu: false,
-      isOpenDropdown: false,
-    }
-  }
+const CustomDropDownNav = () => {
+  const [startDate, setStartDate] = useState(new Date())
 
-  toggle = () => {
-    this.setState(prevState => ({
-      menu: !prevState.menu,
-    }))
-  }
-
-  render() {
-    const { menu } = this.state
-    return (
-      <React.Fragment>
-        <Dropdown isOpen={menu} toggle={this.toggle} className="d-inline-block">
-          <DropdownToggle
-            className="btn header-item custom-dropdown-nav"
-            tag="button"
-          >
-            15 Jan 2021
-            <i className="bx bx-down-arrow"></i>
-          </DropdownToggle>
-          <DropdownMenu className="language-switch dropdown-menu-end">
-            <DropdownItem> Test Menu</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-      </React.Fragment>
-    )
-  }
+  const ExampleCustomInput = forwardRef(({ value, onClick }, ref) => (
+    <div className="custom-dropdown-nav" onClick={onClick} ref={ref}>
+      {value}
+      <i class="mdi mdi-chevron-down d-xl-inline-block"></i>
+    </div>
+  ))
+  return (
+    <div className="custom-datepick">
+    <DatePicker
+      selected={startDate}
+      onChange={date => setStartDate(date)}
+      customInput={<ExampleCustomInput />}
+      dateFormat="d MMM yyyy"
+    />
+    </div>
+  )
 }
-
 export default CustomDropDownNav
