@@ -1,42 +1,68 @@
-// 
+//
 // projects.scss
 //
 
 // project list
 
-.project-list-table{
-    border-collapse:separate; 
-    border-spacing:0 12px; 
-  tr{
+.project-list-table {
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  tr {
     background-color: $card-bg;
   }
-  
 }
 
-.custom-dropdown-nav{
+.custom-dropdown-nav {
   background-color: $sidebar-dark-bg;
   color: $white;
   border-radius: 15px;
   height: 28px;
-  padding:0 30px;
+  padding: 0 30px;
   display: flex;
   align-items: center;
   text-align: center;
   margin-top: 20px;
   cursor: pointer;
   color: rgba($white, 0.7);
-  i{
+  i {
     margin-left: 5px;
   }
-  &:hover{
+  &:hover {
     color: rgba($white, 1);
   }
 }
 
-.custom-datepick{
+.custom-datepick {
   .react-datepicker__input-container {
     position: relative;
     display: inline-block;
     width: auto !important;
+  }
+  .react-datepicker__header {
+    background-color: $sidebar-dark-bg;
+  }
+  .react-datepicker__current-month,
+  .react-datepicker-time__header,
+  .react-datepicker-year-header {
+    margin-top: 0;
+    color: rgba($white, 0.7);
+    font-weight: bold;
+    font-size: 0.944rem;
+  }
+  .react-datepicker__day-name,
+  .react-datepicker__time-name {
+    color: rgba($white, 0.7);
+    display: inline-block;
+    width: 1.7rem;
+    line-height: 1.7rem;
+    text-align: center;
+    margin: 0.166rem;
+  }
+  .react-datepicker-popper[data-placement^="bottom"]
+    .react-datepicker__triangle,
+  .react-datepicker-popper[data-placement^="bottom"]
+    .react-datepicker__triangle::before {
+    border-top: none;
+    border-bottom-color: $sidebar-dark-bg;
   }
 }
