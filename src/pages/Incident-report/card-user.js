@@ -12,7 +12,8 @@ import {
 } from "reactstrap"
 
 //Import Images
-import avatar1 from "../../assets/images/users/avatar-1.jpg"
+import avatar1 from "../../assets/images/users/Image-For-Mystrata.jpg"
+
 import { Link } from "react-router-dom"
 
 class CardUser extends Component {
