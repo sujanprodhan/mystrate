@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import MetaTags from 'react-meta-tags';
+import MetaTags from "react-meta-tags"
 import { connect } from "react-redux"
 import { Link, withRouter } from "react-router-dom"
-import * as moment from 'moment';
+import * as moment from "moment"
 
 import {
   Badge,
@@ -17,7 +17,7 @@ import {
   UncontrolledDropdown,
   Modal,
   ModalHeader,
-  ModalBody
+  ModalBody,
 } from "reactstrap"
 
 import { AvForm, AvField } from "availity-reactstrap-validation"
@@ -40,12 +40,12 @@ import company5 from "../../assets/images/img-5.png"
 import {
   getProjects,
   updateProject,
-  deleteProject
+  deleteProject,
 } from "../../store/projects/actions"
 
 class ProjectsList extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       compprojects: [],
       modal: false,
@@ -55,11 +55,10 @@ class ProjectsList extends Component {
     this.toggle = this.toggle.bind(this)
     this.handleValidProjectSubmit = this.handleValidProjectSubmit.bind(this)
     this.handleProjectClicks = this.handleProjectClicks.bind(this)
-
   }
 
   componentDidMount() {
-    const { projects, onGetProjects } = this.props;
+    const { projects, onGetProjects } = this.props
     onGetProjects()
     this.setState({ projects })
   }
@@ -69,7 +68,7 @@ class ProjectsList extends Component {
     this.toggle()
   }
 
-  handleDeleteProject = (project) => {
+  handleDeleteProject = project => {
     const { onDeleteProject } = this.props
     onDeleteProject(project)
   }
@@ -86,7 +85,7 @@ class ProjectsList extends Component {
         status: project.status,
         color: project.color,
         dueDate: project.dueDate,
-        team: project.team
+        team: project.team,
       },
       isEdit: true,
     })
@@ -104,7 +103,6 @@ class ProjectsList extends Component {
    * Handling submit user on user form
    */
   handleValidProjectSubmit = (e, values) => {
-
     const { onAddNewProject, onUpdateProject } = this.props
     const { isEdit, projects, selectedProject } = this.state
 
@@ -117,13 +115,12 @@ class ProjectsList extends Component {
         status: values.status,
         color: values.color,
         dueDate: values.dueDate,
-        team: values.team
+        team: values.team,
       }
 
       // update user
       onUpdateProject(updateProject)
     } else {
-
       const newProject = {
         id: Math.floor(Math.random() * (30 - 20)) + 20,
         name: values["name"],
@@ -131,7 +128,7 @@ class ProjectsList extends Component {
         status: values["status"],
         color: values["color"],
         dueDate: values["dueDate"],
-        team: values["team"]
+        team: values["team"],
       }
       // save new user
       onAddNewProject(newProject)
@@ -140,9 +137,9 @@ class ProjectsList extends Component {
     this.toggle()
   }
 
-  handleValidDate = (date) => {
-    const date1 =  moment(new Date(date)).format('DD MMM Y');
-    return date1;
+  handleValidDate = date => {
+    const date1 = moment(new Date(date)).format("DD MMM Y")
+    return date1
   }
 
   render() {
@@ -152,143 +149,279 @@ class ProjectsList extends Component {
     return (
       <React.Fragment>
         <div className="">
-          <MetaTags>
-           
-          </MetaTags>
-            {/* Render Breadcrumbs */}
-           
-          
-            <Row>
-              <Col lg="12">
-                <div className="">
-                  <div className="table-responsive">
-                    <Table className="project-list-table table-nowrap align-middle table-borderless">
-                      <thead>
-                        <tr>
-                         
-                          <th scope="col">Schedule Task</th>
-                          <th scope="col">Due Date </th>
-                          <th scope="col">Frequency</th>
-                       
-                          <th scope="col">Team</th>
-                          <th scope="col">Action</th>
-                        </tr>
+          <MetaTags></MetaTags>
+          {/* Render Breadcrumbs */}
 
-                        <tr>
-                          
-                          <td><h5 class="text-truncate font-size-14"><a class="text-dark" href="/IndividualReport">Schedule task text</a></h5>
-                          <p class="text-muted mb-0">It will be as simple as Occidental</p></td>
-                          <td><th scope="col">11 October 2021</th></td>
-                          <td><th scope="col">Daily</th></td>
-                          
-                         
+          <Row>
+            <Col lg="12">
+              <div className="">
+                <div className="table-responsive">
+                  <Table className="project-list-table table-nowrap align-middle table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Schedule Task</th>
+                        <th scope="col">Due Date </th>
+                        <th scope="col">Frequency</th>
 
-                          <td class="justify-content-center">
+                        <th scope="col">Team</th>
+                        <th scope="col">Action</th>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <h5 class="text-truncate font-size-14">
+                            <a class="text-dark" href="/projects-overview/1">
+                              Schedule task text
+                            </a>
+                          </h5>
+                          <p class="text-muted mb-0">
+                            It will be as simple as Occidental
+                          </p>
+                        </td>
+                        <td>
+                          <th scope="col">11 October 2021</th>
+                        </td>
+                        <td>
+                          <th scope="col">Daily</th>
+                        </td>
+
+                        <td class="justify-content-center">
                           <div class="avatar-group">
-                          <div class="avatar-group-item">
-                          <a class="d-inline-block" id="member1" href="/attendance-page">
-                          <img src="/static/media/avatar-4.b23e41d9.jpg" class="rounded-circle avatar-xs" alt="" />
-                          </a></div><div class="avatar-group-item">
-                          <a class="d-inline-block" id="member2" href="/attendance-page">
-                          <img src="/static/media/avatar-5.a5c59cee.jpg" class="rounded-circle avatar-xs" alt="" />
-                          </a></div></div></td>
+                            <div class="avatar-group-item">
+                              <a
+                                class="d-inline-block"
+                                id="member1"
+                                href="/attendance-page"
+                              >
+                                <img
+                                  src="/static/media/avatar-4.b23e41d9.jpg"
+                                  class="rounded-circle avatar-xs"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+                            <div class="avatar-group-item">
+                              <a
+                                class="d-inline-block"
+                                id="member2"
+                                href="/attendance-page"
+                              >
+                                <img
+                                  src="/static/media/avatar-5.a5c59cee.jpg"
+                                  class="rounded-circle avatar-xs"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+                          </div>
+                        </td>
 
-                          <td class="d-grid gap-2"><Link class="btn btn-primary" to="/IndividualReport" role="button">View</Link></td>
-                        </tr>
+                        <td class="d-grid gap-2">
+                          <Link
+                            class="btn btn-primary"
+                            to="/projects-overview/1"
+                            role="button"
+                          >
+                            View
+                          </Link>
+                        </td>
+                      </tr>
 
-                        <tr>
-                          
-                          <td><h5 class="text-truncate font-size-14"><a class="text-dark" href="/IndividualReport">Schedule task text</a></h5>
-                          <p class="text-muted mb-0">It will be as simple as Occidental</p></td>
-                          <td><th scope="col">17 October 2021</th></td>
-                          <td><th scope="col">Weekly</th></td>
-                          
-                         
+                      <tr>
+                        <td>
+                          <h5 class="text-truncate font-size-14">
+                            <a class="text-dark" href="/projects-overview/1">
+                              Schedule task text
+                            </a>
+                          </h5>
+                          <p class="text-muted mb-0">
+                            It will be as simple as Occidental
+                          </p>
+                        </td>
+                        <td>
+                          <th scope="col">17 October 2021</th>
+                        </td>
+                        <td>
+                          <th scope="col">Weekly</th>
+                        </td>
 
-                          <td class="justify-content-center">
+                        <td class="justify-content-center">
                           <div class="avatar-group ">
-                          <div class="avatar-group-item">
-                          <a class="d-inline-block" id="member1" href="/attendance-page">
-                          <img src="/static/media/avatar-4.b23e41d9.jpg" class="rounded-circle avatar-xs" alt="" />
-                          </a></div><div class="avatar-group-item">
-                          <a class="d-inline-block" id="member2" href="/attendance-page">
-                          <img src="/static/media/avatar-5.a5c59cee.jpg" class="rounded-circle avatar-xs" alt="" />
-                          </a></div></div></td>
+                            <div class="avatar-group-item">
+                              <a
+                                class="d-inline-block"
+                                id="member1"
+                                href="/attendance-page"
+                              >
+                                <img
+                                  src="/static/media/avatar-4.b23e41d9.jpg"
+                                  class="rounded-circle avatar-xs"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+                            <div class="avatar-group-item">
+                              <a
+                                class="d-inline-block"
+                                id="member2"
+                                href="/attendance-page"
+                              >
+                                <img
+                                  src="/static/media/avatar-5.a5c59cee.jpg"
+                                  class="rounded-circle avatar-xs"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+                          </div>
+                        </td>
 
-                         <td class="d-grid gap-2"><Link class="btn btn-primary" to="/IndividualReport" role="button">View</Link></td>
-                        </tr>
+                        <td class="d-grid gap-2">
+                          <Link
+                            class="btn btn-primary"
+                            to="/projects-overview/1"
+                            role="button"
+                          >
+                            View
+                          </Link>
+                        </td>
+                      </tr>
 
-                        <tr>
-                          
-                          <td><h5 class="text-truncate font-size-14"><a class="text-dark" href="/IndividualReport">Schedule task text</a></h5>
-                          <p class="text-muted mb-0">It will be as simple as Occidental</p></td>
-                          <td><th scope="col">24 October 2021</th></td>
-                          <td><th scope="col">Monthly</th></td>
-                          
-                         
+                      <tr>
+                        <td>
+                          <h5 class="text-truncate font-size-14">
+                            <a class="text-dark" href="/projects-overview/1">
+                              Schedule task text
+                            </a>
+                          </h5>
+                          <p class="text-muted mb-0">
+                            It will be as simple as Occidental
+                          </p>
+                        </td>
+                        <td>
+                          <th scope="col">24 October 2021</th>
+                        </td>
+                        <td>
+                          <th scope="col">Monthly</th>
+                        </td>
 
-                          <td class="justify-content-center">
+                        <td class="justify-content-center">
                           <div class="avatar-group">
-                          <div class="avatar-group-item">
-                          <a class="d-inline-block" id="member1" href="/attendance-page">
-                          <img src="/static/media/avatar-4.b23e41d9.jpg" class="rounded-circle avatar-xs" alt="" />
-                          </a></div><div class="avatar-group-item">
-                          <a class="d-inline-block" id="member2" href="/attendance-page">
-                          <img src="/static/media/avatar-5.a5c59cee.jpg" class="rounded-circle avatar-xs" alt="" />
-                          </a></div></div></td>
+                            <div class="avatar-group-item">
+                              <a
+                                class="d-inline-block"
+                                id="member1"
+                                href="/attendance-page"
+                              >
+                                <img
+                                  src="/static/media/avatar-4.b23e41d9.jpg"
+                                  class="rounded-circle avatar-xs"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+                            <div class="avatar-group-item">
+                              <a
+                                class="d-inline-block"
+                                id="member2"
+                                href="/attendance-page"
+                              >
+                                <img
+                                  src="/static/media/avatar-5.a5c59cee.jpg"
+                                  class="rounded-circle avatar-xs"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+                          </div>
+                        </td>
 
-                          <td class="d-grid gap-2"><Link class="btn btn-primary" to="/IndividualReport" role="button">View</Link></td>
-                        </tr>
+                        <td class="d-grid gap-2">
+                          <Link
+                            class="btn btn-primary"
+                            to="/projects-overview/1"
+                            role="button"
+                          >
+                            View
+                          </Link>
+                        </td>
+                      </tr>
 
-                        <tr>
-                          
-                          <td><h5 class="text-truncate font-size-14"><a class="text-dark" href="/IndividualReport">Schedule task text</a></h5>
-                          <p class="text-muted mb-0">It will be as simple as Occidental</p></td>
-                          <td><th scope="col">16 October 2021</th></td>
-                          <td><th scope="col">Daily</th></td>
-                          
-                         
+                      <tr>
+                        <td>
+                          <h5 class="text-truncate font-size-14">
+                            <a class="text-dark" href="/projects-overview/1">
+                              Schedule task text
+                            </a>
+                          </h5>
+                          <p class="text-muted mb-0">
+                            It will be as simple as Occidental
+                          </p>
+                        </td>
+                        <td>
+                          <th scope="col">16 October 2021</th>
+                        </td>
+                        <td>
+                          <th scope="col">Daily</th>
+                        </td>
 
-                          <td class="justify-content-center">
+                        <td class="justify-content-center">
                           <div class="avatar-group">
-                          <div class="avatar-group-item">
-                          <a class="d-inline-block" id="member1" href="/attendance-page">
-                          <img src="/static/media/avatar-4.b23e41d9.jpg" class="rounded-circle avatar-xs" alt="" />
-                          </a></div><div class="avatar-group-item">
-                          <a class="d-inline-block" id="member2" href="/attendance-page">
-                          <img src="/static/media/avatar-5.a5c59cee.jpg" class="rounded-circle avatar-xs" alt="" />
-                          </a></div></div></td>
+                            <div class="avatar-group-item">
+                              <a
+                                class="d-inline-block"
+                                id="member1"
+                                href="/attendance-page"
+                              >
+                                <img
+                                  src="/static/media/avatar-4.b23e41d9.jpg"
+                                  class="rounded-circle avatar-xs"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+                            <div class="avatar-group-item">
+                              <a
+                                class="d-inline-block"
+                                id="member2"
+                                href="/attendance-page"
+                              >
+                                <img
+                                  src="/static/media/avatar-5.a5c59cee.jpg"
+                                  class="rounded-circle avatar-xs"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+                          </div>
+                        </td>
 
-                          <td class="d-grid gap-2"><Link class="btn btn-primary" to="/IndividualReport" role="button">View</Link></td>
-                        </tr>
-
-                        
-
-                        
-
-                        
-
-
-
-                      </thead>
-                      
-                    </Table>
-                    
-                  </div>
+                        <td class="d-grid gap-2">
+                          <Link
+                            class="btn btn-primary"
+                            to="/projects-overview/1"
+                            role="button"
+                          >
+                            View
+                          </Link>
+                        </td>
+                      </tr>
+                    </thead>
+                  </Table>
                 </div>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs="12">
-                <div className="text-center my-3">
-                  <Link to="#" className="text-success">
-                    <i className="bx bx-loader bx-spin font-size-18 align-middle me-2" />
-                    Load more
-                  </Link>
-                </div>
-              </Col>
-            </Row>
-          
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs="12">
+              <div className="text-center my-3">
+                <Link to="#" className="text-success">
+                  <i className="bx bx-loader bx-spin font-size-18 align-middle me-2" />
+                  Load more
+                </Link>
+              </div>
+            </Col>
+          </Row>
         </div>
       </React.Fragment>
     )
@@ -299,7 +432,7 @@ ProjectsList.propTypes = {
   compprojects: PropTypes.array,
   onGetProjects: PropTypes.func,
   onDeleteProject: PropTypes.func,
-  onUpdateProject: PropTypes.func
+  onUpdateProject: PropTypes.func,
 }
 
 const mapStateToProps = ({ projects }) => ({

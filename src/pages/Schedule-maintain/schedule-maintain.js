@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 import { Container, Row, Col, CardTitle, Card, CardBody } from "reactstrap"
-import MetaTags from 'react-meta-tags';
+import MetaTags from "react-meta-tags"
 import DonutChart from "../AllCharts/apex/Scheduledonutchart"
 import SplineArea from "../AllCharts/apex/Schedulespinal"
-
 
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
@@ -12,8 +11,6 @@ import Breadcrumbs from "../../components/Common/Breadcrumb"
 import CardWelcome from "./card-welcome"
 import MiniWidget from "./mini-widget"
 import ProjectsList from "./projects-list"
-
-
 
 class Schedulemaintain extends Component {
   constructor(props) {
@@ -44,10 +41,7 @@ class Schedulemaintain extends Component {
           color: "warning",
           desc: "From previous period",
         },
-
       ],
-      
-
     }
   }
 
@@ -63,63 +57,74 @@ class Schedulemaintain extends Component {
             <Breadcrumbs breadcrumbItem="Schedule Maintainance" />
 
             {/* Card User */}
-            
 
             <Row>
               {/* card user */}
-             
 
               <Col xl="12">
                 {/* card welcome */}
-              
 
                 <Row>
                   {/* mini widgets new */}
                   <CardWelcome />
                   <MiniWidget reports={this.state.reports} />
                 </Row>
-
-
               </Col>
-              
-               <Col lg={8}>
 
-               <Card>
-                <CardBody>
-                <Row>
-                <Col lg={3}>
-                <CardTitle className="mb-2">Schedule Completed</CardTitle>
-                <select class="form-select mb-2" aria-label="Default select example">
-  <option selected>Select Month</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-                   <div class="text-muted mt-4"><h4>58<i class="mdi mdi-chevron-up ms-1 text-success">
-              </i></h4><div class="d-flex"><span class="badge badge-soft-success font-size-12"> + 0.2% </span> 
-              <span class="ms-2 text-truncate">From previous period</span></div></div>
-                <button class="btn btn-primary mt-4">View Details</button>
+              <Col lg={8}>
+                <Card>
+                  <CardBody>
+                    <Row>
+                      <Col lg={3}>
+                        <CardTitle className="mb-2">
+                          Schedule Completed
+                        </CardTitle>
+                        <select
+                          class="form-select mb-2"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Select Month</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                        <div class="text-muted mt-4">
+                          <h4>
+                            58
+                            <i class="mdi mdi-chevron-up ms-1 text-success"></i>
+                          </h4>
+                          <div class="d-flex">
+                            <span class="badge badge-soft-success font-size-12">
+                              {" "}
+                              + 0.2%{" "}
+                            </span>
+                            <span class="ms-2 text-truncate">
+                              From previous period
+                            </span>
+                          </div>
+                        </div>
+                        <button class="btn btn-primary mt-4">
+                          View Details
+                        </button>
 
-
-                <div><h6 class="font-size-12 mt-4">Last Month</h6></div>
-                    <CardTitle className="mt-2"> 42 </CardTitle>
-                </Col>
-                   <Col lg={9}>
-                   <Row>
-                     <Col></Col>
-                     <Col lg={3} >
-                     
-</Col>
-</Row>
-                    <SplineArea />
-                    </Col>
+                        <div>
+                          <h6 class="font-size-12 mt-4">Last Month</h6>
+                        </div>
+                        <CardTitle className="mt-2"> 42 </CardTitle>
+                      </Col>
+                      <Col lg={9}>
+                        <Row>
+                          <Col></Col>
+                          <Col lg={3}></Col>
+                        </Row>
+                        <SplineArea />
+                      </Col>
                     </Row>
                   </CardBody>
                 </Card>
               </Col>
 
-
-                    <Col lg={4}>
+              <Col lg={4}>
                 <Card>
                   <CardBody>
                     <CardTitle className="mb-4">Schedule Analystic</CardTitle>
@@ -128,30 +133,9 @@ class Schedulemaintain extends Component {
                 </Card>
               </Col>
 
-                   
-                    <ProjectsList />
-               
-              
-
-
-              
-                  
-
+              <ProjectsList />
             </Row>
-
-
-            
-            
-
-
-
-
-              
-              
-
-                
-
-                      </Container>
+          </Container>
         </div>
       </React.Fragment>
     )

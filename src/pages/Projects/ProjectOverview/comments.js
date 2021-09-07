@@ -51,19 +51,19 @@ const Comments = ({ comments }) => {
                       as a skeptical Cambridge friend
                     </p>
                   </Media>
-                  <div className="ms-3">
+                  {/* <div className="ms-3">
                     <Link to="" className="text-primary">
                       Reply
                     </Link>
-                  </div>
+                  </div> */}
                 </Media>
               )}
             </Media>
-            <div className="ms-3">
+            {/* <div className="ms-3">
               <Link to="" className="text-primary">
                 Reply
               </Link>
-            </div>
+            </div> */}
           </Media>
         ))}
         <div className="text-center mt-4 pt-2">

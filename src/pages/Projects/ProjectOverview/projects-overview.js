@@ -37,11 +37,12 @@ class ProjectsOverview extends Component {
       <React.Fragment>
         <div className="page-content">
           <MetaTags>
-            <title>Project Overview | Skote - React Admin & Dashboard Template</title>
+            <title>Task Overview</title>
           </MetaTags>
           <Container fluid>
             {/* Render Breadcrumbs */}
-            <Breadcrumbs title="Projects" breadcrumbItem="Project Overview" />
+
+            <Breadcrumbs title="Task" breadcrumbItem="TASK Overview" />
 
             {!isEmpty(projectDetail) && (
               <>

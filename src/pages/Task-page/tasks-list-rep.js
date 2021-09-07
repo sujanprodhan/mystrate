@@ -186,7 +186,7 @@ class TasksListnew extends Component {
                                   </div>
                                 </td>
                                 <td>
-                                  <Link class="btn btn-primary" to="/Individualtask" role="button">View</Link>
+                                  <Link class="btn btn-primary" to="/projects-overview/0" role="button">View</Link>
                                 </td>
                               </tr>
                             ))}

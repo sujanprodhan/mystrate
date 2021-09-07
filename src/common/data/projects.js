@@ -1,9 +1,9 @@
 const projects = [
   {
     id: 0,
-    img: "img1",
-    name: "New admin Design",
-    description: "It will be as simple as Occidental",
+    img: "avatar4",
+    name: "Checking water Pump",
+    description: "Task Created By : Janice Cole",
     status: "Completed",
     color: "success",
     dueDate: "2019-10-15",
@@ -65,15 +65,15 @@ const projects = [
   },
   {
     id: 1,
-    img: "img2",
-    name: "Brand logo design",
-    description: "To achieve it would be necessary",
+    img: "avatar4",
+    name: "Checking water Pump",
+    description: "Task Created By : Janice Cole",
     status: "Pending",
     color: "warning",
     dueDate: "2019-10-22",
     commentsCount: 183,
     team: [
-      { id: 1, img: "avatar8" },
+      { id: 1, img: "avatar4", fullname: "Janice Cole"  },
       { id: 2, img: "avatar2", fullname: "Daniel Candles" },
     ],
     startDate: "08 Sept, 2019",
