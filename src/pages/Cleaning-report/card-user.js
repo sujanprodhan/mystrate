@@ -14,7 +14,7 @@ import {
 import { Link } from "react-router-dom"
 
 //Import Images
-import avatar1 from "../../assets/images/users/avatar-1.jpg"
+import avatar1 from "../../assets/images/users/Cleaner.jpg"
 
 class CardUser extends Component {
   constructor(props) {

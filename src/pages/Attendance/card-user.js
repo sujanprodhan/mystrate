@@ -12,7 +12,7 @@ import {
 } from "reactstrap"
 
 //Import Images
-import avatar1 from "../../assets/images/users/avatar-1.jpg"
+import attendanceImg from "../../assets/images/users/attendance.jpg"
 
 class CardUser extends Component {
   constructor(props) {
@@ -42,7 +42,7 @@ class CardUser extends Component {
                     <Media>
                       <div className="me-3">
                         <img
-                          src={avatar1}
+                          src={attendanceImg}
                           alt=""
                           className="avatar-md rounded-circle img-thumbnail"
                         />
