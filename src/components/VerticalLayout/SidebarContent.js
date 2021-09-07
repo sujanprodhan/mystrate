@@ -220,12 +220,12 @@ class SidebarContent extends Component {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <Link to="/committeeinfo" className="">
                  <i className='bx bxs-user-voice' ></i>
                   <span>{this.props.t("Committee Information")}</span>
                 </Link>
-              </li>
+              </li> */}
 
               <li>
                 <Link to="/importantfiles" className="">
@@ -234,12 +234,12 @@ class SidebarContent extends Component {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <Link to="/settingpage" className="">
                   <i  className='bx bxs-wrench'></i>
                   <span>{this.props.t("Setting")}</span>
                 </Link>
-              </li>
+              </li> */}
               
 
               <li className="menu-title">{this.props.t("Project")}</li>

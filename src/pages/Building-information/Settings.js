@@ -79,20 +79,21 @@ export default class Settings extends Component {
                   <hr />
 
                   <Row>
-                    <Col xl={4}>
+                    <Col xl={6}>
                       <div>
                         <p className="text-muted text-truncate mb-2">
-                          Year Completion
+                          <b>Community Status </b>
                         </p>
-                        <h5 className="mb-0">32</h5>
+                        <p className="mb-0">JMB</p> 
                       </div>
                     </Col>
-                    <div className="col-4">
+                    <div className="col-6">
                       <div>
+                        {/* <p className="text-muted text-truncate mb-2"> */}
                         <p className="text-muted text-truncate mb-2">
-                          Developer
+                        <b> Developer </b>
                         </p>
-                        <h5 className="mb-0">10k</h5>
+                        <p className="text-truncate mb-2">Maxhilton Property Berhad</p>
                       </div>
                     </div>
                   </Row>
@@ -104,7 +105,7 @@ export default class Settings extends Component {
           <Card>
             <CardBody>
               <div className="d-flex flex-wrap">
-                <h5 className="card-title mb-3 me-2">Estimated Population</h5>
+                <h5 className="card-title mb-3 me-2">Authority </h5>
 
                 <UncontrolledDropdown className="dropdown ms-auto dropdown-menu-end dropdown-menu">
                   <DropdownToggle
@@ -161,7 +162,7 @@ export default class Settings extends Component {
 
                 <Row className="justify-content-center">
                   <Col xl={10}>
-                    <h4 className="text-primary">Building Reoprt !</h4>
+                    <h4 className="text-primary">TYPO</h4>
                     <p className="text-muted font-size-14 mb-4">
                       Download Full building report in your email
                       update.

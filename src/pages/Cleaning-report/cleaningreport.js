@@ -4,7 +4,7 @@ import MetaTags from 'react-meta-tags';
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { Link, withRouter } from "react-router-dom"
-
+import UiLightboxCommon from "pages/Ui/LightBoxCommon"
 
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
@@ -232,8 +232,28 @@ class Cleaningreport extends Component {
                       </td>
                       <td tabindex="0" aria-label="Time Spent sortable" class="sortable">36 Min<span class="order-4"></span>
                       </td>
-                      <td tabindex="0" aria-label="View Picture sortable" class="sortable">View Image<span class="order-4"></span>
-                      </td>
+                      <td class="">
+                        <div class="avatar-group">
+                            <div class="avatar-group-item">
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-4.b23e41d9.jpg",
+                                  ]}
+                                />
+                              </a>
+                            </div>
+                            <div class="avatar-group-item">                             
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-5.a5c59cee.jpg",
+                                  ]}
+                                />
+                              </a>
+                            </div>
+                          </div>
+                        </td>
                     </tr>
 
                     <tr>
@@ -249,8 +269,28 @@ class Cleaningreport extends Component {
                       </td>
                       <td tabindex="0" aria-label="Time Spent sortable" class="sortable">36 Min<span class="order-4"></span>
                       </td>
-                      <td tabindex="0" aria-label="View Picture sortable" class="sortable">View Image<span class="order-4"></span>
-                      </td>
+                      <td class="">
+                        <div class="avatar-group">
+                            <div class="avatar-group-item">
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-4.b23e41d9.jpg",
+                                  ]}
+                                />
+                              </a>
+                            </div>
+                            <div class="avatar-group-item">                             
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-5.a5c59cee.jpg",
+                                  ]}
+                                />
+                              </a>
+                            </div>
+                          </div>
+                        </td>
                     </tr>
 
                     <tr>
@@ -266,8 +306,28 @@ class Cleaningreport extends Component {
                       </td>
                       <td tabindex="0" aria-label="Time Spent sortable" class="sortable">36 Min<span class="order-4"></span>
                       </td>
-                      <td tabindex="0" aria-label="View Picture sortable" class="sortable">View Image<span class="order-4"></span>
-                      </td>
+                      <td class="">
+                        <div class="avatar-group">
+                            <div class="avatar-group-item">
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-4.b23e41d9.jpg",
+                                  ]}
+                                />
+                              </a>
+                            </div>
+                            <div class="avatar-group-item">                             
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-5.a5c59cee.jpg",
+                                  ]}
+                                />
+                              </a>
+                            </div>
+                          </div>
+                        </td>
                     </tr>
                   </thead>
                 </table>
