@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import { Container, Row, Col } from "reactstrap"
-import MetaTags from 'react-meta-tags';
-
+import MetaTags from "react-meta-tags"
 
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
@@ -11,8 +10,6 @@ import CardUser from "./card-user"
 import CardWelcome from "./card-welcome"
 import MiniWidget from "./mini-widget"
 import ProjectsList from "./projects-list"
-
-
 
 //Bitcoin Chart
 const series1 = [
@@ -77,10 +74,6 @@ const options3 = {
   tooltip: { fixed: { enabled: !1 }, x: { show: !1 }, marker: { show: !1 } },
 }
 
-
-
-
-
 class Assetstagging extends Component {
   constructor(props) {
     super(props)
@@ -110,10 +103,7 @@ class Assetstagging extends Component {
           color: "warning",
           desc: "From previous period",
         },
-
       ],
-      
-
     }
   }
 
@@ -133,11 +123,9 @@ class Assetstagging extends Component {
 
             <Row>
               {/* card user */}
-             
 
               <Col xl="12">
                 {/* card welcome */}
-              
 
                 <Row>
                   {/* mini widgets new */}
@@ -146,23 +134,9 @@ class Assetstagging extends Component {
                 </Row>
               </Col>
 
-                    
-                    <ProjectsList />
-               
-
+              <ProjectsList />
             </Row>
-            
-            
-
-
-
-
-              
-              
-
-                
-
-                      </Container>
+          </Container>
         </div>
       </React.Fragment>
     )
