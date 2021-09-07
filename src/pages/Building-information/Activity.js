@@ -22,7 +22,7 @@ export default class Activity extends Component {
             <CardBody>
               <div className="d-flex">
                 <div className="me-2">
-                  <h5 className="card-title mb-4">Pending Information</h5>
+                  <h5 className="card-title mb-4">Committee Information</h5>
                 </div>
                 
               </div>
@@ -38,8 +38,7 @@ export default class Activity extends Component {
                         <div>
                           
                           <span className="font-weight-semibold">
-                            Attendance Module-  allow you to see all attendance 
-
+                          Max Hilton -  Chairman ( present )
                             </span>
                             
                         </div>
@@ -54,7 +53,7 @@ export default class Activity extends Component {
                      
                       <div className="media-body">
                         <div>
-                          Asset Modules - allow you to see all asset statues 
+                        Annie Yeoh - Secretary ( present ) 
 
                         </div>
                       </div>
@@ -68,7 +67,7 @@ export default class Activity extends Component {
                       
                       <div className="media-body">
                         <div>
-                         Collection Modules - track all defaulters and collection tasks
+                        Lim Sew Yee  - Treasure  ( present )
 
                         </div>
                       </div>
@@ -82,8 +81,7 @@ export default class Activity extends Component {
                       
                       <div className="media-body">
                         <div>
-                          In enim justo, rhoncus ut, imperdiet a venenatis
-                          vitae
+                        Amugaram - Chairman ( 2016 - 2018 )
                           </div>
                       </div>
                     </div>
@@ -96,7 +94,7 @@ export default class Activity extends Component {
                       
                       <div className="media-body">
                         <div>
-                          Tracking Modules - track your staff in-building locations
+                        Ali Muhammad - Chairman ( 2016 - 2018 )
 
                           </div>
                       </div>
