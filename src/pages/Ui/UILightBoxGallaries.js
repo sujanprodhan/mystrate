@@ -184,16 +184,7 @@ class UiLightboxCommonGallary extends Component {
                     width="120"
                   />
                 </div>
-                <div className="img-fluid">
-                  <img
-                    src={img6}
-                    onClick={() =>
-                      this.setState({ isGallery: true, photoIndex: 5 })
-                    }
-                    alt=""
-                    width="120"
-                  />
-                </div>
+ 
                 
               </div>
               </div>
