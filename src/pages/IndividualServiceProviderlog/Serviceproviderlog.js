@@ -13,6 +13,13 @@ import {
   Container
 } from "reactstrap"
 
+import { connect } from "react-redux"
+import PropTypes from "prop-types"
+import { withRouter } from "react-router-dom"
+import AttachedFiles from "./attachedFiles"
+import { getProjectDetail } from "store/projects/actions"
+import Slidewithcontrol from "../Ui/CarouselTypes/slidewithcontrol"
+import UiLightboxCommonGallary from '../Ui/UILightBoxGallaries'
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 
@@ -21,8 +28,21 @@ import img1 from "../../assets/images/small/img-2.jpg"
 import avtar1 from "../../assets/images/users/avatar-2.jpg"
 import avtar2 from "../../assets/images/users/img3.jpg"
 
-export default class IndividualServiceProviderlog extends Component {
+class IndividualServiceProviderlog extends Component {
+  componentDidMount() {
+    const {
+      match: { params },
+      onGetProjectDetail,
+    } = this.props
+    if (params && params.id) {
+      onGetProjectDetail(params.id)
+    } else {
+      onGetProjectDetail(0) //remove this after full integration
+    }
+  }
+
   render() {
+    const { projectDetail } = this.props
     return (
       <React.Fragment>
         <div className="page-content">
@@ -43,9 +63,10 @@ export default class IndividualServiceProviderlog extends Component {
                               <div className="mb-4">
                                 
                               </div>
-                              <h4>Service Provider Log</h4>
+                              <h4>BROKEN LIFT NO 4</h4>
                               <p className="text-muted mb-4">
-                                <i className="mdi mdi-calendar me-1"></i> Last Updates : 12:55 PM 15 Dec 2021
+                                <i className="mdi mdi-calendar me-1"></i> Reported by ABC Lift Company Sdn Bhd
+
                           </p>
                             </div>
 
@@ -54,8 +75,8 @@ export default class IndividualServiceProviderlog extends Component {
                               <Row>
                                 <Col sm={4}>
                                   <div>
-                                    <p className="text-muted mb-2">Break In</p>
-                                    <h5 className="font-size-15">Active</h5>
+                                    <p className="text-muted mb-2">Service  Category </p>
+                                    <h5 className="font-size-15">Breakdown & Repair </h5>
                                   </div>
                                 </Col>
                                 <Col sm={4}>
@@ -66,22 +87,16 @@ export default class IndividualServiceProviderlog extends Component {
                                 </Col>
                                 <Col sm={4}>
                                   <div className="mt-4 mt-sm-0">
-                                    <p className="text-muted mb-2">Post by</p>
-                                    <h5 className="font-size-15">Gilbert Smith</h5>
+                                    <p className="text-muted mb-2">Location </p>
+                                    <h5 className="font-size-15">Level A Common Area </h5>
                                   </div>
                                 </Col>
                               </Row>
                             </div>
                             <hr />
 
-                            <div className="my-5">
-                              <img
-                                src={img1}
-                                alt=""
-                                className="img-thumbnail mx-auto d-block"
-                              />
-                            </div>
-
+                            <Slidewithcontrol />
+                            <UiLightboxCommonGallary />
                             <hr />
 
                             <div className="mt-4">
@@ -113,83 +128,19 @@ export default class IndividualServiceProviderlog extends Component {
                                  
 
                                 <div className="mt-4">
-                                  <h5 className="mb-3">Victim Details </h5>
-
-                                  <div>
-                                    <div className="row">
-                                      <div className="col-lg-4 col-sm-6">
-                                        <div>
-                                          <ul className="ps-4">
-                                            <li className="py-1">
-                                              Donec sodales sagittis
-                                        </li>
-                                            <li className="py-1">
-                                              Sed consequat leo eget
-                                        </li>
-                                            <li className="py-1">
-                                              Aliquam lorem ante
-                                        </li>
-                                          </ul>
-                                        </div>
-                                      </div>
-                                      <div className="col-lg-4 col-sm-6">
-                                        <div>
-                                          <ul className="ps-4">
-                                            <li className="py-1">
-                                              Aenean ligula eget
-                                        </li>
-                                            <li className="py-1">
-                                              Cum sociis natoque
-                                        </li>
-                                          </ul>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <h5 className="mb-3">Problem Found </h5>
+                                  <p> Faulty part found on the lift controller motherboard which cannot be repair anymore, new replacement is needed to make the lift run again.  </p>
+              
+                                </div>
+                                <div className="mt-4">
+                                  <h5 className="mb-3">Action taken </h5>
+                                  <p> Will prepare and sent quotation for management office to approve.</p>
+              
                                 </div>
                               </div>
 
-                              <hr />
-
-                              <div className="mt-4">
-                                  <h5 className="mb-3">Image and Files </h5>
-                                  <Row>
-                                    <Col>
-                                 <img
-                                        src={avtar2}
-                                        alt=""
-                                        className="img-fluid d-block img-fluid"
-                                      />
-                                      </Col>
-                                       <Col>
-                                      <img
-                                        src={avtar2}
-                                        alt=""
-                                        className="img-fluid d-block img-fluid"
-                                      />
-                                      </Col>
-
-                                      <Col>
-                                      <img
-                                        src={avtar2}
-                                        alt=""
-                                        className="img-fluid d-block img-fluid"
-                                      />
-                                      </Col>
-
-                                      <Col>
-                                      <img
-                                        src={avtar2}
-                                        alt=""
-                                        className="img-fluid d-block img-fluid"
-                                      />
-                                      </Col>
-                                      </Row>
-                                </div>
-
-
-
-                              
+                              <hr/>
+                              <AttachedFiles files={projectDetail.files} />
 
                               
                             </div>
@@ -207,3 +158,21 @@ export default class IndividualServiceProviderlog extends Component {
     )
   }
 }
+IndividualServiceProviderlog.propTypes = {
+  projectDetail: PropTypes.any,
+  match: PropTypes.object,
+  onGetProjectDetail: PropTypes.func,
+}
+
+const mapStateToProps = ({ projects }) => ({
+  projectDetail: projects.projectDetail,
+})
+
+const mapDispatchToProps = dispatch => ({
+  onGetProjectDetail: id => dispatch(getProjectDetail(id)),
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(IndividualServiceProviderlog))
