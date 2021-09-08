@@ -398,8 +398,8 @@ const projects = [
   {
     id: 8,
     img: "img2",
-    name: "New admin Design",
-    description: "Their most common words.",
+    name: "Light is not working",
+    description: "Task Created By : Janice@gmail.com ",
     status: "Completed",
     color: "success",
     dueDate: "2019-10-12",

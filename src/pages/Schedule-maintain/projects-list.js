@@ -20,6 +20,8 @@ import {
   ModalBody,
 } from "reactstrap"
 
+import UiLightboxCommon from "pages/Ui/LightBoxCommon"
+
 import { AvForm, AvField } from "availity-reactstrap-validation"
 
 //Import Breadcrumb
@@ -170,7 +172,7 @@ class ProjectsList extends Component {
                       <tr>
                         <td>
                           <h5 class="text-truncate font-size-14">
-                            <a class="text-dark" href="/projects-overview/1">
+                            <a class="text-dark" href="projects-overview-schedule">
                               Schedule task text
                             </a>
                           </h5>
@@ -186,30 +188,22 @@ class ProjectsList extends Component {
                         </td>
 
                         <td class="justify-content-center">
-                          <div class="avatar-group">
+                        <div class="avatar-group justify-content-center">
                             <div class="avatar-group-item">
-                              <a
-                                class="d-inline-block"
-                                id="member1"
-                                href="/attendance-page"
-                              >
-                                <img
-                                  src="/static/media/avatar-4.b23e41d9.jpg"
-                                  class="rounded-circle avatar-xs"
-                                  alt=""
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-4.b23e41d9.jpg",
+                                  ]}
                                 />
                               </a>
                             </div>
-                            <div class="avatar-group-item">
-                              <a
-                                class="d-inline-block"
-                                id="member2"
-                                href="/attendance-page"
-                              >
-                                <img
-                                  src="/static/media/avatar-5.a5c59cee.jpg"
-                                  class="rounded-circle avatar-xs"
-                                  alt=""
+                            <div class="avatar-group-item">                             
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-5.a5c59cee.jpg",
+                                  ]}
                                 />
                               </a>
                             </div>
@@ -219,7 +213,7 @@ class ProjectsList extends Component {
                         <td class="d-grid gap-2">
                           <Link
                             class="btn btn-primary"
-                            to="/projects-overview/1"
+                            to="projects-overview-schedule"
                             role="button"
                           >
                             View
@@ -230,7 +224,7 @@ class ProjectsList extends Component {
                       <tr>
                         <td>
                           <h5 class="text-truncate font-size-14">
-                            <a class="text-dark" href="/projects-overview/1">
+                            <a class="text-dark" href="projects-overview-schedule">
                               Schedule task text
                             </a>
                           </h5>
@@ -246,30 +240,22 @@ class ProjectsList extends Component {
                         </td>
 
                         <td class="justify-content-center">
-                          <div class="avatar-group ">
+                        <div class="avatar-group justify-content-center">
                             <div class="avatar-group-item">
-                              <a
-                                class="d-inline-block"
-                                id="member1"
-                                href="/attendance-page"
-                              >
-                                <img
-                                  src="/static/media/avatar-4.b23e41d9.jpg"
-                                  class="rounded-circle avatar-xs"
-                                  alt=""
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-4.b23e41d9.jpg",
+                                  ]}
                                 />
                               </a>
                             </div>
-                            <div class="avatar-group-item">
-                              <a
-                                class="d-inline-block"
-                                id="member2"
-                                href="/attendance-page"
-                              >
-                                <img
-                                  src="/static/media/avatar-5.a5c59cee.jpg"
-                                  class="rounded-circle avatar-xs"
-                                  alt=""
+                            <div class="avatar-group-item">                             
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-5.a5c59cee.jpg",
+                                  ]}
                                 />
                               </a>
                             </div>
@@ -279,7 +265,7 @@ class ProjectsList extends Component {
                         <td class="d-grid gap-2">
                           <Link
                             class="btn btn-primary"
-                            to="/projects-overview/1"
+                            to="projects-overview-schedule"
                             role="button"
                           >
                             View
@@ -290,7 +276,7 @@ class ProjectsList extends Component {
                       <tr>
                         <td>
                           <h5 class="text-truncate font-size-14">
-                            <a class="text-dark" href="/projects-overview/1">
+                            <a class="text-dark" href="projects-overview-schedule">
                               Schedule task text
                             </a>
                           </h5>
@@ -306,30 +292,22 @@ class ProjectsList extends Component {
                         </td>
 
                         <td class="justify-content-center">
-                          <div class="avatar-group">
+                        <div class="avatar-group justify-content-center">
                             <div class="avatar-group-item">
-                              <a
-                                class="d-inline-block"
-                                id="member1"
-                                href="/attendance-page"
-                              >
-                                <img
-                                  src="/static/media/avatar-4.b23e41d9.jpg"
-                                  class="rounded-circle avatar-xs"
-                                  alt=""
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-4.b23e41d9.jpg",
+                                  ]}
                                 />
                               </a>
                             </div>
-                            <div class="avatar-group-item">
-                              <a
-                                class="d-inline-block"
-                                id="member2"
-                                href="/attendance-page"
-                              >
-                                <img
-                                  src="/static/media/avatar-5.a5c59cee.jpg"
-                                  class="rounded-circle avatar-xs"
-                                  alt=""
+                            <div class="avatar-group-item">                             
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-5.a5c59cee.jpg",
+                                  ]}
                                 />
                               </a>
                             </div>
@@ -339,7 +317,7 @@ class ProjectsList extends Component {
                         <td class="d-grid gap-2">
                           <Link
                             class="btn btn-primary"
-                            to="/projects-overview/1"
+                            to="projects-overview-schedule"
                             role="button"
                           >
                             View
@@ -350,7 +328,7 @@ class ProjectsList extends Component {
                       <tr>
                         <td>
                           <h5 class="text-truncate font-size-14">
-                            <a class="text-dark" href="/projects-overview/1">
+                            <a class="text-dark" href="projects-overview-schedule">
                               Schedule task text
                             </a>
                           </h5>
@@ -366,30 +344,22 @@ class ProjectsList extends Component {
                         </td>
 
                         <td class="justify-content-center">
-                          <div class="avatar-group">
+                        <div class="avatar-group justify-content-center">
                             <div class="avatar-group-item">
-                              <a
-                                class="d-inline-block"
-                                id="member1"
-                                href="/attendance-page"
-                              >
-                                <img
-                                  src="/static/media/avatar-4.b23e41d9.jpg"
-                                  class="rounded-circle avatar-xs"
-                                  alt=""
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-4.b23e41d9.jpg",
+                                  ]}
                                 />
                               </a>
                             </div>
-                            <div class="avatar-group-item">
-                              <a
-                                class="d-inline-block"
-                                id="member2"
-                                href="/attendance-page"
-                              >
-                                <img
-                                  src="/static/media/avatar-5.a5c59cee.jpg"
-                                  class="rounded-circle avatar-xs"
-                                  alt=""
+                            <div class="avatar-group-item">                             
+                              <a href="#">
+                                <UiLightboxCommon
+                                  lightImage={[
+                                    "/static/media/avatar-5.a5c59cee.jpg",
+                                  ]}
                                 />
                               </a>
                             </div>
@@ -399,7 +369,7 @@ class ProjectsList extends Component {
                         <td class="d-grid gap-2">
                           <Link
                             class="btn btn-primary"
-                            to="/projects-overview/1"
+                            to="projects-overview-schedule"
                             role="button"
                           >
                             View

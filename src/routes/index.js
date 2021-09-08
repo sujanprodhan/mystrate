@@ -22,6 +22,8 @@ import TasksCreate from "../pages/Tasks/tasks-create"
 import ProjectsGrid from "../pages/Projects/projects-grid"
 import ProjectsList from "../pages/Projects/projects-list"
 import ProjectsOverview from "../pages/Projects/ProjectOverview/projects-overview"
+import ProjectsOverviewTasks from "../pages/Projects/ProjectOverview/projects-overview-tasks"
+import ProjectsOverviewSchedule from "../pages/Projects/ProjectOverview/projects-overview-schedule"
 import ProjectsCreate from "../pages/Projects/projects-create"
 
 //Ecommerce Pages
@@ -208,6 +210,7 @@ import LoginHeightAprtment from "../pages/ProjectLists/LoginHeightAprtment.js";
 import VistaCondominium from "../pages/ProjectLists/VistaCondominium.js";
 import SainJohnResidency from "../pages/ProjectLists/SainJohnResidency.js";
 import MaxhiltonTower from "../pages/ProjectLists/MaxhiltonTower.js";
+import projectsOverviewComplaint from "pages/Projects/ProjectOverview/projects-overview-complaint"
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: Dashboard },
@@ -305,6 +308,9 @@ const authProtectedRoutes = [
   { path: "/projects-list", component: ProjectsList },
   { path: "/projects-overview", component: ProjectsOverview },
   { path: "/projects-overview/:id", component: ProjectsOverview },
+  { path: "/projects-overview-task", component: ProjectsOverviewTasks },
+  { path: "/projects-overview-complaint", component: projectsOverviewComplaint },
+  { path: "/projects-overview-schedule", component: ProjectsOverviewSchedule },
   { path: "/projects-create", component: ProjectsCreate },
 
   // Contacts
