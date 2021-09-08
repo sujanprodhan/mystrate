@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import MetaTags from 'react-meta-tags';
+import MetaTags from "react-meta-tags"
 import { Link } from "react-router-dom"
 import {
   Card,
@@ -10,9 +10,16 @@ import {
   Input,
   Label,
   Row,
-  Container
+  Container,
 } from "reactstrap"
 
+import { connect } from "react-redux"
+import PropTypes from "prop-types"
+import { withRouter } from "react-router-dom"
+import AttachedFiles from "./attachedFiles"
+import { getProjectDetail } from "store/projects/actions"
+import Slidewithcontrol from "../Ui/CarouselTypes/slidewithcontrol"
+import UiLightboxCommonGallary from '../Ui/UILightBoxGallaries'
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 
@@ -21,8 +28,22 @@ import img1 from "../../assets/images/small/img-2.jpg"
 import avtar1 from "../../assets/images/users/avatar-2.jpg"
 import avtar2 from "../../assets/images/users/img3.jpg"
 
-export default class Individualincident extends Component {
+
+class Individualincident extends Component {
+  componentDidMount() {
+    const {
+      match: { params },
+      onGetProjectDetail,
+    } = this.props
+    if (params && params.id) {
+      onGetProjectDetail(params.id)
+    } else {
+      onGetProjectDetail(0) //remove this after full integration
+    }
+  }
+
   render() {
+    const { projectDetail } = this.props
     return (
       <React.Fragment>
         <div className="page-content">
@@ -40,13 +61,12 @@ export default class Individualincident extends Component {
                         <div className="col-xl-8">
                           <div>
                             <div className="text-center">
-                              <div className="mb-4">
-                                
-                              </div>
-                              <h4>Incident Report</h4>
+                              <div className="mb-4"></div>
+                              <h4>BREAKIN IN UNIT A-3-21</h4>
                               <p className="text-muted mb-4">
-                                <i className="mdi mdi-calendar me-1"></i> Last Updates : 12:55 PM 15 Dec 2021
-                          </p>
+                                <i className="mdi mdi-calendar me-1"></i>{" "}
+                                Reported by security team / Building manager
+                              </p>
                             </div>
 
                             <hr />
@@ -54,63 +74,76 @@ export default class Individualincident extends Component {
                               <Row>
                                 <Col sm={4}>
                                   <div>
-                                    <p className="text-muted mb-2">Break In</p>
-                                    <h5 className="font-size-15">Active</h5>
+                                    <p className="text-muted mb-2">
+                                      Incident Category{" "}
+                                    </p>
+                                    <h5 className="font-size-15">
+                                      Break In Case{" "}
+                                    </h5>
                                   </div>
                                 </Col>
                                 <Col sm={4}>
                                   <div className="mt-4 mt-sm-0">
-                                    <p className="text-muted mb-2">Date and Time</p>
-                                    <h5 className="font-size-15">1:00 PM and 10 Apr, 2020</h5>
+                                    <p className="text-muted mb-2">
+                                      Date and Time
+                                    </p>
+                                    <h5 className="font-size-15">
+                                      1:00 PM and 10 Apr, 2020
+                                    </h5>
                                   </div>
                                 </Col>
                                 <Col sm={4}>
                                   <div className="mt-4 mt-sm-0">
-                                    <p className="text-muted mb-2">Post by</p>
-                                    <h5 className="font-size-15">Gilbert Smith</h5>
+                                    <p className="text-muted mb-2">
+                                      Incident Location{" "}
+                                    </p>
+                                    <h5 className="font-size-15">
+                                      Level A Common Area{" "}
+                                    </h5>
                                   </div>
                                 </Col>
                               </Row>
                             </div>
                             <hr />
 
-                            <div className="my-5">
-                              <img
-                                src={img1}
-                                alt=""
-                                className="img-thumbnail mx-auto d-block"
-                              />
-                            </div>
-
+                            <Slidewithcontrol />
+                            <UiLightboxCommonGallary />
                             <hr />
 
                             <div className="mt-4">
                               <div className="text-muted font-size-14">
                                 <h4>Incident Report Description</h4>
                                 <p>
-                                  Neque porro quisquam est, qui dolorem ipsum quia
-                                  dolor sit amet, consectetur, adipisci velit, sed
-                                  quia non numquam eius modi tempora incidunt ut
-                                  labore et dolore magnam enim ad minima veniam quis
-                            </p>
+                                  Neque porro quisquam est, qui dolorem ipsum
+                                  quia dolor sit amet, consectetur, adipisci
+                                  velit, sed quia non numquam eius modi tempora
+                                  incidunt ut labore et dolore magnam enim ad
+                                  minima veniam quis
+                                </p>
 
                                 <p className="mb-4">
                                   Ut enim ad minima veniam, quis nostrum
-                                  exercitationem ullam corporis suscipit laboriosam,
-                                  nisi ut aliquid ex ea reprehenderit qui in ea
-                                  voluptate velit esse quam nihil molestiae
-                                  consequatur, vel illum qui dolorem eum fugiat quo
-                                  voluptas nulla pariatur? At vero eos et accusamus
-                                  et iusto odio dignissimos ducimus qui blanditiis
+                                  exercitationem ullam corporis suscipit
+                                  laboriosam, nisi ut aliquid ex ea
+                                  reprehenderit qui in ea voluptate velit esse
+                                  quam nihil molestiae consequatur, vel illum
+                                  qui dolorem eum fugiat quo voluptas nulla
+                                  pariatur? At vero eos et accusamus et iusto
+                                  odio dignissimos ducimus qui blanditiis
                                   praesentium voluptatum deleniti atque corrupti
                                   quos dolores et quas molestias excepturi sint
-                                  occaecati cupiditate non provident, similique sunt
-                            </p>
+                                  occaecati cupiditate non provident, similique
+                                  sunt
+                                </p>
 
-                                
-
-                                
-                                 
+                                <div className="mt-4">
+                                  <h5 className="mb-3">Action Taken </h5>
+                                  <p>
+                                    Police report has been launched and we have
+                                    also printed the police report and submit it
+                                    to the management office.{" "}
+                                  </p>
+                                </div>
 
                                 <div className="mt-4">
                                   <h5 className="mb-3">Victim Details </h5>
@@ -122,13 +155,13 @@ export default class Individualincident extends Component {
                                           <ul className="ps-4">
                                             <li className="py-1">
                                               Donec sodales sagittis
-                                        </li>
+                                            </li>
                                             <li className="py-1">
                                               Sed consequat leo eget
-                                        </li>
+                                            </li>
                                             <li className="py-1">
                                               Aliquam lorem ante
-                                        </li>
+                                            </li>
                                           </ul>
                                         </div>
                                       </div>
@@ -137,10 +170,10 @@ export default class Individualincident extends Component {
                                           <ul className="ps-4">
                                             <li className="py-1">
                                               Aenean ligula eget
-                                        </li>
+                                            </li>
                                             <li className="py-1">
                                               Cum sociis natoque
-                                        </li>
+                                            </li>
                                           </ul>
                                         </div>
                                       </div>
@@ -149,49 +182,9 @@ export default class Individualincident extends Component {
                                 </div>
                               </div>
 
-                              <hr />
-
-                              <div className="mt-4">
-                                  <h5 className="mb-3">Image and Files </h5>
-                                  <Row>
-                                    <Col>
-                                 <img
-                                        src={avtar2}
-                                        alt=""
-                                        className="img-fluid d-block img-fluid"
-                                      />
-                                      </Col>
-                                       <Col>
-                                      <img
-                                        src={avtar2}
-                                        alt=""
-                                        className="img-fluid d-block img-fluid"
-                                      />
-                                      </Col>
-
-                                      <Col>
-                                      <img
-                                        src={avtar2}
-                                        alt=""
-                                        className="img-fluid d-block img-fluid"
-                                      />
-                                      </Col>
-
-                                      <Col>
-                                      <img
-                                        src={avtar2}
-                                        alt=""
-                                        className="img-fluid d-block img-fluid"
-                                      />
-                                      </Col>
-                                      </Row>
-                                </div>
-
-
-
-                              
-
-                              
+                          <hr/>
+                              <AttachedFiles files={projectDetail.files} />
+                            
                             </div>
                           </div>
                         </div>
@@ -201,9 +194,29 @@ export default class Individualincident extends Component {
                 </Card>
               </Col>
             </Row>
+
           </Container>
         </div>
       </React.Fragment>
     )
   }
 }
+
+Individualincident.propTypes = {
+  projectDetail: PropTypes.any,
+  match: PropTypes.object,
+  onGetProjectDetail: PropTypes.func,
+}
+
+const mapStateToProps = ({ projects }) => ({
+  projectDetail: projects.projectDetail,
+})
+
+const mapDispatchToProps = dispatch => ({
+  onGetProjectDetail: id => dispatch(getProjectDetail(id)),
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(Individualincident))
