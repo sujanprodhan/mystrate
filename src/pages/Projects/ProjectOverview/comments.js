@@ -30,7 +30,7 @@ const Comments = ({ comments }) => {
             <Media body>
               <h5 className="font-size-13 mb-1">{comment.username}</h5>
               <p className="text-muted mb-1">{comment.comment}</p>
-              {comment.reply && (
+              {/* {comment.reply && (
                 <Media className="mt-3">
                   <div className="avatar-xs me-3">
                     {comment.reply.userImg ? (
@@ -51,13 +51,13 @@ const Comments = ({ comments }) => {
                       as a skeptical Cambridge friend
                     </p>
                   </Media>
-                  {/* <div className="ms-3">
+                   <div className="ms-3">
                     <Link to="" className="text-primary">
                       Reply
                     </Link>
-                  </div> */}
+                  </div> 
                 </Media>
-              )}
+              )} */}
             </Media>
             {/* <div className="ms-3">
               <Link to="" className="text-primary">

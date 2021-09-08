@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import MetaTags from 'react-meta-tags';
+import MetaTags from "react-meta-tags"
 import { isEmpty, map, size } from "lodash"
 import { Link, withRouter } from "react-router-dom"
 import classNames from "classnames"
@@ -15,13 +15,12 @@ import TotalSellingProduct from "./total-selling-product"
 import Tasks from "./tasks"
 
 import ReactApexChart from "react-apexcharts"
-
+import UiLightboxCommon from "pages/Ui/LightBoxCommon"
 //Import Images
 import images from "../../assets/images"
 
 import { getTasks } from "../../store/tasks/actions"
 import { options, series, statusClasses } from "common/data/tasks"
-
 
 const series3 = [
   {
@@ -95,9 +94,9 @@ const options3 = {
 class TasksListnew extends Component {
   state = {
     cardreport: {
-        options: options,
-        series: series,
-      },
+      options: options,
+      series: series,
+    },
   }
 
   componentDidMount() {
@@ -107,107 +106,96 @@ class TasksListnew extends Component {
 
   render() {
     const { tasks } = this.props
-    const recentTasks = tasks.find(task => task.title === "Sceduled Preventive Maintainence")
+    const recentTasks = tasks.find(
+      task => task.title === "Sceduled Preventive Maintainence"
+    )
 
     return (
       <React.Fragment>
         <div className="">
-          <MetaTags>
-            
-          </MetaTags>
-         
-            
-            <Row>
-              
+          <MetaTags></MetaTags>
 
-              <Col lg={12}>
-                
-
-                {!isEmpty(recentTasks) && (
-                  <Card>
-                    <CardBody>
-                      <CardTitle className="mb-4">
-                       Expired Today
-                      </CardTitle>
-                      <div className="table-responsive">
-                        <table className="table table-nowrap align-middle mb-0">
-                          <tbody>
-                            {map(recentTasks.tasks, (item, i) => (
-                              <tr key={i}>
-                                <td>
-                                  <h5 className="text-truncate font-size-14 m-0">
-                                    <Link to="#" className="text-dark">
-                                      {item.description}
-                                    </Link>
-                                  </h5>
-                                </td>
-                                <td>
-                                  <div className="avatar-group">
-                                    {map(
-                                      item.members,
-                                      (member, index) =>
-                                        index < 2 && (
-                                          <div className="avatar-group-item" key={'member-' + index}>
-                                            <Link
-                                              to="#"
-                                              className="d-inline-block"
-                                            >
-                                              {member.userImg ? (
-                                                <img
-                                                  src={images[member.userImg]}
-                                                  className="rounded-circle avatar-xs"
-                                                  alt=""
-                                                />
-                                              ) : (
-                                                  <div className="avatar-xs">
-                                                    <span className="avatar-title rounded-circle bg-info text-white font-size-16">
-                                                      {member.username}
-                                                    </span>
-                                                  </div>
-                                                )}
-                                            </Link>
-                                          </div>
-                                        )
-                                    )}
-                                    {size(item.members) > 2 && (
-                                      <div className="avatar-group-item">
-                                        <Link
-                                          to="#"
-                                          className="d-inline-block"
+          <Row>
+            <Col lg={12}>
+              {!isEmpty(recentTasks) && (
+                <Card>
+                  <CardBody>
+                    <CardTitle className="mb-4">Expired Today</CardTitle>
+                    <div className="table-responsive">
+                      <table className="table table-nowrap align-middle mb-0">
+                        <tbody>
+                          {map(recentTasks.tasks, (item, i) => (
+                            <tr key={i}>
+                              <td>
+                                <h5 className="text-truncate font-size-14 m-0">
+                                  <Link to="#" className="text-dark">
+                                    {item.description}
+                                  </Link>
+                                </h5>
+                              </td>
+                              <td>
+                                <div className="avatar-group">
+                                  {map(
+                                    item.members,
+                                    (member, index) =>
+                                      index < 2 && (
+                                        <div
+                                          className="avatar-group-item"
+                                          key={"member-" + index}
                                         >
-                                          <div className="avatar-xs">
-                                            <span className="avatar-title rounded-circle bg-info text-white font-size-16">
-                                              {size(item.members) - 2} +
+                                          <Link
+                                            to="#"
+                                            className="d-inline-block"
+                                          >
+                                            {member.userImg ? (
+                                              <a href="#">
+                                              <UiLightboxCommon
+                                                lightImage={images[member.userImg]}
+                                              />
+                                            </a>
+                                            ) : (
+                                              <div className="avatar-xs">
+                                                <span className="avatar-title rounded-circle bg-info text-white font-size-16">
+                                                  {member.username}
+                                                </span>
+                                              </div>
+                                            )}
+                                          </Link>
+                                        </div>
+                                      )
+                                  )}
+                                  {size(item.members) > 2 && (
+                                    <div className="avatar-group-item">
+                                      <Link to="#" className="d-inline-block">
+                                        <div className="avatar-xs">
+                                          <span className="avatar-title rounded-circle bg-info text-white font-size-16">
+                                            {size(item.members) - 2} +
                                           </span>
-                                          </div>
-                                        </Link>
-                                      </div>
-                                    )}
-                                  </div>
-                                </td>
-                                <td>
-                                  <Link class="btn btn-primary" to="/projects-overview/0" role="button">View</Link>
-                                </td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </CardBody>
-                  </Card>
-
-
-
-                )}
-
-             
-
-              </Col>
-
-
-            </Row>
-
-          
+                                        </div>
+                                      </Link>
+                                    </div>
+                                  )}
+                                </div>
+                              </td>
+                              <td>
+                                <Link
+                                  class="btn btn-primary"
+                                  to="/projects-overview-task"
+                                  role="button"
+                                >
+                                  View
+                                </Link>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </CardBody>
+                </Card>
+              )}
+            </Col>
+          </Row>
         </div>
       </React.Fragment>
     )

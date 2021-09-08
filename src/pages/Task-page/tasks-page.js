@@ -16,6 +16,7 @@ import MiniCards from "./mini-card"
 import TasksListnew from "./tasks-list-rep"
 import ReactApexChart from "react-apexcharts"
 import { options, series, statusClasses } from "common/data/tasks"
+import UiLightboxCommon from "pages/Ui/LightBoxCommon"
 
 class Taskpage extends Component {
   constructor(props) {
@@ -164,21 +165,39 @@ class Taskpage extends Component {
                             <td>
                               <div class="avatar-group">
                                 <div class="avatar-group-item">
-                                  <Link class="d-inline-block" to="/tasks-page">
-                                    <img
-                                      src="/static/media/avatar-2.feb0f89d.jpg"
-                                      class="rounded-circle avatar-xs"
-                                      alt=""
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-8.ad5418a9.jpg",
+                                      ]}
                                     />
-                                  </Link>
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-7.5ba5195e.jpg",
+                                      ]}
+                                    />
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-4.b23e41d9.jpg",
+                                      ]}
+                                    />
+                                  </a>
                                 </div>
                                 <div class="avatar-group-item">
                                   <Link class="d-inline-block" to="/tasks-page">
-                                    <img
-                                      src="/static/media/avatar-1.3921191a.jpg"
-                                      class="rounded-circle avatar-xs"
-                                      alt=""
-                                    />
+                                    <div class="avatar-xs">
+                                      <span class="avatar-title rounded-circle bg-success text-white font-size-16">
+                                        3 +
+                                      </span>
+                                    </div>
                                   </Link>
                                 </div>
                               </div>
@@ -186,7 +205,7 @@ class Taskpage extends Component {
                             <td>
                               <Link
                                 class="btn btn-primary"
-                                to="/projects-overview/0"
+                                to="projects-overview-task"
                                 role="button"
                               >
                                 View
@@ -204,28 +223,29 @@ class Taskpage extends Component {
                             <td>
                               <div class="avatar-group">
                                 <div class="avatar-group-item">
-                                  <Link class="d-inline-block" to="/tasks-page">
-                                    <img
-                                      src="/static/media/avatar-4.b23e41d9.jpg"
-                                      class="rounded-circle avatar-xs"
-                                      alt=""
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-8.ad5418a9.jpg",
+                                      ]}
                                     />
-                                  </Link>
+                                  </a>
                                 </div>
+                               
                                 <div class="avatar-group-item">
-                                  <Link class="d-inline-block" to="/tasks-page">
-                                    <img
-                                      src="/static/media/avatar-5.a5c59cee.jpg"
-                                      class="rounded-circle avatar-xs"
-                                      alt=""
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-4.b23e41d9.jpg",
+                                      ]}
                                     />
-                                  </Link>
+                                  </a>
                                 </div>
                                 <div class="avatar-group-item">
                                   <Link class="d-inline-block" to="/tasks-page">
                                     <div class="avatar-xs">
                                       <span class="avatar-title rounded-circle bg-success text-white font-size-16">
-                                        3 +
+                                        5 +
                                       </span>
                                     </div>
                                   </Link>
@@ -235,7 +255,7 @@ class Taskpage extends Component {
                             <td>
                               <Link
                                 class="btn btn-primary"
-                                to="/projects-overview/0"
+                                to="projects-overview-task"
                                 role="button"
                               >
                                 View
@@ -253,10 +273,37 @@ class Taskpage extends Component {
                             <td>
                               <div class="avatar-group">
                                 <div class="avatar-group-item">
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-8.ad5418a9.jpg",
+                                      ]}
+                                    />
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-7.5ba5195e.jpg",
+                                      ]}
+                                    />
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-4.b23e41d9.jpg",
+                                      ]}
+                                    />
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
                                   <Link class="d-inline-block" to="/tasks-page">
                                     <div class="avatar-xs">
                                       <span class="avatar-title rounded-circle bg-success text-white font-size-16">
-                                        F
+                                        3 +
                                       </span>
                                     </div>
                                   </Link>
@@ -266,7 +313,7 @@ class Taskpage extends Component {
                             <td>
                               <Link
                                 class="btn btn-primary"
-                                to="/projects-overview/0"
+                                to="projects-overview-task"
                                 role="button"
                               >
                                 View
@@ -293,16 +340,43 @@ class Taskpage extends Component {
                                   Brand logo design
                                 </a>
                               </h5>
-                            </td>
+                            </td>                            
                             <td>
                               <div class="avatar-group">
                                 <div class="avatar-group-item">
-                                  <Link class="d-inline-block" to="/tasks-page">
-                                    <img
-                                      src="/static/media/avatar-7.5ba5195e.jpg"
-                                      class="rounded-circle avatar-xs"
-                                      alt=""
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-8.ad5418a9.jpg",
+                                      ]}
                                     />
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-7.5ba5195e.jpg",
+                                      ]}
+                                    />
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-4.b23e41d9.jpg",
+                                      ]}
+                                    />
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
+                                  <Link class="d-inline-block" to="/tasks-page">
+                                    <div class="avatar-xs">
+                                      <span class="avatar-title rounded-circle bg-success text-white font-size-16">
+                                        5 +
+                                      </span>
+                                    </div>
                                   </Link>
                                 </div>
                               </div>
@@ -310,7 +384,7 @@ class Taskpage extends Component {
                             <td>
                               <Link
                                 class="btn btn-primary"
-                                to="/projects-overview/0"
+                                to="projects-overview-task"
                                 role="button"
                               >
                                 View
@@ -325,31 +399,32 @@ class Taskpage extends Component {
                                 </Link>
                               </h5>
                             </td>
+                           
                             <td>
                               <div class="avatar-group">
                                 <div class="avatar-group-item">
-                                  <Link class="d-inline-block" to="/tasks-page">
-                                    <div class="avatar-xs">
-                                      <span class="avatar-title rounded-circle bg-success text-white font-size-16">
-                                        S
-                                      </span>
-                                    </div>
-                                  </Link>
-                                </div>
-                                <div class="avatar-group-item">
-                                  <Link class="d-inline-block" to="/tasks-page">
-                                    <img
-                                      src="/static/media/avatar-8.ad5418a9.jpg"
-                                      class="rounded-circle avatar-xs"
-                                      alt=""
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-8.ad5418a9.jpg",
+                                      ]}
                                     />
-                                  </Link>
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-4.b23e41d9.jpg",
+                                      ]}
+                                    />
+                                  </a>
                                 </div>
                                 <div class="avatar-group-item">
                                   <Link class="d-inline-block" to="/tasks-page">
                                     <div class="avatar-xs">
                                       <span class="avatar-title rounded-circle bg-success text-white font-size-16">
-                                        1 +
+                                        3 +
                                       </span>
                                     </div>
                                   </Link>
@@ -359,7 +434,7 @@ class Taskpage extends Component {
                             <td>
                               <Link
                                 class="btn btn-primary"
-                                to="/projects-overview/0"
+                                to="projects-overview-task"
                                 role="button"
                               >
                                 View
@@ -390,19 +465,28 @@ class Taskpage extends Component {
                             <td>
                               <div class="avatar-group">
                                 <div class="avatar-group-item">
-                                  <Link class="d-inline-block" to="/tasks-page">
-                                    <img
-                                      src="/static/media/avatar-6.dc44eabf.jpg"
-                                      class="rounded-circle avatar-xs"
-                                      alt=""
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-6.dc44eabf.jpg",
+                                      ]}
                                     />
-                                  </Link>
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-4.b23e41d9.jpg",
+                                      ]}
+                                    />
+                                  </a>
                                 </div>
                                 <div class="avatar-group-item">
                                   <Link class="d-inline-block" to="/tasks-page">
                                     <div class="avatar-xs">
                                       <span class="avatar-title rounded-circle bg-success text-white font-size-16">
-                                        F
+                                        3 +
                                       </span>
                                     </div>
                                   </Link>
@@ -412,7 +496,7 @@ class Taskpage extends Component {
                             <td>
                               <Link
                                 class="btn btn-primary"
-                                to="/projects-overview/0"
+                                to="projects-overview-task"
                                 role="button"
                               >
                                 View
@@ -430,12 +514,30 @@ class Taskpage extends Component {
                             <td>
                               <div class="avatar-group">
                                 <div class="avatar-group-item">
-                                  <Link class="d-inline-block" to="/tasks-page">
-                                    <img
-                                      src="/static/media/avatar-7.5ba5195e.jpg"
-                                      class="rounded-circle avatar-xs"
-                                      alt=""
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-6.dc44eabf.jpg",
+                                      ]}
                                     />
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-4.b23e41d9.jpg",
+                                      ]}
+                                    />
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
+                                  <Link class="d-inline-block" to="/tasks-page">
+                                    <div class="avatar-xs">
+                                      <span class="avatar-title rounded-circle bg-success text-white font-size-16">
+                                        10 +
+                                      </span>
+                                    </div>
                                   </Link>
                                 </div>
                               </div>
@@ -443,7 +545,7 @@ class Taskpage extends Component {
                             <td>
                               <Link
                                 class="btn btn-primary"
-                                to="/projects-overview/0"
+                                to="projects-overview-task"
                                 role="button"
                               >
                                 View
@@ -461,28 +563,28 @@ class Taskpage extends Component {
                             <td>
                               <div class="avatar-group">
                                 <div class="avatar-group-item">
-                                  <Link class="d-inline-block" to="/tasks-page">
-                                    <img
-                                      src="/static/media/avatar-4.b23e41d9.jpg"
-                                      class="rounded-circle avatar-xs"
-                                      alt=""
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-6.dc44eabf.jpg",
+                                      ]}
                                     />
-                                  </Link>
+                                  </a>
+                                </div>
+                                <div class="avatar-group-item">
+                                  <a href="#">
+                                    <UiLightboxCommon
+                                      lightImage={[
+                                        "/static/media/avatar-4.b23e41d9.jpg",
+                                      ]}
+                                    />
+                                  </a>
                                 </div>
                                 <div class="avatar-group-item">
                                   <Link class="d-inline-block" to="/tasks-page">
                                     <div class="avatar-xs">
                                       <span class="avatar-title rounded-circle bg-success text-white font-size-16">
-                                        S
-                                      </span>
-                                    </div>
-                                  </Link>
-                                </div>
-                                <div class="avatar-group-item">
-                                  <Link class="d-inline-block" to="/tasks-page">
-                                    <div class="avatar-xs">
-                                      <span class="avatar-title rounded-circle bg-success text-white font-size-16">
-                                        1 +
+                                        2 +
                                       </span>
                                     </div>
                                   </Link>
@@ -492,7 +594,7 @@ class Taskpage extends Component {
                             <td>
                               <Link
                                 class="btn btn-primary"
-                                to="/projects-overview/0"
+                                to="projects-overview-task"
                                 role="button"
                               >
                                 View
