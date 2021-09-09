@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import { Container, Row, Col } from "reactstrap"
-import MetaTags from 'react-meta-tags';
-
+import MetaTags from "react-meta-tags"
 
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
@@ -11,8 +10,6 @@ import CardUser from "./card-user"
 import CardWelcome from "./card-welcome"
 import MiniWidget from "./mini-widget"
 import ProjectsList from "./projects-list"
-
-
 
 //Bitcoin Chart
 const series1 = [
@@ -77,10 +74,6 @@ const options3 = {
   tooltip: { fixed: { enabled: !1 }, x: { show: !1 }, marker: { show: !1 } },
 }
 
-
-
-
-
 class Attendance extends Component {
   constructor(props) {
     super(props)
@@ -110,10 +103,7 @@ class Attendance extends Component {
           color: "warning",
           desc: "3 Late, 3 leaving early",
         },
-
       ],
-      
-
     }
   }
 
@@ -133,11 +123,9 @@ class Attendance extends Component {
 
             <Row>
               {/* card user */}
-             
 
               <Col xl="12">
                 {/* card welcome */}
-              
 
                 <Row>
                   {/* mini widgets new */}
@@ -146,23 +134,9 @@ class Attendance extends Component {
                 </Row>
               </Col>
 
-                    
-                    <ProjectsList />
-               
-
+              <ProjectsList />
             </Row>
-            
-            
-
-
-
-
-              
-              
-
-                
-
-                      </Container>
+          </Container>
         </div>
       </React.Fragment>
     )
