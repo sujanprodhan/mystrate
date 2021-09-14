@@ -43,7 +43,7 @@ class ProjectsOverviewTasks extends Component {
           <Container fluid>
             {/* Render Breadcrumbs */}
 
-            <Breadcrumbs title="Task" breadcrumbItem="TASK Overview" />
+            <Breadcrumbs title="Task" breadcrumbItem="Task Overview" />
 
             {!isEmpty(projectDetail) && (
               <>

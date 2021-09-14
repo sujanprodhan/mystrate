@@ -55,7 +55,7 @@ class ProjectsOverviewSchedule extends Component {
           <Container fluid>
             {/* Render Breadcrumbs */}
 
-            <Breadcrumbs title="Task" breadcrumbItem="SCHEDULED TASK" />
+            <Breadcrumbs title="Task" breadcrumbItem="Scheduled Task" />
 
             {!isEmpty(projectDetail) && (
               <>

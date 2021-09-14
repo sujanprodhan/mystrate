@@ -43,7 +43,7 @@ class ProjectsOverviewComplaint extends Component {
           <Container fluid>
             {/* Render Breadcrumbs */}
 
-            <Breadcrumbs title="Task" breadcrumbItem="COMPLAINT  TASK" />
+            <Breadcrumbs title="Task" breadcrumbItem="Complaint Task" />
 
             {!isEmpty(projectDetail) && (
               <>

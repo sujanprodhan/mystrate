@@ -12,6 +12,7 @@ import {
 } from "reactstrap"
 
 import avatar from "../../assets/images/users/avatar-1.jpg"
+import brand from "../../assets/images/brands/brand.jpg";
 
 export default class Settings extends Component {
   constructor(props) {
@@ -136,16 +137,18 @@ export default class Settings extends Component {
 
               <div className="d-flex flex-wrap">
                 <div>
-                  <p className="text-muted mb-1">Total Subscribe</p>
-                  <h4 className="mb-3">10,512</h4>
+                  <p className="text-muted mb-1" style={{marginTop:"-15px"}}>Commissioner Of Building</p>
+                  <br/><br/><h4 className="mb-3">2890</h4>
                   <p className="text-success mb-0">
-                    <span>
+                    {/* <span>
                       0.6 % <i className="mdi mdi-arrow-top-right ms-1"></i>
-                    </span>
+                    </span> */}
+                    <span className="text-primary"> Active mystrata accounts</span>
                   </p>
                 </div>
                 <div className="ms-auto align-self-end">
-                  <i className="bx bx-group display-4 text-light"></i>
+                  {/* <i className="bx bx-group display-4 text-light"></i> */}
+                  <img alt="sidebar bg image" width="50" height="50" className="" src={brand} />
                 </div>
               </div>
             </CardBody>
