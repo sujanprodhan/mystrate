@@ -204,8 +204,8 @@ class ProjectsList extends Component {
                           </th>
                         </td>
 
-                        <td class="justify-content-center">
-                        <div class="avatar-group justify-content-center">
+                        <td class="">
+                        <div class="avatar-group">
                             <div class="avatar-group-item">
                               <a href="#">
                                 <UiLightboxCommon
@@ -268,8 +268,8 @@ class ProjectsList extends Component {
                           </th>
                         </td>
 
-                        <td class="justify-content-center">
-                        <div class="avatar-group justify-content-center">
+                        <td class="">
+                        <div class="avatar-group">
                             <div class="avatar-group-item">
                               <a href="#">
                                 <UiLightboxCommon
@@ -332,8 +332,8 @@ class ProjectsList extends Component {
                           </th>
                         </td>
 
-                        <td class="justify-content-center">
-                        <div class="avatar-group justify-content-center">
+                        <td class="">
+                        <div class="avatar-group">
                             <div class="avatar-group-item">
                               <a href="#">
                                 <UiLightboxCommon
@@ -395,9 +395,8 @@ class ProjectsList extends Component {
                             </span>
                           </th>
                         </td>
-
-                        <td class="justify-content-center">
-                          <div class="avatar-group justify-content-center">
+                        <td class="">
+                        <div class="avatar-group">
                             <div class="avatar-group-item">
                               <a href="#">
                                 <UiLightboxCommon
@@ -460,8 +459,8 @@ class ProjectsList extends Component {
                           </th>
                         </td>
 
-                        <td class="justify-content-center">
-                        <div class="avatar-group justify-content-center">
+                        <td class="">
+                        <div class="avatar-group">
                             <div class="avatar-group-item">
                               <a href="#">
                                 <UiLightboxCommon
