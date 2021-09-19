@@ -109,7 +109,7 @@ class Header extends Component {
       <React.Fragment>
         <header id="page-topbar">
           <div className="navbar-header">
-            <div className="d-flex">
+             <div className="d-flex">
 
 
               <button
@@ -121,21 +121,33 @@ class Header extends Component {
                 <i className="fa fa-fw fa-bars"></i>
               </button>
 
+              <form className="app-search d-none d-lg-block">
+                <div className="position-relative">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder={this.props.t("Search") + "..."}
+                  />
+                  <span className="bx bx-search-alt"></span>
+                </div>
+              </form>
 
-
-            
-
-
-              
-
-              <Dropdown
+              {/* <Dropdown
                 className="dropdown-mega d-none d-lg-block ms-2"
                 isOpen={this.state.megaMenuDrp}
                 toggle={() => {
                   this.setState({ megaMenuDrp: !this.state.megaMenuDrp })
                 }}
               >
-                
+                <DropdownToggle
+                  className="btn header-item"
+                  caret
+                  tag="button"
+                >
+                  {" "}
+                  {this.props.t("Mega Menu 123")}{" "}
+                  <i className="mdi mdi-chevron-down"></i>
+                </DropdownToggle>
                 <DropdownMenu className="dropdown-megamenu">
                   <Row>
                     <Col sm={8}>
@@ -275,7 +287,7 @@ class Header extends Component {
                     </Col>
                   </Row>
                 </DropdownMenu>
-              </Dropdown>
+              </Dropdown> */}
             </div>
             <div className="d-flex">
               <div className="dropdown d-inline-block d-lg-none ms-2">
@@ -321,7 +333,7 @@ class Header extends Component {
 
               
 
-              {/* <div className="dropdown d-none d-lg-inline-block ms-1">
+              <div className="dropdown d-none d-lg-inline-block ms-1">
                 <button
                   type="button"
                   onClick={this.toggleFullscreen}
@@ -330,7 +342,7 @@ class Header extends Component {
                 >
                   <i className="bx bx-fullscreen"></i>
                 </button>
-              </div> */}
+              </div> 
 
               <NotificationDropdown />
               <ProfileMenu />

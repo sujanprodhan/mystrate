@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Container, Row, Col } from "reactstrap"
-import MetaTags from 'react-meta-tags';
+import MetaTags from "react-meta-tags"
 
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
@@ -9,11 +9,18 @@ import Breadcrumbs from "../../components/Common/Breadcrumb"
 import CardUser from "./card-user"
 import CardWelcome from "./card-welcome"
 import MiniWidget from "./mini-widget"
-import WalletBalance from "./wallet-balance"
-import OverView from "./overview"
-import Transactions from "./transactions"
-import Notifications from "./notifications"
-import BuySell from "./buy-sell"
+import Earning from "./earning"
+import SalesAnalytics from "./sales-analytics"
+import TotalSellingProduct from "./total-selling-product"
+import Tasks from "./tasks"
+import ChatBox from "./chat-box"
+import CardUsernew from "./card-user-rep"
+import CardWelcomenew from "./card-welcome-rep"
+import MiniWidgetnew from "./mini-widget-rep"
+import TasksListnew from "./tasks-list-rep"
+import Settingsnew from "./Settings-rep"
+import CardUserlatest from "./CardUser-latest"
+import MonthlyEarning from "./MonthlyEarning-rep"
 
 //Bitcoin Chart
 const series1 = [
@@ -84,32 +91,58 @@ class Dashboard extends Component {
     this.state = {
       reports: [
         {
-          title: "Bitcoin",
+          icon: "bx bx-copy-alt",
+          title: "Task resolved today",
+          value: "25",
+          badgeValue: "+ 0.2%",
+          color: "success",
+          desc: "From previous period",
+        },
+        {
+          icon: "bx bx-archive-in",
+          title: "Complaint resolved",
+          value: "5",
+          badgeValue: "+ 0.2%",
+          color: "success",
+          desc: "From previous period",
+        },
+        {
+          icon: "bx bx-purchase-tag-alt",
+          title: "incident reported",
+          value: "1",
+          badgeValue: "0%",
+          color: "warning",
+          desc: "From previous period",
+        },
+      ],
+      reportsnew: [
+        {
+          title: "cleaner",
           icon: "mdi mdi-bitcoin",
           color: "warning",
-          value: "$ 57,986.76",
-          arrow: 'mdi-arrow-up text-success',
-          desc: "+ 0.0012 ( 0.2 % )",
+          value: "10 Staff",
+          arrow: "mdi-arrow-up text-success",
+          desc: "0 Absent",
           series: series1,
           options: options1,
         },
         {
-          title: "Ethereum",
+          title: "security day",
           icon: "mdi mdi-ethereum",
           color: "primary",
-          arrow: 'mdi-arrow-down text-danger',
-          value: "$ 2,077.53",
-          desc: "- 4.102 ( 0.1 % )",
+          arrow: "mdi-arrow-down text-danger",
+          value: "10 Staff",
+          desc: "1 Absent",
           series: series2,
           options: options2,
         },
         {
-          title: "litecoin",
+          title: "Security Night",
           icon: "mdi mdi-litecoin",
           color: "info",
-          arrow: 'mdi-arrow-up text-success',
-          value: "$ 225.01",
-          desc: "+ 1.792 ( 0.1 % )",
+          arrow: "mdi-arrow-up text-success",
+          value: "12 Staff",
+          desc: "3 Absent",
           series: series3,
           options: options3,
         },
@@ -122,44 +155,43 @@ class Dashboard extends Component {
       <React.Fragment>
         <div className="page-content">
           <MetaTags>
-            <title>Crypto Dashboard | Skote - React Admin & Dashboard Template</title>
+            <title> Dashboard </title>
           </MetaTags>
           <Container fluid>
             {/* Render Breadcrumb */}
-            <Breadcrumbs title="Dashboards" breadcrumbItem="Crypto" />
+            <Breadcrumbs breadcrumbItem="Dashboard" />
+
+            {/* Card User */}
+            <CardUser />
+
             <Row>
               {/* card user */}
-              <CardUser />
+              <CardUsernew />
 
               <Col xl="8">
                 {/* card welcome */}
-                <CardWelcome />
+                <CardWelcomenew />
 
                 <Row>
-                  {/* mini widgets */}
+                  {/* mini widgets new */}
                   <MiniWidget reports={this.state.reports} />
                 </Row>
               </Col>
             </Row>
 
             <Row>
-              {/* wallet balance */}
-              <WalletBalance />
+              {/* welcome card */}
+              <CardWelcome />
 
-              {/* overview */}
-              <OverView />
+              <Col xl="8">
+                <Row>
+                  {/*mimi widgets */}
+                  <MiniWidgetnew reportsnew={this.state.reportsnew} />
+                </Row>
+              </Col>
             </Row>
 
-            <Row>
-              {/* transactions */}
-              <Transactions />
-
-              {/* notifications */}
-              <Notifications />
-
-              {/* buy sell */}
-              <BuySell />
-            </Row>
+            <TasksListnew />
           </Container>
         </div>
       </React.Fragment>

@@ -74,6 +74,9 @@ import TwostepVerification2 from "../pages/AuthenticationInner/auth-two-step-ver
 // Dashboard
 import Dashboard from "../pages/Dashboard/index"
 import DashboardSaas from "../pages/Dashboard-saas/index"
+import DashboardCompany from "../pages/Dashboard-saas/dashboardCompany"
+import DashboardKptp from "../pages/Dashboard-saas/dashboarbdKptp"
+import DashboardCob from "../pages/Dashboard-saas/dashboardCob"
 import DashboardCrypto from "../pages/Dashboard-crypto/index"
 import DashboardBlog from "../pages/Dashboard-blog/index"
 
@@ -214,9 +217,14 @@ import projectsOverviewComplaint from "pages/Projects/ProjectOverview/projects-o
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: Dashboard },
-  { path: "/dashboard-saas", component: DashboardSaas },
-  { path: "/dashboard-crypto", component: DashboardCrypto },
-  { path: "/dashboard-blog", component: DashboardBlog },
+
+  { path: "/dashboard-company", component: DashboardCompany },
+  { path: "/dashboard-kptp", component: DashboardKptp },
+  { path: "/dashboard-cob", component: DashboardCob },
+
+  // { path: "/dashboard-saas", component: DashboardSaas },
+  // { path: "/dashboard-crypto", component: DashboardCrypto },
+  // { path: "/dashboard-blog", component: DashboardBlog },
 
   //Crypto
   { path: "/crypto-wallet", component: CryptoWallet },
