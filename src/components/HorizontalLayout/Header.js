@@ -348,6 +348,46 @@ class Header extends Component {
                 </div>
               </div>
 
+            
+              <div className="dropdown d-inline-block d-lg-none ms-2">
+                <button
+                  type="button"
+                  className="btn header-item noti-icon"
+                  id="page-header-search-dropdown"
+                  onClick={() => {
+                    this.setState({ isSearch: !this.state.isSearch })
+                  }}
+                >
+                  <i className="mdi mdi-magnify" />
+                </button>
+                <div
+                  className={
+                    this.state.isSearch
+                      ? "dropdown-menu dropdown-menu-lg dropdown-menu-end p-0 show"
+                      : "dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                  }
+                  aria-labelledby="page-header-search-dropdown"
+                >
+                  <form className="p-3">
+                    <div className="form-group m-0">
+                      <div className="input-group">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder={this.props.t("Search") + "..."}
+                          aria-label="Recipient's username"
+                        />
+                        <div className="input-group-append">
+                          <button className="btn btn-primary" type="submit">
+                            <i className="mdi mdi-magnify" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
               <CustomDropDownNav />
 
               <Dropdown
@@ -357,13 +397,13 @@ class Header extends Component {
                   this.setState({ socialDrp: !this.state.socialDrp })
                 }}
               >
-                {/* <DropdownToggle
+               <DropdownToggle
                   className="btn header-item noti-icon"
                   caret
                   tag="button"
                 >
                   <i className="bx bx-customize" />
-                </DropdownToggle> */}
+                </DropdownToggle> 
 
                 <DropdownMenu className="dropdown-menu-lg dropdown-menu-end">
                   <div className="px-lg-2">
