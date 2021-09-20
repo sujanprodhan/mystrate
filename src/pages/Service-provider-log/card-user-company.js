@@ -63,9 +63,9 @@ class CardUser extends Component {
                         <Col xs="4">
                           <div>
                             <p className="text-muted text-truncate mb-2">
-                              No of Tower
+                              Projects
                             </p>
-                            <h5 className="mb-0">6</h5>
+                            <h5 className="mb-0">18</h5>
                           </div>
                         </Col>
                         <Col xs="4">
@@ -79,9 +79,9 @@ class CardUser extends Component {
                         <Col xs="4">
                           <div>
                             <p className="text-muted text-truncate mb-2">
-                              Areas
+                              Reaflags
                             </p>
-                            <h5 className="mb-0">180</h5>
+                            <h5 className="mb-0">24</h5>
                           </div>
                         </Col>
                       </Row>

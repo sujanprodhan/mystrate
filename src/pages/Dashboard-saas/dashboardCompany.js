@@ -6,10 +6,10 @@ import { Row, Col, Card, CardBody, CardTitle, Container } from "reactstrap"
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 
 //Import Components
-import CardUser from "./card-user"
+import CardUser from "./card-user-company"
 import MiniWidget from "./mini-widget"
-import CardUsernew from "./card-user-rep"
-import CardWelcomenew from "./card-welcome-rep"
+import CardUsernew from "./card-user-rep-company"
+import CardWelcomenew from "./card-welcome-rep-company"
 
 // datatable related plugins
 import BootstrapTable from "react-bootstrap-table-next"
@@ -123,27 +123,27 @@ class Dashboard extends Component {
       reports: [
         {
           icon: "bx bx-copy-alt",
-          title: "Task resolved today",
-          value: "25",
+          title: "Pending Tasks",
+          value: "89 pendings",
           badgeValue: "+ 0.2%",
           color: "success",
-          desc: "From previous period",
+          desc: "From 15 projects",
         },
         {
           icon: "bx bx-archive-in",
-          title: "Complaint resolved",
-          value: "5",
+          title: "Pending Complaints",
+          value: "150",
           badgeValue: "+ 0.2%",
           color: "success",
-          desc: "From previous period",
+          desc: "From 12 projects",
         },
         {
           icon: "bx bx-purchase-tag-alt",
-          title: "incident reported",
-          value: "1",
+          title: "Financial Report Submission",
+          value: "13 missed",
           badgeValue: "0%",
           color: "warning",
-          desc: "From previous period",
+          desc: "From 8 projects",
         },
       ],
       reportsnew: [
@@ -254,11 +254,11 @@ class Dashboard extends Component {
       <React.Fragment>
         <div className="page-content">
           <MetaTags>
-            <title> Dashboard </title>
+            <title> Company Dashboard </title>
           </MetaTags>
           <Container fluid>
             {/* Render Breadcrumb */}
-            <Breadcrumbs breadcrumbItem="Dashboard" />
+            <Breadcrumbs breadcrumbItem="Company Dashboard" title="Dashboard"/>
 
             {/* Card User */}
             <CardUser />

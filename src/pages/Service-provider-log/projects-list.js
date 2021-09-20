@@ -165,7 +165,7 @@ class ProjectsList extends Component {
                         <th scope="col">Time</th>
                         <th scope="col">Service Provider</th>
 
-                        <th scope="col">Team</th>
+                        <th scope="col">Service Image</th>
                         <th scope="col">Details</th>
                       </tr>
 
