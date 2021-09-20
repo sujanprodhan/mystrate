@@ -6,11 +6,12 @@ import { Row, Col, Card, CardBody, CardTitle, Container } from "reactstrap"
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 
 //Import Components
-import CardUser from "./card-user"
+import CardUser from "./card-user-kptp"
 import MiniWidget from "./mini-widget"
 import CardUsernew from "./card-user-rep"
-import CardWelcomenew from "./card-welcome-rep"
-
+import CardWelcomenew from "./card-welcome-rep-kptp"
+import CardWelcome from './card-welcome-cob';
+import MiniWidgetnew from "./mini-widget-rep"
 // datatable related plugins
 import BootstrapTable from "react-bootstrap-table-next"
 import paginationFactory, {
@@ -123,61 +124,61 @@ class Dashboard extends Component {
       reports: [
         {
           icon: "bx bx-copy-alt",
-          title: "Task resolved today",
-          value: "25",
+          title: "Application / Write in",
+          value: "56 Pending",
           badgeValue: "+ 0.2%",
           color: "success",
-          desc: "From previous period",
+          desc: "From 50 Projects",
         },
         {
           icon: "bx bx-archive-in",
-          title: "Complaint resolved",
-          value: "5",
+          title: "Compalints",
+          value: "98941 pending",
           badgeValue: "+ 0.2%",
           color: "success",
-          desc: "From previous period",
+          desc: "From 290 Projects ",
         },
         {
           icon: "bx bx-purchase-tag-alt",
-          title: "incident reported",
-          value: "1",
+          title: "Financial Report Submission",
+          value: "985 Missed",
           badgeValue: "0%",
           color: "warning",
-          desc: "From previous period",
+          desc: "From 150 Projects",
         },
       ],
       reportsnew: [
         {
-          title: "cleaner",
+          title: "Pending AGM",
           icon: "mdi mdi-bitcoin",
           color: "warning",
-          value: "10 Staff",
+          value: "136 issue found",
           arrow: "mdi-arrow-up text-success",
-          desc: "0 Absent",
+          desc: "From 81 Projects",
           series: series1,
           options: options1,
         },
         {
-          title: "security day",
+          title: "Pending monthly meeting",
           icon: "mdi mdi-ethereum",
           color: "primary",
           arrow: "mdi-arrow-down text-danger",
-          value: "10 Staff",
-          desc: "1 Absent",
+          value: "86 Missed",
+          desc: "From 49 Projects",
           series: series2,
           options: options2,
         },
         {
-          title: "Security Night",
+          title: "Yearly Audited Report",
           icon: "mdi mdi-litecoin",
           color: "info",
           arrow: "mdi-arrow-up text-success",
-          value: "12 Staff",
-          desc: "3 Absent",
+          value: "101 Pending",
+          desc: "From 198 Projects",
           series: series3,
           options: options3,
         },
-      ],
+      ]
     }
   }
 
@@ -258,14 +259,14 @@ class Dashboard extends Component {
           </MetaTags>
           <Container fluid>
             {/* Render Breadcrumb */}
-            <Breadcrumbs breadcrumbItem="Dashboard" />
+            <Breadcrumbs breadcrumbItem="KPTP Dashboard" title="Dashboard" />
 
             {/* Card User */}
             <CardUser />
 
             <Row>
               {/* card user */}
-              <CardUsernew />
+              {/* <CardUsernew /> */}
 
               <Col xl="8">
                 {/* card welcome */}
@@ -278,7 +279,7 @@ class Dashboard extends Component {
               </Col>
             </Row>
 
-            {/* <Row>
+           <Row>
            
               <CardWelcome />
 
@@ -293,7 +294,7 @@ class Dashboard extends Component {
 
 
 
-              <TasksListnew /> */}
+              {/* <TasksListnew /> */}
 
             <Row>
               <Col className="col-12">

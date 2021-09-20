@@ -22,7 +22,8 @@ import paginationFactory, {
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit"
 
 import "../Tables/datatables.scss"
-
+import CardWelcome from './card-welcome-company';
+import MiniWidgetnew from "./mini-widget-rep"
 // Table data
 const products = [
   {id: 1, projectName: "Max Resedency Project", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
@@ -148,32 +149,32 @@ class Dashboard extends Component {
       ],
       reportsnew: [
         {
-          title: "cleaner",
+          title: "Pending AGM",
           icon: "mdi mdi-bitcoin",
           color: "warning",
-          value: "10 Staff",
+          value: "8 Issues",
           arrow: "mdi-arrow-up text-success",
-          desc: "0 Absent",
+          desc: "From 8 Projects",
           series: series1,
           options: options1,
         },
         {
-          title: "security day",
+          title: "Pending Monthly Meeting",
           icon: "mdi mdi-ethereum",
           color: "primary",
           arrow: "mdi-arrow-down text-danger",
-          value: "10 Staff",
-          desc: "1 Absent",
+          value: "150 Pending",
+          desc: "From 12 Projects",
           series: series2,
           options: options2,
         },
         {
-          title: "Security Night",
+          title: "Yearly Auditted Report",
           icon: "mdi mdi-litecoin",
           color: "info",
           arrow: "mdi-arrow-up text-success",
-          value: "12 Staff",
-          desc: "3 Absent",
+          value: "8 Pending ",
+          desc: "From 6 Projects",
           series: series3,
           options: options3,
         },
@@ -278,7 +279,7 @@ class Dashboard extends Component {
               </Col>
             </Row>
 
-            {/* <Row>
+           <Row>
            
               <CardWelcome />
 
@@ -293,7 +294,7 @@ class Dashboard extends Component {
 
 
 
-              <TasksListnew /> */}
+              {/* <TasksListnew />  */}
 
             <Row>
               <Col className="col-12">
