@@ -475,6 +475,7 @@ class Dashboard extends Component {
             </Row>
 
             {/* <TasksListnew /> */}
+           
             <Card>
               <CardBody>
                 <CardTitle className="h4"> Project Overview </CardTitle>
@@ -493,13 +494,12 @@ class Dashboard extends Component {
                             <input type="checkbox" />
                           </Th>
                           <Th>ID</Th>
-                          <Th data-priority="1">Add Management Company</Th>
-                          <Th data-priority="3">Task Issue</Th>
-                          <Th data-priority="1">COB Issue</Th>
-                          <Th data-priority="3">Attendance Issue</Th>
-                          <Th data-priority="3">Financial Issue</Th>
-                          <Th data-priority="6">Status</Th>
-                          <Th data-priority="6">View Details</Th>
+                          <Th data-priority="1">COB</Th>
+                          <Th data-priority="3">Total Project</Th>
+                          <Th data-priority="1">AGM Issue</Th>
+                          <Th data-priority="3">Complaints</Th>
+                          <Th data-priority="3">No Of Submission</Th>
+                          <Th data-priority="6"> Details</Th>
                         </Tr>
                       </Thead>
                       <Tbody>
@@ -508,19 +508,13 @@ class Dashboard extends Component {
                             <input type="checkbox" />
                           </Td>
                           <Td>1</Td>
-                          <Td>Lemond Management company sdn bhd</Td>
-                          <Td>15</Td>
-                          <Td>5</Td>
-                          <Td>15</Td>
-                          <Td>5</Td>
-                          <Td>
-                            {" "}
-                            <span class="bg-success badge badge-success">
-                              JMB
-                            </span>
-                          </Td>
+                          <Td>CEXL</Td>
+                          <Td>3245</Td>
+                          <Td>16523</Td>
+                          <Td>15597</Td>                          
+                          <Td>15597</Td>                          
                           <td>
-                            <Link to="" className="btn btn-primary">
+                            <Link to="" className="">
                               View
                             </Link>
                           </td>
@@ -530,68 +524,41 @@ class Dashboard extends Component {
                             <input type="checkbox" />
                           </Td>
                           <Td>2</Td>
-                          <Td>Knightfrank sdn bhd</Td>
-                          <Td>13</Td>
-                          <Td>0</Td>
-                          <Td>0</Td>
-                          <Td>0</Td>
-
-                          <Td>
-                            {" "}
-                            <span class="bg-warning badge badge-success">
-                              MC
-                            </span>
-                          </Td>
+                          <Td>Angeico Rasmos</Td>
+                          <Td>Cheif Executive Officer</Td>
+                          <Td>London</Td>
+                          <Td>47</Td>
+                          <Td>2009/10/09</Td>
                           <td>
-                            <Link to="" className="btn btn-primary">
-                              View
-                            </Link>
+                            $120,000.00
                           </td>
                         </Tr>
-
                         <Tr>
                           <Td>
                             <input type="checkbox" />
                           </Td>
                           <Td>3</Td>
-                          <Td>Knightfrank sdn bhd </Td>
-                          <Td>8</Td>
-                          <Td>1</Td>
-                          <Td>0</Td>
-                          <Td>1</Td>
-                          <Td>
-                            {" "}
-                            <span class="bg-success badge badge-success">
-                              JMB
-                            </span>
-                          </Td>
+                          <Td>Ashton Cax</Td>
+                          <Td>Junior Technical Author</Td>
+                          <Td>San Francisco</Td>
+                          <Td>66</Td>
+                          <Td>2009/10/09</Td>
                           <td>
-                            <Link to="" className="btn btn-primary">
-                              View
-                            </Link>
+                            $56,000.00
                           </td>
                         </Tr>
-
                         <Tr>
                           <Td>
                             <input type="checkbox" />
                           </Td>
                           <Td>4</Td>
-                          <Td>Total PM sdn bhd</Td>
-                          <Td>15</Td>
-                          <Td>1</Td>
-                          <Td>15</Td>
-                          <Td>1</Td>
-                          <Td>
-                            {" "}
-                            <span class="bg-success badge badge-success">
-                              JBM
-                            </span>
-                          </Td>
+                          <Td>Bradity Greer</Td>
+                          <Td>Software Engineer</Td>
+                          <Td>London</Td>
+                          <Td>47</Td>
+                          <Td>2009/10/09</Td>
                           <td>
-                            <Link to="" className="btn btn-primary">
-                              View
-                            </Link>
+                            $120,000.00
                           </td>
                         </Tr>
                         <Tr>
@@ -599,21 +566,13 @@ class Dashboard extends Component {
                             <input type="checkbox" />
                           </Td>
                           <Td>5</Td>
-                          <Td>Knightfrank sdn bhd</Td>
-                          <Td>9</Td>
-                          <Td>8</Td>
-                          <Td>15</Td>
-                          <Td>8</Td>
-                          <Td>
-                            {" "}
-                            <span class="bg-warning badge badge-success">
-                              MC
-                            </span>
-                          </Td>
+                          <Td>Bendanan Wainger</Td>
+                          <Td>Software Engineer</Td>
+                          <Td>San Francisco</Td>
+                          <Td>40</Td>
+                          <Td>2009/10/09</Td>
                           <td>
-                            <Link to="" className="btn btn-primary">
-                              View
-                            </Link>
+                            $66,000.00
                           </td>
                         </Tr>
                         <Tr>
@@ -621,23 +580,16 @@ class Dashboard extends Component {
                             <input type="checkbox" />
                           </Td>
                           <Td>6</Td>
-                          <Td>Lemond Management company sdn bhd</Td>
-                          <Td>15</Td>
-                          <Td>5</Td>
-                          <Td>15</Td>
-                          <Td>5</Td>
-                          <Td>
-                            {" "}
-                            <span class="bg-success badge badge-success">
-                              JMB
-                            </span>
-                          </Td>
+                          <Td>Nubo Nash</Td>
+                          <Td>Integration Speciality</Td>
+                          <Td>London</Td>
+                          <Td>28</Td>
+                          <Td>2009/10/09</Td>
                           <td>
-                            <Link to="" className="btn btn-primary">
-                              View
-                            </Link>
+                            $125,000.00
                           </td>
                         </Tr>
+
                       </Tbody>
                     </Table>
                   </div>
