@@ -335,8 +335,11 @@ class Dashboard extends Component {
                             </span>
                           </Td>
                           <td>
-                            <Link to="" className="btn btn-primary">
-                              View
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
                             </Link>
                           </td>
                         </Tr>
@@ -358,8 +361,11 @@ class Dashboard extends Component {
                             </span>
                           </Td>
                           <td>
-                            <Link to="" className="btn btn-primary">
-                              View
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
                             </Link>
                           </td>
                         </Tr>
@@ -381,8 +387,11 @@ class Dashboard extends Component {
                             </span>
                           </Td>
                           <td>
-                            <Link to="" className="btn btn-primary">
-                              View
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
                             </Link>
                           </td>
                         </Tr>
@@ -404,8 +413,11 @@ class Dashboard extends Component {
                             </span>
                           </Td>
                           <td>
-                            <Link to="" className="btn btn-primary">
-                              View
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
                             </Link>
                           </td>
                         </Tr>
@@ -426,8 +438,11 @@ class Dashboard extends Component {
                             </span>
                           </Td>
                           <td>
-                            <Link to="" className="btn btn-primary">
-                              View
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
                             </Link>
                           </td>
                         </Tr>
@@ -448,8 +463,11 @@ class Dashboard extends Component {
                             </span>
                           </Td>
                           <td>
-                            <Link to="" className="btn btn-primary">
-                              View
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
                             </Link>
                           </td>
                         </Tr>

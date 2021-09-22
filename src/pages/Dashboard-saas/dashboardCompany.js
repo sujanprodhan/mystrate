@@ -518,11 +518,11 @@ class Dashboard extends Component {
                             </span>
                           </Td>
                           <td>
-                            <Link
+                          <Link
                               to=""
-                              className="btn btn-primary"
+                              className="btn btn-primary btn-rounded btn-sm"
                             >
-                              View
+                              View Details
                             </Link>
                           </td>
                         </Tr>
@@ -544,11 +544,11 @@ class Dashboard extends Component {
                             </span>
                           </Td>
                           <td>
-                            <Link
+                          <Link
                               to=""
-                              className="btn btn-primary"
+                              className="btn btn-primary btn-rounded btn-sm"
                             >
-                              View
+                              View Details
                             </Link>
                           </td>
                         </Tr>
@@ -570,11 +570,11 @@ class Dashboard extends Component {
                             </span>
                           </Td>
                           <td>
-                            <Link
+                          <Link
                               to=""
-                              className="btn btn-primary"
+                              className="btn btn-primary btn-rounded btn-sm"
                             >
-                              View
+                              View Details
                             </Link>
                           </td>
                         </Tr>
@@ -596,11 +596,11 @@ class Dashboard extends Component {
                             </span>
                           </Td>
                           <td>
-                            <Link
+                          <Link
                               to=""
-                              className="btn btn-primary"
+                              className="btn btn-primary btn-rounded btn-sm"
                             >
-                              View
+                              View Details
                             </Link>
                           </td>
                         </Tr>
@@ -615,17 +615,16 @@ class Dashboard extends Component {
                           <Td>15</Td>
                           <Td>8</Td>
                           <Td>
-                            {" "}
                             <span class="bg-warning badge badge-success">
                               Ungent
                             </span>
                           </Td>
                           <td>
-                            <Link
+                          <Link
                               to=""
-                              className="btn btn-primary"
+                              className="btn btn-primary btn-rounded btn-sm"
                             >
-                              View
+                              View Details
                             </Link>
                           </td>
                         </Tr>
@@ -639,18 +638,17 @@ class Dashboard extends Component {
                           <Td>5</Td>
                           <Td>15</Td>
                           <Td>5</Td>
-                          <Td>
-                            {" "}
+                          <Td>                            
                             <span class="bg-success badge badge-success">
                               Good
                             </span>
                           </Td>
                           <td>
-                            <Link
+                          <Link
                               to=""
-                              className="btn btn-primary"
+                              className="btn btn-primary btn-rounded btn-sm"
                             >
-                              View
+                              View Details
                             </Link>
                           </td>
                         </Tr>

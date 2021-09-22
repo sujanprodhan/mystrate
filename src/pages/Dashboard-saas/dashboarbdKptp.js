@@ -499,7 +499,7 @@ class Dashboard extends Component {
                           <Th data-priority="1">AGM Issue</Th>
                           <Th data-priority="3">Complaints</Th>
                           <Th data-priority="3">No Of Submission</Th>
-                          <Th data-priority="6"> Details</Th>
+                          <Th data-priority="6">View Details</Th>
                         </Tr>
                       </Thead>
                       <Tbody>
@@ -508,14 +508,17 @@ class Dashboard extends Component {
                             <input type="checkbox" />
                           </Td>
                           <Td>1</Td>
-                          <Td>CEXL</Td>
+                          <Td>DBKL</Td>
                           <Td>3245</Td>
                           <Td>16523</Td>
                           <Td>15597</Td>                          
                           <Td>15597</Td>                          
                           <td>
-                            <Link to="" className="">
-                              View
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
                             </Link>
                           </td>
                         </Tr>
@@ -524,13 +527,18 @@ class Dashboard extends Component {
                             <input type="checkbox" />
                           </Td>
                           <Td>2</Td>
-                          <Td>Angeico Rasmos</Td>
-                          <Td>Cheif Executive Officer</Td>
-                          <Td>London</Td>
+                          <Td>MBPJ</Td>
+                          <Td>356</Td>
+                          <Td>56</Td>
                           <Td>47</Td>
-                          <Td>2009/10/09</Td>
+                          <Td>52</Td>
                           <td>
-                            $120,000.00
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
                           </td>
                         </Tr>
                         <Tr>
@@ -538,13 +546,18 @@ class Dashboard extends Component {
                             <input type="checkbox" />
                           </Td>
                           <Td>3</Td>
-                          <Td>Ashton Cax</Td>
-                          <Td>Junior Technical Author</Td>
-                          <Td>San Francisco</Td>
-                          <Td>66</Td>
-                          <Td>2009/10/09</Td>
+                          <Td>MBPJ</Td>
+                          <Td>1440</Td>
+                          <Td>1420</Td>
+                          <Td>1396</Td>
+                          <Td>1245</Td>
                           <td>
-                            $56,000.00
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
                           </td>
                         </Tr>
                         <Tr>
@@ -552,13 +565,18 @@ class Dashboard extends Component {
                             <input type="checkbox" />
                           </Td>
                           <Td>4</Td>
-                          <Td>Bradity Greer</Td>
-                          <Td>Software Engineer</Td>
-                          <Td>London</Td>
-                          <Td>47</Td>
-                          <Td>2009/10/09</Td>
+                          <Td>MBAJ</Td>
+                          <Td>1280</Td>
+                          <Td>360</Td>
+                          <Td>574</Td>
+                          <Td>906</Td>
                           <td>
-                            $120,000.00
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
                           </td>
                         </Tr>
                         <Tr>
@@ -566,13 +584,18 @@ class Dashboard extends Component {
                             <input type="checkbox" />
                           </Td>
                           <Td>5</Td>
-                          <Td>Bendanan Wainger</Td>
-                          <Td>Software Engineer</Td>
-                          <Td>San Francisco</Td>
-                          <Td>40</Td>
-                          <Td>2009/10/09</Td>
+                          <Td>MBSP</Td>
+                          <Td>3010</Td>
+                          <Td>3111</Td>
+                          <Td>2540</Td>
+                          <Td>2540</Td>
                           <td>
-                            $66,000.00
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
                           </td>
                         </Tr>
                         <Tr>
@@ -580,13 +603,18 @@ class Dashboard extends Component {
                             <input type="checkbox" />
                           </Td>
                           <Td>6</Td>
-                          <Td>Nubo Nash</Td>
-                          <Td>Integration Speciality</Td>
-                          <Td>London</Td>
-                          <Td>28</Td>
-                          <Td>2009/10/09</Td>
+                          <Td>MBBP</Td>
+                          <Td>2501</Td>
+                          <Td>1366</Td>
+                          <Td>1500</Td>
+                          <Td>1300</Td>
                           <td>
-                            $125,000.00
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
                           </td>
                         </Tr>
 
