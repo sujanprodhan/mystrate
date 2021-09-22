@@ -1,10 +1,10 @@
 import React, { Component } from "react"
 import MetaTags from "react-meta-tags"
 import { Row, Col, Card, CardBody, CardTitle, Container } from "reactstrap"
-
+import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table"
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
-
+import { Link, withRouter } from "react-router-dom"
 //Import Components
 import CardUser from "./card-user-cob"
 import MiniWidget from "./mini-widget"
@@ -290,90 +290,126 @@ class Dashboard extends Component {
             </Row>
               {/* <TasksListnew />  */}
 
-            <Row>
-              <Col className="col-12">
-                <Card>
-                  <CardBody>
-                    {/* <CardTitle className="h4">Default Datatable </CardTitle>
-                    <p className="card-title-desc">
-                      react-bootstrap-table-next plugin has most features enabled by default,
-                      so all you need to do to use it with your own tables is to
-                      call the construction function:{" "}
-                      <code>react-bootstrap-table-next </code>.
-                    </p> */}
-                    <PaginationProvider
-                      pagination={paginationFactory(pageOptions)}
-                      keyField="id"
-                      columns={columns}
-                      data={this.state.productData}
+              <Card>
+              <CardBody>
+                <CardTitle className="h4"> Project Overview </CardTitle>
+                <div className="table-rep-plugin">
+                  <div
+                    className="table-responsive mb-0"
+                    data-pattern="priority-columns"
+                  >
+                    <Table
+                      id="tech-companies-1"
+                      className="table table-striped table-bordered table-hovered"
                     >
-                      {({ paginationProps, paginationTableProps }) => (
-                        <ToolkitProvider
-                          keyField="id"
-                          columns={columns}
-                          data={this.state.productData}
-                          search
-                        >
-                          {toolkitProps => (
-                            <React.Fragment>
-                              <Row className="mb-2">
-                                <Col md="4">
-                                  <div className="search-box me-2 mb-2 d-inline-block">
-                                    <div className="position-relative">
-                                      <SearchBar
-                                        {...toolkitProps.searchProps}
-                                      />
-                                      <i className="bx bx-search-alt search-icon" />
-                                    </div>
-                                  </div>
-                                </Col>
-                              </Row>
+                      <Thead>
+                        <Tr>
+                          <Th>
+                            <input type="checkbox" />
+                          </Th>
+                          <Th>ID</Th>
+                          <Th data-priority="1">COB</Th>
+                          <Th data-priority="3">Total Project</Th>
+                          <Th data-priority="1">AGM Issue</Th>
+                          <Th data-priority="3">Complaints</Th>
+                          <Th data-priority="3">No Of Submission</Th>
+                          <Th data-priority="6"> Details</Th>
+                        </Tr>
+                      </Thead>
+                      <Tbody>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>1</Td>
+                          <Td>CEXL</Td>
+                          <Td>3245</Td>
+                          <Td>16523</Td>
+                          <Td>15597</Td>                          
+                          <Td>15597</Td>                          
+                          <td>
+                            <Link to="" className="">
+                              View
+                            </Link>
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>2</Td>
+                          <Td>Angeico Rasmos</Td>
+                          <Td>Cheif Executive Officer</Td>
+                          <Td>London</Td>
+                          <Td>47</Td>
+                          <Td>2009/10/09</Td>
+                          <td>
+                            $120,000.00
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>3</Td>
+                          <Td>Ashton Cax</Td>
+                          <Td>Junior Technical Author</Td>
+                          <Td>San Francisco</Td>
+                          <Td>66</Td>
+                          <Td>2009/10/09</Td>
+                          <td>
+                            $56,000.00
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>4</Td>
+                          <Td>Bradity Greer</Td>
+                          <Td>Software Engineer</Td>
+                          <Td>London</Td>
+                          <Td>47</Td>
+                          <Td>2009/10/09</Td>
+                          <td>
+                            $120,000.00
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>5</Td>
+                          <Td>Bendanan Wainger</Td>
+                          <Td>Software Engineer</Td>
+                          <Td>San Francisco</Td>
+                          <Td>40</Td>
+                          <Td>2009/10/09</Td>
+                          <td>
+                            $66,000.00
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>6</Td>
+                          <Td>Nubo Nash</Td>
+                          <Td>Integration Speciality</Td>
+                          <Td>London</Td>
+                          <Td>28</Td>
+                          <Td>2009/10/09</Td>
+                          <td>
+                            $125,000.00
+                          </td>
+                        </Tr>
 
-                              <Row>
-                                <Col xl="12">
-                                  <div className="table-responsive">
-                                    <BootstrapTable
-                                      keyField={"id"}
-                                      responsive
-                                      bordered={false}
-                                      striped={false}
-                                      defaultSorted={defaultSorted}
-                                      selectRow={selectRow}
-                                      rowEvents={ rowEvents }
-                                      classes={
-                                        "table align-middle table-nowrap"
-                                      }
-                                      headerWrapperClasses={"thead-light"}
-                                      {...toolkitProps.baseProps}
-                                      {...paginationTableProps}
-                                    />
-                                  </div>
-                                </Col>
-                              </Row>
-
-                              <Row className="align-items-md-center mt-30">
-                                <Col className="inner-custom-pagination d-flex">
-                                  <div className="d-inline">
-                                    <SizePerPageDropdownStandalone
-                                      {...paginationProps}
-                                    />
-                                  </div>
-                                  <div className="text-md-right ms-auto">
-                                    <PaginationListStandalone
-                                      {...paginationProps}
-                                    />
-                                  </div>
-                                </Col>
-                              </Row>
-                            </React.Fragment>
-                          )}
-                        </ToolkitProvider>
-                      )}
-                    </PaginationProvider>
-                  </CardBody>
-                </Card>
-              </Col>
-            </Row>
+                      </Tbody>
+                    </Table>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
           </Container>
         </div>
       </React.Fragment>

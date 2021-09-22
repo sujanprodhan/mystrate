@@ -51,7 +51,7 @@ class CardUser extends Component {
                         <div className="text-muted">
                           <p className="mb-2">Welcome to Mystrata</p>
                           <h5 className="mb-1">KPTP</h5>
-                          <p className="mb-0">KPTP</p>
+                          <p className="mb-0">Kementerian Perumahan Dan Kerajaan Tempatan</p>
                         </div>
                       </Media>
                     </Media>

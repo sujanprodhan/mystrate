@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import MetaTags from "react-meta-tags"
 import { Row, Col, Card, CardBody, CardTitle, Container } from "reactstrap"
-
+import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table"
+import { Link, withRouter } from "react-router-dom"
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 
@@ -10,7 +11,7 @@ import CardUser from "./card-user-kptp"
 import MiniWidget from "./mini-widget"
 import CardUsernew from "./card-user-rep"
 import CardWelcomenew from "./card-welcome-rep-kptp"
-import CardWelcome from './card-welcome-cob';
+import CardWelcome from "./card-welcome-cob"
 import MiniWidgetnew from "./mini-widget-rep"
 // datatable related plugins
 import BootstrapTable from "react-bootstrap-table-next"
@@ -26,29 +27,213 @@ import "../Tables/datatables.scss"
 
 // Table data
 const products = [
-  {id: 1, projectName: "Max Resedency Project", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 2, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 3, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 4, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 5, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 6, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 7, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 8, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 9, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 10, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 11, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 12, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 13, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 14, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 15, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 16, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 17, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 18, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 19, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 20, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 21, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 22, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 23, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"}
+  {
+    id: 1,
+    projectName: "Max Resedency Project",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 2,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 3,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 4,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 5,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 6,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 7,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 8,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 9,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 10,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 11,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 12,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 13,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 14,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 15,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 16,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 17,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 18,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 19,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 20,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 21,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 22,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 23,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
 ]
 
 //Bitcoin Chart
@@ -178,16 +363,16 @@ class Dashboard extends Component {
           series: series3,
           options: options3,
         },
-      ]
+      ],
     }
   }
 
   render() {
     const rowEvents = {
       onClick: (e, row, rowIndex) => {
-    //    alert(rowIndex);
-      }
-    };
+        //    alert(rowIndex);
+      },
+    }
     const columns = [
       {
         dataField: "projectName",
@@ -268,7 +453,7 @@ class Dashboard extends Component {
               {/* card user */}
               {/* <CardUsernew /> */}
 
-              <Col xl="8">
+              <Col xl="12">
                 {/* card welcome */}
                 <CardWelcomenew />
 
@@ -279,34 +464,191 @@ class Dashboard extends Component {
               </Col>
             </Row>
 
-           <Row>
-           
+            <Row>
               <CardWelcome />
 
               <Col xl="8">
                 <Row>
-      
                   <MiniWidgetnew reportsnew={this.state.reportsnew} />
                 </Row>
               </Col>
             </Row>
 
+            {/* <TasksListnew /> */}
+            <Card>
+              <CardBody>
+                <CardTitle className="h4"> Project Overview </CardTitle>
+                <div className="table-rep-plugin">
+                  <div
+                    className="table-responsive mb-0"
+                    data-pattern="priority-columns"
+                  >
+                    <Table
+                      id="tech-companies-1"
+                      className="table table-striped table-bordered table-hovered"
+                    >
+                      <Thead>
+                        <Tr>
+                          <Th>
+                            <input type="checkbox" />
+                          </Th>
+                          <Th>ID</Th>
+                          <Th data-priority="1">Add Management Company</Th>
+                          <Th data-priority="3">Task Issue</Th>
+                          <Th data-priority="1">COB Issue</Th>
+                          <Th data-priority="3">Attendance Issue</Th>
+                          <Th data-priority="3">Financial Issue</Th>
+                          <Th data-priority="6">Status</Th>
+                          <Th data-priority="6">View Details</Th>
+                        </Tr>
+                      </Thead>
+                      <Tbody>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>1</Td>
+                          <Td>Lemond Management company sdn bhd</Td>
+                          <Td>15</Td>
+                          <Td>5</Td>
+                          <Td>15</Td>
+                          <Td>5</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-success badge badge-success">
+                              JMB
+                            </span>
+                          </Td>
+                          <td>
+                            <Link to="" className="btn btn-primary">
+                              View
+                            </Link>
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>2</Td>
+                          <Td>Knightfrank sdn bhd</Td>
+                          <Td>13</Td>
+                          <Td>0</Td>
+                          <Td>0</Td>
+                          <Td>0</Td>
 
+                          <Td>
+                            {" "}
+                            <span class="bg-warning badge badge-success">
+                              MC
+                            </span>
+                          </Td>
+                          <td>
+                            <Link to="" className="btn btn-primary">
+                              View
+                            </Link>
+                          </td>
+                        </Tr>
 
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>3</Td>
+                          <Td>Knightfrank sdn bhd </Td>
+                          <Td>8</Td>
+                          <Td>1</Td>
+                          <Td>0</Td>
+                          <Td>1</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-success badge badge-success">
+                              JMB
+                            </span>
+                          </Td>
+                          <td>
+                            <Link to="" className="btn btn-primary">
+                              View
+                            </Link>
+                          </td>
+                        </Tr>
 
-              {/* <TasksListnew /> */}
-
-            <Row>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>4</Td>
+                          <Td>Total PM sdn bhd</Td>
+                          <Td>15</Td>
+                          <Td>1</Td>
+                          <Td>15</Td>
+                          <Td>1</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-success badge badge-success">
+                              JBM
+                            </span>
+                          </Td>
+                          <td>
+                            <Link to="" className="btn btn-primary">
+                              View
+                            </Link>
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>5</Td>
+                          <Td>Knightfrank sdn bhd</Td>
+                          <Td>9</Td>
+                          <Td>8</Td>
+                          <Td>15</Td>
+                          <Td>8</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-warning badge badge-success">
+                              MC
+                            </span>
+                          </Td>
+                          <td>
+                            <Link to="" className="btn btn-primary">
+                              View
+                            </Link>
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>6</Td>
+                          <Td>Lemond Management company sdn bhd</Td>
+                          <Td>15</Td>
+                          <Td>5</Td>
+                          <Td>15</Td>
+                          <Td>5</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-success badge badge-success">
+                              JMB
+                            </span>
+                          </Td>
+                          <td>
+                            <Link to="" className="btn btn-primary">
+                              View
+                            </Link>
+                          </td>
+                        </Tr>
+                      </Tbody>
+                    </Table>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+            {/* <Row>
               <Col className="col-12">
                 <Card>
                   <CardBody>
-                    {/* <CardTitle className="h4">Default Datatable </CardTitle>
-                    <p className="card-title-desc">
-                      react-bootstrap-table-next plugin has most features enabled by default,
-                      so all you need to do to use it with your own tables is to
-                      call the construction function:{" "}
-                      <code>react-bootstrap-table-next </code>.
-                    </p> */}
+
                     <PaginationProvider
                       pagination={paginationFactory(pageOptions)}
                       keyField="id"
@@ -379,7 +721,7 @@ class Dashboard extends Component {
                   </CardBody>
                 </Card>
               </Col>
-            </Row>
+            </Row> */}
           </Container>
         </div>
       </React.Fragment>
