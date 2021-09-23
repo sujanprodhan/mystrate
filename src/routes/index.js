@@ -167,6 +167,7 @@ import Pages500 from "../pages/Utility/pages-500"
 
 //Extra Pages
 import AttendencePage from "../pages/Attendance/attendance-page"
+import VisitorManagementNew from "../pages/Attendance/visitor-management";
 import Stafftracking from "../pages/Staff-tracking/stafftracking"
 import Complaints from "../pages/Complaints/complaints"
 import Taskpage from "../pages/Task-page/tasks-page"
@@ -244,7 +245,7 @@ const authProtectedRoutes = [
   { path: "/incidentreport", component: Incidentreport },
   { path: "/cleaningreport", component: Cleaningreport },
   { path: "/debtcollection", component: Debtcollection },
-  { path: "/visitormanagement", component: Visitormanagement },
+  { path: "/visitormanagement", component: VisitorManagementNew},
   { path: "/accesscards", component: Accesscards },
   { path: "/accountingreport", component: Accountingreport },
   { path: "/settingpage", component: Settingpage },
