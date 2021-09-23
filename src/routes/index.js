@@ -73,6 +73,7 @@ import TwostepVerification2 from "../pages/AuthenticationInner/auth-two-step-ver
 
 // Dashboard
 import Dashboard from "../pages/Dashboard/index"
+import DocumentsAndFiles from "../pages/Dashboard/documents-and-files"
 import DashboardSaas from "../pages/Dashboard-saas/index"
 import DashboardCompany from "../pages/Dashboard-saas/dashboardCompany"
 import DashboardKptp from "../pages/Dashboard-saas/dashboarbdKptp"
@@ -253,7 +254,8 @@ const authProtectedRoutes = [
   { path: "/assetstagging", component: Assetstagging },
   { path: "/buildinginformation", component: Buildinginformation },
   { path: "/committeeinfo", component: Committeeinformation },
-  { path: "/importantfiles", component: Importantfiles },
+ // { path: "/importantfiles", component: Importantfiles },
+  { path: "/importantfiles", component: DocumentsAndFiles },
   { path: "/serviceprovidercontract", component: Servicecontract },
 
   { path: "/IndividualReport", component: IndividualReport },
