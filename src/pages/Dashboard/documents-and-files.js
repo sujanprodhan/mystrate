@@ -164,15 +164,6 @@ class DocumentsFiles extends Component {
             {/* Card User */}
             <CardUser />
 
-            {/* <Row>
-              <CardUsernew />
-              <Col xl="8">
-                <CardWelcomenew />
-                <Row>
-                  <MiniWidget reports={this.state.reports} />
-                </Row>
-              </Col>
-            </Row> */}
 
             <Row>
               {/* welcome card */}

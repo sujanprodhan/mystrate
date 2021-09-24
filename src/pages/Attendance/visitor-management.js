@@ -113,7 +113,7 @@ class VisitorManagementNew extends Component {
       <React.Fragment>
         <div className="page-content">
           <MetaTags>
-            <title>Attendance</title>
+            <title>Visitor Management</title>
           </MetaTags>
           <Container fluid>
             {/* Render Breadcrumb */}

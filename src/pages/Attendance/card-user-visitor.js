@@ -63,7 +63,7 @@ class CardUser extends Component {
                         <Col xs="4">
                           <div>
                             <p className="text-muted text-truncate mb-2">
-                             Droped
+                             Dropoff
                             </p>
                             <h5 className="mb-0">48</h5>
                           </div>

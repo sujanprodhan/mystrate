@@ -211,9 +211,7 @@ class ProjectsList extends Component {
                                 +8801740095212
                         </td>
                         <td class="d-grid gap-2">
-                          <Link to="/stafftracking" className="btn btn-primary">
-                            View
-                          </Link>
+                          9685423
                         </td>
                       </tr>
 
@@ -255,9 +253,10 @@ class ProjectsList extends Component {
                         </td>
 
                         <td class="d-grid gap-2">
-                          <Link to="/stafftracking" className="btn btn-primary">
+                          {/* <Link to="/stafftracking" className="btn btn-primary">
                             View
-                          </Link>
+                          </Link> */}
+                          6986544
                         </td>
                       </tr>
 
@@ -300,9 +299,7 @@ class ProjectsList extends Component {
                         </td>
 
                         <td class="d-grid gap-2">
-                          <Link to="/stafftracking" className="btn btn-primary">
-                            View
-                          </Link>
+                          659854
                         </td>
                       </tr>
 
@@ -344,9 +341,7 @@ class ProjectsList extends Component {
                         </td>
 
                         <td class="d-grid gap-2">
-                          <Link to="/stafftracking" className="btn btn-primary">
-                            View
-                          </Link>
+                          365241
                         </td>
                       </tr>
 
@@ -388,9 +383,7 @@ class ProjectsList extends Component {
                         </td>
 
                         <td class="d-grid gap-2">
-                          <Link to="/stafftracking" className="btn btn-primary">
-                            View
-                          </Link>
+                          236512
                         </td>
                       </tr>
                     </thead>

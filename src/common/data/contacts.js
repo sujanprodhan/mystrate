@@ -6,7 +6,8 @@ const users = [
     color: "primary",
     email: "david@skote.com",
     projects: "125",
-    tags: ["Photoshop", "illustrator"],
+    date: "December 2019 - AGM Minutes",
+    tags: ["Warning"],
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ const users = [
     designation: "Frontend Developer",
     email: "frank@skote.com",
     projects: "132",
-    tags: ["Html" , "Css" , "Php"],
+    date: "December 2019 - Audited Account ",
+    tags: ["Warning"],
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ const users = [
     designation: "Backend Developer",
     email: "Rafael@skote.com",
     projects: "1112",
-    tags: ["Php" , "Java" , "Python" , "Html"],
+    date: "January 2021 - Minutes Of Meeting ",
+    tags: ["Warning"],
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ const users = [
     color: "success",
     email: "mark@skote.com",
     projects: "121",
-    tags: ["Ruby" , "Php" , "UI/UX Designer"],
+    date: "January 2021 - Monthly Account ",
+    tags: ["Warning"],
   },
   {
     id: 5,
@@ -42,7 +46,8 @@ const users = [
     designation: "Frontend Developer",
     email: "minnie@skote.com",
     projects: "145",
-    tags: ["Html" , "Css" , "Java"],
+    date: "December 2020 - Monthly Minutes Of Meeting ",
+    tags: ["Warning"],
   },
   {
     id: 6,
@@ -51,7 +56,8 @@ const users = [
     designation: "UI/UX Designer",
     email: "shirley@skote.com",
     projects: "136",
-    tags: ["Photoshop" , "UI/UX Designer"],
+    date: "December 2019 - AGM Minutes",
+    tags: ["Warning"],
   },
   {
     id: 7,
@@ -60,7 +66,8 @@ const users = [
     color: "info",
     email: "john@skote.com",
     projects: "125",
-    tags: ["Ruby" , "Php" , "Java"],
+    date: "December 2019 - Audited Account ",
+    tags: ["Warning"],
   },
   {
     id: 8,
@@ -70,7 +77,8 @@ const users = [
     color: "",
     email: "colin@skote.com",
     projects: "136",
-    tags: ["Php" , "Java" , "Python" ],
+    date: "January 2021 - Minutes Of Meeting ",
+    tags: ["Warning"],
   },
   {
     id: 9,
@@ -79,7 +87,8 @@ const users = [
     color: "primary",
     email: "david@skote.com",
     projects: "125",
-    tags: ["Photoshop", "illustrator"],
+    date: "January 2021 - Monthly Account ",
+    tags: ["Warning"],
   },
   {
     id: 10,
@@ -88,7 +97,8 @@ const users = [
     designation: "Frontend Developer",
     email: "frank@skote.com",
     projects: "132",
-    tags: ["Html" , "Css" , "Php"],
+    date: "December 2020 - Monthly Minutes Of Meeting ",
+    tags: ["Warning"],
   },
   {
     id: 11,
@@ -97,7 +107,8 @@ const users = [
     designation: "Backend Developer",
     email: "Rafael@skote.com",
     projects: "1112",
-    tags: ["Php" , "Java" , "Python" , "Html"],
+    date: "December 2020 - Monthly Minutes Of Meeting ",
+    tags: ["Warning"],
   },
   {
     id: 12,
@@ -106,7 +117,8 @@ const users = [
     color: "success",
     email: "mark@skote.com",
     projects: "121",
-    tags: ["Ruby" , "Php" , "UI/UX Designer"],
+    date: "December 2019 - AGM Minutes",
+    tags: ["Warning"],
   },
   {
     id: 13,
@@ -115,7 +127,8 @@ const users = [
     designation: "Frontend Developer",
     email: "minnie@skote.com",
     projects: "145",
-    tags: ["Html" , "Css" , "Java"],
+    date: "December 2019 - Audited Account ",
+    tags: ["Warning"],
   },
 ]
 

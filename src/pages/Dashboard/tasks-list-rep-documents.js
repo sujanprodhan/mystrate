@@ -18,6 +18,7 @@ import TotalSellingProduct from "./total-selling-product"
 import Tasks from "./tasks"
 
 import ReactApexChart from "react-apexcharts"
+import Storage from "../../pages/FileManager/StorageDocuments";
 
 //Import Images
 import images from "../../assets/images"
@@ -40,6 +41,52 @@ const series3 = [
     data: [30, 11, 22, 18, 32, 23, 58, 45, 30, 36, 15, 34],
   },
 ]
+
+const storageOptions = {
+  chart: {
+    height: 150,
+    type: "radialBar",
+    sparkline: {
+      enabled: true,
+    },
+  },
+  colors: ["#556ee6"],
+  plotOptions: {
+    radialBar: {
+      startAngle: -90,
+      endAngle: 90,
+      track: {
+        background: "#e7e7e7",
+        strokeWidth: "97%",
+        margin: 5, // margin is in pixels
+      },
+
+      hollow: {
+        size: "60%",
+      },
+
+      dataLabels: {
+        name: {
+          show: false,
+        },
+        value: {
+          offsetY: -2,
+          fontSize: "16px",
+        },
+      },
+    },
+  },
+  grid: {
+    padding: {
+      top: -10,
+    },
+  },
+  stroke: {
+    dashArray: 3,
+  },
+  labels: ["Storage"],
+}
+
 
 const options3 = {
   chart: {
@@ -98,12 +145,16 @@ const options3 = {
     horizontalAlign: "right",
   },
 }
-
+const storageSeries = [76]
 class TasksListnew extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      filemanager: {
+        options: storageOptions,
+        series: storageSeries,
+      },
       cardreport: {
         options: options,
         series: series,
@@ -166,7 +217,12 @@ class TasksListnew extends Component {
           sort: true,
         },
         {
-          text: "Tags",
+          dataField: "date",
+          text: "Date",
+          sort: true,
+        },
+        {
+          text: "Status",
           dataField: "tags",
           sort: true,
           formatter: (cellContent, user) => (
@@ -174,7 +230,7 @@ class TasksListnew extends Component {
               {map(
                 user.tags,
                 (tag, index) =>
-                  index < 2 && (
+                  index < 1 && (
                     <Link
                       to="#"
                       className="badge badge-soft-primary font-size-11 m-1"
@@ -184,7 +240,7 @@ class TasksListnew extends Component {
                     </Link>
                   )
               )}
-              {size(user.tags) > 2 && (
+              {/* {size(user.tags) > 2 && (
                 <Link
                   to="#"
                   className="badge badge-soft-primary font-size-11 m-1"
@@ -192,7 +248,7 @@ class TasksListnew extends Component {
                 >
                   {size(user.tags) - 1} + more
                 </Link>
-              )}
+              )} */}
             </>
           ),
         },
@@ -208,6 +264,7 @@ class TasksListnew extends Component {
           text: "Action",
           formatter: (cellContent, user) => (
             <div className="d-flex gap-3">
+              <Link className="text-success" to="#"><i className="mdi mdi-cloud-download font-size-18" id="edittooltip"></i></Link>
               <Link className="text-success" to="#"><i className="mdi mdi-pencil font-size-18" id="edittooltip" onClick={() => this.handleUserClick(user)}></i></Link>
               <Link className="text-danger" to="#"><i className="mdi mdi-delete font-size-18" id="deletetooltip" onClick={() => this.handleDeleteUser(user)}></i></Link>
             </div>
@@ -346,8 +403,9 @@ class TasksListnew extends Component {
             <title>Importants file and documents</title>
           </MetaTags>
           <Breadcrumbs breadcrumbItem="Submission List" />
+
           <Row>
-            <Col lg={8}>
+            <Col lg={9}>
               <div class="card">
                 <div class="card-body">
                   <div class="row">
@@ -524,10 +582,11 @@ class TasksListnew extends Component {
 
             </Col>
 
-            <Col lg={4}>
-              
-
-         
+            <Col lg={3}> 
+                   
+             <Storage filemanager={this.state.filemanager} />
+          
+            
             </Col>
           </Row>
 
