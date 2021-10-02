@@ -1,15 +1,15 @@
 import React, { Component } from "react"
 import MetaTags from "react-meta-tags"
 import { Row, Col, Card, CardBody, CardTitle, Container } from "reactstrap"
-
+import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table"
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
-
+import { Link, withRouter } from "react-router-dom"
 //Import Components
-import CardUser from "./card-user"
+import CardUser from "./card-user-company"
 import MiniWidget from "./mini-widget"
-import CardUsernew from "./card-user-rep"
-import CardWelcomenew from "./card-welcome-rep"
+import CardUsernew from "./card-user-rep-company"
+import CardWelcomenew from "./card-welcome-rep-company"
 
 // datatable related plugins
 import BootstrapTable from "react-bootstrap-table-next"
@@ -22,32 +22,217 @@ import paginationFactory, {
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit"
 
 import "../Tables/datatables.scss"
-
+import CardWelcome from "./card-welcome-company"
+import MiniWidgetnew from "./mini-widget-rep"
 // Table data
 const products = [
-  {id: 1, projectName: "Max Resedency Project", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 2, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 3, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 4, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 5, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 6, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 7, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 8, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 9, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 10, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 11, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 12, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 13, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 14, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 15, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 16, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 17, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 18, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 19, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 20, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 21, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 22, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"},
-  {id: 23, projectName: "Max Resedency 2", taskIssue: "14",cobIssue: "5", attendanceIssue: "23", financialIssue: "good",status: "-"}
+  {
+    id: 1,
+    projectName: "Max Resedency Project",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 2,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 3,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 4,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 5,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 6,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 7,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 8,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 9,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 10,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 11,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 12,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 13,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 14,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 15,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 16,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 17,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 18,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 19,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 20,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 21,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 22,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
+  {
+    id: 23,
+    projectName: "Max Resedency 2",
+    taskIssue: "14",
+    cobIssue: "5",
+    attendanceIssue: "23",
+    financialIssue: "good",
+    status: "-",
+  },
 ]
 
 //Bitcoin Chart
@@ -123,57 +308,57 @@ class Dashboard extends Component {
       reports: [
         {
           icon: "bx bx-copy-alt",
-          title: "Task resolved today",
-          value: "25",
+          title: "Pending Tasks",
+          value: "89 pendings",
           badgeValue: "+ 0.2%",
           color: "success",
-          desc: "From previous period",
+          desc: "From 15 projects",
         },
         {
           icon: "bx bx-archive-in",
-          title: "Complaint resolved",
-          value: "5",
+          title: "Pending Complaints",
+          value: "150",
           badgeValue: "+ 0.2%",
           color: "success",
-          desc: "From previous period",
+          desc: "From 12 projects",
         },
         {
           icon: "bx bx-purchase-tag-alt",
-          title: "incident reported",
-          value: "1",
+          title: "Financial Report Submission",
+          value: "13 missed",
           badgeValue: "0%",
           color: "warning",
-          desc: "From previous period",
+          desc: "From 8 projects",
         },
       ],
       reportsnew: [
         {
-          title: "cleaner",
+          title: "Pending AGM",
           icon: "mdi mdi-bitcoin",
           color: "warning",
-          value: "10 Staff",
+          value: "8 Issues",
           arrow: "mdi-arrow-up text-success",
-          desc: "0 Absent",
+          desc: "From 8 Projects",
           series: series1,
           options: options1,
         },
         {
-          title: "security day",
+          title: "Pending Monthly Meeting",
           icon: "mdi mdi-ethereum",
           color: "primary",
           arrow: "mdi-arrow-down text-danger",
-          value: "10 Staff",
-          desc: "1 Absent",
+          value: "150 Pending",
+          desc: "From 12 Projects",
           series: series2,
           options: options2,
         },
         {
-          title: "Security Night",
+          title: "Yearly Auditted Report",
           icon: "mdi mdi-litecoin",
           color: "info",
           arrow: "mdi-arrow-up text-success",
-          value: "12 Staff",
-          desc: "3 Absent",
+          value: "8 Pending ",
+          desc: "From 6 Projects",
           series: series3,
           options: options3,
         },
@@ -184,9 +369,9 @@ class Dashboard extends Component {
   render() {
     const rowEvents = {
       onClick: (e, row, rowIndex) => {
-    //    alert(rowIndex);
-      }
-    };
+        //    alert(rowIndex);
+      },
+    }
     const columns = [
       {
         dataField: "projectName",
@@ -254,11 +439,11 @@ class Dashboard extends Component {
       <React.Fragment>
         <div className="page-content">
           <MetaTags>
-            <title> Dashboard </title>
+            <title> Company Dashboard </title>
           </MetaTags>
           <Container fluid>
             {/* Render Breadcrumb */}
-            <Breadcrumbs breadcrumbItem="Dashboard" />
+            <Breadcrumbs breadcrumbItem="Company Dashboard" title="Dashboard" />
 
             {/* Card User */}
             <CardUser />
@@ -278,34 +463,210 @@ class Dashboard extends Component {
               </Col>
             </Row>
 
-            {/* <Row>
-           
+            <Row>
               <CardWelcome />
 
               <Col xl="8">
                 <Row>
-      
                   <MiniWidgetnew reportsnew={this.state.reportsnew} />
                 </Row>
               </Col>
             </Row>
 
+            <Card>
+              <CardBody>
+                <CardTitle className="h4"> Project Overview </CardTitle>
+                <div className="table-rep-plugin">
+                  <div
+                    className="table-responsive mb-0"
+                    data-pattern="priority-columns"
+                  >
+                    <Table
+                      id="tech-companies-1"
+                      className="table table-striped table-bordered table-hovered"
+                    >
+                      <Thead>
+                        <Tr>
+                          <Th>
+                            <input type="checkbox" />
+                          </Th>
+                          <Th>ID</Th>
+                          <Th data-priority="1">Project Name</Th>
+                          <Th data-priority="3">Task Issue</Th>
+                          <Th data-priority="1">COB Issue</Th>
+                          <Th data-priority="3">Attendance Issue</Th>
+                          <Th data-priority="3">Financial Issue</Th>
+                          <Th data-priority="6">Status</Th>
+                          <Th data-priority="6">View Details</Th>
+                        </Tr>
+                      </Thead>
+                      <Tbody>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>1</Td>
+                          <Td>Max Residency Ampang</Td>
+                          <Td>15</Td>
+                          <Td>5</Td>
+                          <Td>15</Td>
+                          <Td>5</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-success badge badge-success">
+                              Good
+                            </span>
+                          </Td>
+                          <td>
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>2</Td>
+                          <Td>Trifoly Residency</Td>
+                          <Td>13</Td>
+                          <Td>0</Td>
+                          <Td>0</Td>
+                          <Td>0</Td>
 
+                          <Td>
+                            {" "}
+                            <span class="bg-warning badge badge-success">
+                              Urgent
+                            </span>
+                          </Td>
+                          <td>
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
+                          </td>
+                        </Tr>
 
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>3</Td>
+                          <Td>Ukey Perdana Ampang </Td>
+                          <Td>8</Td>
+                          <Td>1</Td>
+                          <Td>0</Td>
+                          <Td>1</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-success badge badge-success">
+                              Good
+                            </span>
+                          </Td>
+                          <td>
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
+                          </td>
+                        </Tr>
 
-              <TasksListnew /> */}
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>4</Td>
+                          <Td>Highland Resort</Td>
+                          <Td>15</Td>
+                          <Td>1</Td>
+                          <Td>15</Td>
+                          <Td>1</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-success badge badge-success">
+                              Good
+                            </span>
+                          </Td>
+                          <td>
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>5</Td>
+                          <Td>Perdana Exclusive Codno</Td>
+                          <Td>9</Td>
+                          <Td>8</Td>
+                          <Td>15</Td>
+                          <Td>8</Td>
+                          <Td>
+                            <span class="bg-warning badge badge-success">
+                              Ungent
+                            </span>
+                          </Td>
+                          <td>
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>6</Td>
+                          <Td>The Tree KLCC</Td>
+                          <Td>15</Td>
+                          <Td>5</Td>
+                          <Td>15</Td>
+                          <Td>5</Td>
+                          <Td>                            
+                            <span class="bg-success badge badge-success">
+                              Good
+                            </span>
+                          </Td>
+                          <td>
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
+                          </td>
+                        </Tr>
+                        
+                      </Tbody>
+                    </Table>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
 
-            <Row>
+            {/* <TasksListnew />  */}
+
+            {/* <Row>
               <Col className="col-12">
                 <Card>
                   <CardBody>
-                    {/* <CardTitle className="h4">Default Datatable </CardTitle>
-                    <p className="card-title-desc">
-                      react-bootstrap-table-next plugin has most features enabled by default,
-                      so all you need to do to use it with your own tables is to
-                      call the construction function:{" "}
-                      <code>react-bootstrap-table-next </code>.
-                    </p> */}
+     
                     <PaginationProvider
                       pagination={paginationFactory(pageOptions)}
                       keyField="id"
@@ -378,7 +739,7 @@ class Dashboard extends Component {
                   </CardBody>
                 </Card>
               </Col>
-            </Row>
+            </Row> */}
           </Container>
         </div>
       </React.Fragment>

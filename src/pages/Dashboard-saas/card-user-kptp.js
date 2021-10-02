@@ -12,7 +12,7 @@ import {
 } from "reactstrap"
 
 //Import Images
-import avatar1 from "../../assets/images/users/avatar-1.jpg"
+import avatar1 from "../../assets/images/users/user13.jpeg"
 
 class CardUser extends Component {
   constructor(props) {
@@ -50,8 +50,8 @@ class CardUser extends Component {
                       <Media className="align-self-center" body>
                         <div className="text-muted">
                           <p className="mb-2">Welcome to Mystrata</p>
-                          <h5 className="mb-1">Lemonade Management Sdn Bhd</h5>
-                          <p className="mb-0">Committee Member</p>
+                          <h5 className="mb-1">KPTP</h5>
+                          <p className="mb-0">Kementerian Perumahan Dan Kerajaan Tempatan</p>
                         </div>
                       </Media>
                     </Media>
@@ -63,25 +63,25 @@ class CardUser extends Component {
                         <Col xs="4">
                           <div>
                             <p className="text-muted text-truncate mb-2">
-                              No of Tower
+                             Company
                             </p>
-                            <h5 className="mb-0">6</h5>
+                            <h5 className="mb-0">502</h5>
                           </div>
                         </Col>
                         <Col xs="4">
                           <div>
                             <p className="text-muted text-truncate mb-2">
-                              Staff
+                              Building
                             </p>
-                            <h5 className="mb-0">40</h5>
+                            <h5 className="mb-0">26879</h5>
                           </div>
                         </Col>
                         <Col xs="4">
                           <div>
                             <p className="text-muted text-truncate mb-2">
-                              Areas
+                              COB
                             </p>
-                            <h5 className="mb-0">180</h5>
+                            <h5 className="mb-0">36</h5>
                           </div>
                         </Col>
                       </Row>
@@ -100,7 +100,7 @@ class CardUser extends Component {
                           className="btn btn-primary"
                         >
                           <i className="bx bxs-cog align-middle me-1"></i>{" "}
-                          Setting
+                          Notice & Updates
                         </DropdownToggle>
                         <DropdownMenu className="dropdown-menu-end">
                           <DropdownItem href="#">Action</DropdownItem>

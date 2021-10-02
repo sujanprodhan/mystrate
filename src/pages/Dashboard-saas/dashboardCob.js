@@ -1,16 +1,17 @@
 import React, { Component } from "react"
 import MetaTags from "react-meta-tags"
 import { Row, Col, Card, CardBody, CardTitle, Container } from "reactstrap"
-
+import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table"
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
-
+import { Link, withRouter } from "react-router-dom"
 //Import Components
-import CardUser from "./card-user"
+import CardUser from "./card-user-cob"
 import MiniWidget from "./mini-widget"
-import CardUsernew from "./card-user-rep"
-import CardWelcomenew from "./card-welcome-rep"
-
+import CardUsernew from "./card-user-rep-cob"
+import CardWelcomenew from "./card-welcome-rep-cob"
+import CardWelcome from './card-welcome-cob';
+import MiniWidgetnew from "./mini-widget-rep"
 // datatable related plugins
 import BootstrapTable from "react-bootstrap-table-next"
 import paginationFactory, {
@@ -123,57 +124,57 @@ class Dashboard extends Component {
       reports: [
         {
           icon: "bx bx-copy-alt",
-          title: "Task resolved today",
-          value: "25",
+          title: "Application / Write in",
+          value: "56 Pending",
           badgeValue: "+ 0.2%",
           color: "success",
-          desc: "From previous period",
+          desc: "From 50 Projects",
         },
         {
           icon: "bx bx-archive-in",
-          title: "Complaint resolved",
-          value: "5",
+          title: "Compalints",
+          value: "98941 pending",
           badgeValue: "+ 0.2%",
           color: "success",
-          desc: "From previous period",
+          desc: "From 290 Projects ",
         },
         {
           icon: "bx bx-purchase-tag-alt",
-          title: "incident reported",
-          value: "1",
+          title: "Financial Report Submission",
+          value: "985 Missed",
           badgeValue: "0%",
           color: "warning",
-          desc: "From previous period",
+          desc: "From 150 Projects",
         },
       ],
       reportsnew: [
         {
-          title: "cleaner",
+          title: "Pending AGM",
           icon: "mdi mdi-bitcoin",
           color: "warning",
-          value: "10 Staff",
+          value: "136 issue found",
           arrow: "mdi-arrow-up text-success",
-          desc: "0 Absent",
+          desc: "From 81 Projects",
           series: series1,
           options: options1,
         },
         {
-          title: "security day",
+          title: "Pending monthly meeting",
           icon: "mdi mdi-ethereum",
           color: "primary",
           arrow: "mdi-arrow-down text-danger",
-          value: "10 Staff",
-          desc: "1 Absent",
+          value: "86 Missed",
+          desc: "From 49 Projects",
           series: series2,
           options: options2,
         },
         {
-          title: "Security Night",
+          title: "Yearly Audited Report",
           icon: "mdi mdi-litecoin",
           color: "info",
           arrow: "mdi-arrow-up text-success",
-          value: "12 Staff",
-          desc: "3 Absent",
+          value: "101 Pending",
+          desc: "From 198 Projects",
           series: series3,
           options: options3,
         },
@@ -258,7 +259,7 @@ class Dashboard extends Component {
           </MetaTags>
           <Container fluid>
             {/* Render Breadcrumb */}
-            <Breadcrumbs breadcrumbItem="Dashboard" />
+            <Breadcrumbs breadcrumbItem="COB Dashboard" title="Dashboard" />
 
             {/* Card User */}
             <CardUser />
@@ -278,107 +279,204 @@ class Dashboard extends Component {
               </Col>
             </Row>
 
-            {/* <Row>
-           
+       
+            <Row>           
               <CardWelcome />
-
               <Col xl="8">
-                <Row>
-      
+                <Row>      
                   <MiniWidgetnew reportsnew={this.state.reportsnew} />
                 </Row>
               </Col>
             </Row>
+              {/* <TasksListnew />  */}
 
-
-
-
-              <TasksListnew /> */}
-
-            <Row>
-              <Col className="col-12">
-                <Card>
-                  <CardBody>
-                    {/* <CardTitle className="h4">Default Datatable </CardTitle>
-                    <p className="card-title-desc">
-                      react-bootstrap-table-next plugin has most features enabled by default,
-                      so all you need to do to use it with your own tables is to
-                      call the construction function:{" "}
-                      <code>react-bootstrap-table-next </code>.
-                    </p> */}
-                    <PaginationProvider
-                      pagination={paginationFactory(pageOptions)}
-                      keyField="id"
-                      columns={columns}
-                      data={this.state.productData}
+              <Card>
+              <CardBody>
+                <CardTitle className="h4"> Project Overview </CardTitle>
+                <div className="table-rep-plugin">
+                  <div
+                    className="table-responsive mb-0"
+                    data-pattern="priority-columns"
+                  >
+                    <Table
+                      id="tech-companies-1"
+                      className="table table-striped table-bordered table-hovered"
                     >
-                      {({ paginationProps, paginationTableProps }) => (
-                        <ToolkitProvider
-                          keyField="id"
-                          columns={columns}
-                          data={this.state.productData}
-                          search
-                        >
-                          {toolkitProps => (
-                            <React.Fragment>
-                              <Row className="mb-2">
-                                <Col md="4">
-                                  <div className="search-box me-2 mb-2 d-inline-block">
-                                    <div className="position-relative">
-                                      <SearchBar
-                                        {...toolkitProps.searchProps}
-                                      />
-                                      <i className="bx bx-search-alt search-icon" />
-                                    </div>
-                                  </div>
-                                </Col>
-                              </Row>
+                      <Thead>
+                        <Tr>
+                          <Th>
+                            <input type="checkbox" />
+                          </Th>
+                          <Th>ID</Th>
+                          <Th data-priority="1">Add Management Company</Th>
+                          <Th data-priority="3">Task Issue</Th>
+                          <Th data-priority="1">COB Issue</Th>
+                          <Th data-priority="3">Attendance Issue</Th>
+                          <Th data-priority="3">Financial Issue</Th>
+                          <Th data-priority="6">Status</Th>
+                          <Th data-priority="6">View Details</Th>
+                        </Tr>
+                      </Thead>
+                      <Tbody>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>1</Td>
+                          <Td>Lemond Management company sdn bhd</Td>
+                          <Td>15</Td>
+                          <Td>5</Td>
+                          <Td>15</Td>
+                          <Td>5</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-success badge badge-success">
+                              JMB
+                            </span>
+                          </Td>
+                          <td>
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>2</Td>
+                          <Td>Knightfrank sdn bhd</Td>
+                          <Td>13</Td>
+                          <Td>0</Td>
+                          <Td>0</Td>
+                          <Td>0</Td>
 
-                              <Row>
-                                <Col xl="12">
-                                  <div className="table-responsive">
-                                    <BootstrapTable
-                                      keyField={"id"}
-                                      responsive
-                                      bordered={false}
-                                      striped={false}
-                                      defaultSorted={defaultSorted}
-                                      selectRow={selectRow}
-                                      rowEvents={ rowEvents }
-                                      classes={
-                                        "table align-middle table-nowrap"
-                                      }
-                                      headerWrapperClasses={"thead-light"}
-                                      {...toolkitProps.baseProps}
-                                      {...paginationTableProps}
-                                    />
-                                  </div>
-                                </Col>
-                              </Row>
+                          <Td>
+                            {" "}
+                            <span class="bg-warning badge badge-success">
+                              MC
+                            </span>
+                          </Td>
+                          <td>
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
+                          </td>
+                        </Tr>
 
-                              <Row className="align-items-md-center mt-30">
-                                <Col className="inner-custom-pagination d-flex">
-                                  <div className="d-inline">
-                                    <SizePerPageDropdownStandalone
-                                      {...paginationProps}
-                                    />
-                                  </div>
-                                  <div className="text-md-right ms-auto">
-                                    <PaginationListStandalone
-                                      {...paginationProps}
-                                    />
-                                  </div>
-                                </Col>
-                              </Row>
-                            </React.Fragment>
-                          )}
-                        </ToolkitProvider>
-                      )}
-                    </PaginationProvider>
-                  </CardBody>
-                </Card>
-              </Col>
-            </Row>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>3</Td>
+                          <Td>Knightfrank sdn bhd </Td>
+                          <Td>8</Td>
+                          <Td>1</Td>
+                          <Td>0</Td>
+                          <Td>1</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-success badge badge-success">
+                              JMB
+                            </span>
+                          </Td>
+                          <td>
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
+                          </td>
+                        </Tr>
+
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>4</Td>
+                          <Td>Total PM sdn bhd</Td>
+                          <Td>15</Td>
+                          <Td>1</Td>
+                          <Td>15</Td>
+                          <Td>1</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-success badge badge-success">
+                              JBM
+                            </span>
+                          </Td>
+                          <td>
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>5</Td>
+                          <Td>Knightfrank sdn bhd</Td>
+                          <Td>9</Td>
+                          <Td>8</Td>
+                          <Td>15</Td>
+                          <Td>8</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-warning badge badge-success">
+                              MC
+                            </span>
+                          </Td>
+                          <td>
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
+                          </td>
+                        </Tr>
+                        <Tr>
+                          <Td>
+                            <input type="checkbox" />
+                          </Td>
+                          <Td>6</Td>
+                          <Td>Lemond Management company sdn bhd</Td>
+                          <Td>15</Td>
+                          <Td>5</Td>
+                          <Td>15</Td>
+                          <Td>5</Td>
+                          <Td>
+                            {" "}
+                            <span class="bg-success badge badge-success">
+                              JMB
+                            </span>
+                          </Td>
+                          <td>
+                          <Link
+                              to=""
+                              className="btn btn-primary btn-rounded btn-sm"
+                            >
+                              View Details
+                            </Link>
+                          </td>
+                        </Tr>
+                      </Tbody>
+                    </Table>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
           </Container>
         </div>
       </React.Fragment>

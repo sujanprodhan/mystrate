@@ -73,6 +73,7 @@ import TwostepVerification2 from "../pages/AuthenticationInner/auth-two-step-ver
 
 // Dashboard
 import Dashboard from "../pages/Dashboard/index"
+import DocumentsAndFiles from "../pages/Dashboard/documents-and-files"
 import DashboardSaas from "../pages/Dashboard-saas/index"
 import DashboardCompany from "../pages/Dashboard-saas/dashboardCompany"
 import DashboardKptp from "../pages/Dashboard-saas/dashboarbdKptp"
@@ -82,6 +83,9 @@ import DashboardBlog from "../pages/Dashboard-blog/index"
 
 //Crypto
 import CryptoWallet from "../pages/Crypto/CryptoWallet/crypto-wallet"
+
+import DailyCollectionReport from "../pages/Crypto/CryptoWallet/dailyCollectionReport"
+
 import CryptoBuySell from "../pages/Crypto/crypto-buy-sell"
 import CryptoExchange from "../pages/Crypto/crypto-exchange"
 import CryptoLending from "../pages/Crypto/crypto-lending"
@@ -91,6 +95,7 @@ import CryptoIcoLanding from "../pages/Crypto/CryptoIcoLanding/index"
 
 // Charts
 import ChartApex from "../pages/Charts/Apexcharts"
+import DebtorCollection from "../pages/Charts/DebtorCollection"
 import ChartistChart from "../pages/Charts/ChartistChart"
 import ChartjsChart from "../pages/Charts/ChartjsChart"
 import EChart from "../pages/Charts/EChart"
@@ -167,6 +172,7 @@ import Pages500 from "../pages/Utility/pages-500"
 
 //Extra Pages
 import AttendencePage from "../pages/Attendance/attendance-page"
+import VisitorManagementNew from "../pages/Attendance/visitor-management";
 import Stafftracking from "../pages/Staff-tracking/stafftracking"
 import Complaints from "../pages/Complaints/complaints"
 import Taskpage from "../pages/Task-page/tasks-page"
@@ -227,6 +233,8 @@ const authProtectedRoutes = [
   // { path: "/dashboard-blog", component: DashboardBlog },
 
   //Crypto
+  { path: "/daily-collection-report", component: DailyCollectionReport },
+
   { path: "/crypto-wallet", component: CryptoWallet },
   { path: "/crypto-buy-sell", component: CryptoBuySell },
   { path: "/crypto-exchange", component: CryptoExchange },
@@ -244,7 +252,7 @@ const authProtectedRoutes = [
   { path: "/incidentreport", component: Incidentreport },
   { path: "/cleaningreport", component: Cleaningreport },
   { path: "/debtcollection", component: Debtcollection },
-  { path: "/visitormanagement", component: Visitormanagement },
+  { path: "/visitormanagement", component: VisitorManagementNew},
   { path: "/accesscards", component: Accesscards },
   { path: "/accountingreport", component: Accountingreport },
   { path: "/settingpage", component: Settingpage },
@@ -252,7 +260,8 @@ const authProtectedRoutes = [
   { path: "/assetstagging", component: Assetstagging },
   { path: "/buildinginformation", component: Buildinginformation },
   { path: "/committeeinfo", component: Committeeinformation },
-  { path: "/importantfiles", component: Importantfiles },
+ // { path: "/importantfiles", component: Importantfiles },
+  { path: "/importantfiles", component: DocumentsAndFiles },
   { path: "/serviceprovidercontract", component: Servicecontract },
 
   { path: "/IndividualReport", component: IndividualReport },
@@ -336,6 +345,7 @@ const authProtectedRoutes = [
   { path: "/blog-details", component: BlogDetails },
 
   //Charts
+  { path: "/debtor-collection", component: DebtorCollection },
   { path: "/apex-charts", component: ChartApex },
   { path: "/chartist-charts", component: ChartistChart },
   { path: "/chartjs-charts", component: ChartjsChart },

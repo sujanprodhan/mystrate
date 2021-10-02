@@ -12,7 +12,7 @@ import {
 } from "reactstrap"
 
 //Import Images
-import avatar1 from "../../assets/images/users/avatar-1.jpg"
+import avatar1 from "../../assets/images/users/user11.jpg"
 
 class CardUser extends Component {
   constructor(props) {
@@ -51,7 +51,7 @@ class CardUser extends Component {
                         <div className="text-muted">
                           <p className="mb-2">Welcome to Mystrata</p>
                           <h5 className="mb-1">Lemonade Management Sdn Bhd</h5>
-                          <p className="mb-0">Committee Member</p>
+                          <p className="mb-0">PM 1057</p>
                         </div>
                       </Media>
                     </Media>
@@ -63,9 +63,9 @@ class CardUser extends Component {
                         <Col xs="4">
                           <div>
                             <p className="text-muted text-truncate mb-2">
-                              No of Tower
+                             Projects
                             </p>
-                            <h5 className="mb-0">6</h5>
+                            <h5 className="mb-0">16</h5>
                           </div>
                         </Col>
                         <Col xs="4">
@@ -79,9 +79,9 @@ class CardUser extends Component {
                         <Col xs="4">
                           <div>
                             <p className="text-muted text-truncate mb-2">
-                              Areas
+                              Redflags
                             </p>
-                            <h5 className="mb-0">180</h5>
+                            <h5 className="mb-0">24</h5>
                           </div>
                         </Col>
                       </Row>
@@ -100,7 +100,7 @@ class CardUser extends Component {
                           className="btn btn-primary"
                         >
                           <i className="bx bxs-cog align-middle me-1"></i>{" "}
-                          Setting
+                          Notice & Upgrade
                         </DropdownToggle>
                         <DropdownMenu className="dropdown-menu-end">
                           <DropdownItem href="#">Action</DropdownItem>

@@ -59,7 +59,7 @@ class NotificationDropdown extends Component {
             </div>
 
             <SimpleBar style={{ height: "230px" }}>
-              <Link to="" className="text-reset notification-item">
+              <Link to="/dashboard-company" className="text-reset notification-item">
                 <div className="media">
                   <div className="avatar-xs me-3">
                     <span className="avatar-title bg-primary rounded-circle font-size-16">
@@ -84,7 +84,7 @@ class NotificationDropdown extends Component {
                   </div>
                 </div>
               </Link>
-              <Link to="" className="text-reset notification-item">
+              <Link to="/dashboard-kptp" className="text-reset notification-item">
                 <div className="media">
                   <img
                     src={avatar3}
@@ -106,7 +106,7 @@ class NotificationDropdown extends Component {
                   </div>
                 </div>
               </Link>
-              <Link to="" className="text-reset notification-item">
+              <Link to="/dashboard-cob" className="text-reset notification-item">
                 <div className="media">
                   <div className="avatar-xs me-3">
                     <span className="avatar-title bg-success rounded-circle font-size-16">

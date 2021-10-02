@@ -21,17 +21,17 @@ import {
 } from "reactstrap"
 
 import { AvForm, AvField } from "availity-reactstrap-validation"
-import UiLightboxCommon from "pages/Ui/LightBoxCommon"
+
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
+
+import { map } from "lodash"
 
 import company1 from "../../assets/images/img-1.png"
 import company2 from "../../assets/images/img-2.png"
 import company3 from "../../assets/images/img-3.png"
 import company4 from "../../assets/images/img-4.png"
 import company5 from "../../assets/images/img-5.png"
-
-import { map } from "lodash"
 
 //Import Image
 import images from "assets/images"
@@ -42,6 +42,8 @@ import {
   updateProject,
   deleteProject,
 } from "../../store/projects/actions"
+
+import UiLightboxCommon from "pages/Ui/LightBoxCommon"
 
 class ProjectsList extends Component {
   constructor(props) {
@@ -149,8 +151,9 @@ class ProjectsList extends Component {
     return (
       <React.Fragment>
         <div className="">
+          <MetaTags></MetaTags>
           {/* Render Breadcrumbs */}
-          <Breadcrumbs breadcrumbItem="Service Provider List" />
+          <Breadcrumbs breadcrumbItem="Visitor Details" />
 
           <Row>
             <Col lg="12">
@@ -159,88 +162,26 @@ class ProjectsList extends Component {
                   <Table className="project-list-table table-nowrap align-middle table-borderless">
                     <thead>
                       <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Report</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Time</th>
-                        <th scope="col">Service Provider</th>
-
-                        <th scope="col">Service Image</th>
-                        <th scope="col">Details</th>
+                        <th scope="col">
+                          No.
+                        </th>
+                        <th scope="col">Person Name</th>
+                        <th scope="col">Check in time </th>
+                        <th scope="col">Check out time</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Unit No</th>
+                        <th scope="col">Phone No</th>
+                        <th scope="col">Vehicle No</th>
                       </tr>
 
                       <tr>
-                        <th scope="col">1</th>
+                        <th scope="col">
+                          1
+                        </th>
                         <td>
                           <h5 class="text-truncate font-size-14">
-                            <Link
-                              class="text-dark"
-                              to="/IndividualServiceProviderlog"
-                            >
-                              Report text here
-                            </Link>
-                          </h5>
-                          <p class="text-muted mb-0">
-                            It will be as simple as Occidental
-                          </p>
-                        </td>
-                        <td>
-                          <th scope="col">13 November 2021</th>
-                        </td>
-                        <td>
-                          <th scope="col">9:00 AM</th>
-                        </td>
-                        <td>
-                          <th scope="col">
-                            <span class="bg-success badge badge-success">
-                              Cleaner
-                            </span>
-                          </th>
-                        </td>
-
-                        <td class="">
-                          <div class="avatar-group">
-                            <div class="avatar-group-item">
-                              <a href="#">
-                                <UiLightboxCommon
-                                  lightImage={[
-                                    "/static/media/avatar-4.b23e41d9.jpg",
-                                  ]}
-                                />
-                              </a>
-                            </div>
-                            <div class="avatar-group-item">
-                              <a href="#">
-                                <UiLightboxCommon
-                                  lightImage={[
-                                    "/static/media/avatar-5.a5c59cee.jpg",
-                                  ]}
-                                />
-                              </a>
-                            </div>
-                          </div>
-                        </td>
-
-                        <td class="d-grid gap-2">
-                          <Link
-                            class="btn btn-primary"
-                            to="/IndividualServiceProviderlog"
-                            role="button"
-                          >
-                            View
-                          </Link>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <th scope="col">2</th>
-                        <td>
-                          <h5 class="text-truncate font-size-14">
-                            <a
-                              class="text-dark"
-                              href="/IndividualServiceProviderlog"
-                            >
-                              Report text here
+                            <a class="text-dark" href="/projects-overview/0">
+                              John
                             </a>
                           </h5>
                           <p class="text-muted mb-0">
@@ -248,62 +189,40 @@ class ProjectsList extends Component {
                           </p>
                         </td>
                         <td>
-                          <th scope="col">13 November 2021</th>
+                          <th scope="col">9:00 AM</th>
                         </td>
                         <td>
                           <th scope="col">9:00 AM</th>
                         </td>
                         <td>
                           <th scope="col">
-                            <span class="bg-success badge badge-success">
-                              Security
-                            </span>
+                            <span class="bg-danger badge badge-success">
+                              Delivery
+                            </span>                           
+                          </th>
+                        </td>
+                        <td>
+                          <th scope="col" class="text-danger">
+                           C-01-02
                           </th>
                         </td>
 
                         <td class="">
-                          <div class="avatar-group">
-                            <div class="avatar-group-item">
-                              <a href="#">
-                                <UiLightboxCommon
-                                  lightImage={[
-                                    "/static/media/avatar-4.b23e41d9.jpg",
-                                  ]}
-                                />
-                              </a>
-                            </div>
-                            <div class="avatar-group-item">
-                              <a href="#">
-                                <UiLightboxCommon
-                                  lightImage={[
-                                    "/static/media/avatar-5.a5c59cee.jpg",
-                                  ]}
-                                />
-                              </a>
-                            </div>
-                          </div>
+                                +8801740095212
                         </td>
-
                         <td class="d-grid gap-2">
-                          <Link
-                            class="btn btn-primary"
-                            to="/IndividualServiceProviderlog"
-                            role="button"
-                          >
-                            View
-                          </Link>
+                          9685423
                         </td>
                       </tr>
 
                       <tr>
-                        <th scope="col">3</th>
+                        <th scope="col">
+                         2
+                        </th>
                         <td>
                           <h5 class="text-truncate font-size-14">
-                            <a
-                              class="text-dark"
-                              href="/IndividualServiceProviderlog"
-                            >
-                              Report text here
+                            <a class="text-dark" href="/projects-overview/0">
+                              Andrew
                             </a>
                           </h5>
                           <p class="text-muted mb-0">
@@ -311,61 +230,44 @@ class ProjectsList extends Component {
                           </p>
                         </td>
                         <td>
-                          <th scope="col">13 November 2021</th>
+                          <th scope="col">9:00 AM</th>
                         </td>
                         <td>
                           <th scope="col">9:00 AM</th>
                         </td>
                         <td>
                           <th scope="col">
-                            <span class="bg-success badge badge-success">
-                              Lift
+                            <span class="bg-danger badge badge-warning">
+                              Pickup
                             </span>
+                          </th>
+                        </td>
+                        <td>
+                          <th scope="col" className="text-dark">
+                          A-01-25
                           </th>
                         </td>
 
                         <td class="">
-                          <div class="avatar-group">
-                            <div class="avatar-group-item">
-                              <a href="#">
-                                <UiLightboxCommon
-                                  lightImage={[
-                                    "/static/media/avatar-4.b23e41d9.jpg",
-                                  ]}
-                                />
-                              </a>
-                            </div>
-                            <div class="avatar-group-item">
-                              <a href="#">
-                                <UiLightboxCommon
-                                  lightImage={[
-                                    "/static/media/avatar-5.a5c59cee.jpg",
-                                  ]}
-                                />
-                              </a>
-                            </div>
-                          </div>
+                             +8801608203348
                         </td>
+
                         <td class="d-grid gap-2">
-                          <Link
-                            class="btn btn-primary"
-                            to="/IndividualServiceProviderlog"
-                            role="button"
-                          >
+                          {/* <Link to="/stafftracking" className="btn btn-primary">
                             View
-                          </Link>
+                          </Link> */}
+                          6986544
                         </td>
                       </tr>
 
                       <tr>
-                        <th scope="col">4</th>
+                        <th scope="col">
+                         3
+                        </th>
                         <td>
                           <h5 class="text-truncate font-size-14">
-                            <a
-                              class="text-dark"
-                              href="/IndividualServiceProviderlog"
-                            >
-                              Report text here
+                            <a class="text-dark" href="/projects-overview/0">
+                              Smith
                             </a>
                           </h5>
                           <p class="text-muted mb-0">
@@ -373,50 +275,115 @@ class ProjectsList extends Component {
                           </p>
                         </td>
                         <td>
-                          <th scope="col">13 November 2021</th>
+                          <th scope="col">9:00 AM</th>
                         </td>
                         <td>
                           <th scope="col">9:00 AM</th>
                         </td>
                         <td>
                           <th scope="col">
-                            <span class="bg-warning badge badge-success">
-                              Security
-                            </span>
+                           
+                            <span class="bg-success badge badge-success">
+                            Renovation
+                            </span>{" "}
+                          </th>
+                        </td>
+                        <td>
+                          <th scope="col" class="text-danger">
+                            A-01-02
                           </th>
                         </td>
 
                         <td class="">
-                          <div class="avatar-group">
-                            <div class="avatar-group-item">
-                              <a href="#">
-                                <UiLightboxCommon
-                                  lightImage={[
-                                    "/static/media/avatar-4.b23e41d9.jpg",
-                                  ]}
-                                />
-                              </a>
-                            </div>
-                            <div class="avatar-group-item">
-                              <a href="#">
-                                <UiLightboxCommon
-                                  lightImage={[
-                                    "/static/media/avatar-5.a5c59cee.jpg",
-                                  ]}
-                                />
-                              </a>
-                            </div>
-                          </div>
+                        +8801608203348
                         </td>
 
                         <td class="d-grid gap-2">
-                          <Link
-                            class="btn btn-primary"
-                            to="/IndividualServiceProviderlog"
-                            role="button"
-                          >
-                            View
-                          </Link>
+                          659854
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="col">
+                         4
+                        </th>
+                        <td>
+                          <h5 class="text-truncate font-size-14">
+                            <a class="text-dark" href="/projects-overview/0">
+                              Max
+                            </a>
+                          </h5>
+                          <p class="text-muted mb-0">
+                            It will be as simple as Occidental
+                          </p>
+                        </td>
+                        <td>
+                          <th scope="col">9:00 AM</th>
+                        </td>
+                        <td>
+                          <th scope="col">9:00 AM</th>
+                        </td>
+                        <td>
+                          <th scope="col">
+                            <span class="bg-danger badge badge-warning">
+                              Mover
+                            </span>
+                          </th>
+                        </td>
+                        <td>
+                          <th scope="col" class="text-danger">
+                           C-14-21
+                          </th>
+                        </td>
+
+                        <td class="">
+                        +8801740095212
+                        </td>
+
+                        <td class="d-grid gap-2">
+                          365241
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th scope="col">
+                        5
+                        </th>
+                        <td>
+                          <h5 class="text-truncate font-size-14">
+                            <a class="text-dark" href="/projects-overview/0">
+                              Lorren
+                            </a>
+                          </h5>
+                          <p class="text-muted mb-0">
+                            It will be as simple as Occidental
+                          </p>
+                        </td>
+                        <td>
+                          <th scope="col">9:00 AM</th>
+                        </td>
+                        <td>
+                          <th scope="col">9:00 AM</th>
+                        </td>
+                        <td>
+                          <th scope="col">
+                            <span class="bg-success badge badge-success">
+                              DropOff
+                            </span>
+                          </th>
+                        </td>
+                        <td>
+                          <th scope="col" class="text-danger">
+                           Z-01-01
+                          </th>
+                        </td>
+
+                        <td class="">
+                        +8801740095212
+                        </td>
+
+                        <td class="d-grid gap-2">
+                          236512
                         </td>
                       </tr>
                     </thead>

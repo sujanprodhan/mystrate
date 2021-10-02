@@ -172,12 +172,12 @@ class SidebarContent extends Component {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <Link to="/debtcollection" className="">
                   <i className='bx bx-credit-card-alt'></i>
-                  <span>{this.props.t("Debt Collection Summary")}</span>
+                  <span>{this.props.t("Debtor & Collection")}</span>
                 </Link>
-              </li> 
+              </li>  */}
 
 
               
