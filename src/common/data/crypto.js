@@ -7,23 +7,23 @@ const wallet = {
   availableBalance: "$ 9148.23",
   lastMonthDifference: "+ $ 248.35",
   lastMonthDifferencePercent: "+ 1.3 %",
-  send: "$ 654.42",
-  receive: "$ 1054.32",
-  withdraw: "$ 824.34",
+  send: "RM 1,245.00",
+  receive: " RM 1,000.00",
+  withdraw: "RM 500.00",
   series: [
     {
       type: "area",
-      name: "BTC",
+      name: "Cash",
       data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47],
     },
     {
       type: "area",
-      name: "ETH",
+      name: "Online",
       data: [28, 41, 52, 42, 13, 18, 29, 18, 36, 51, 55, 35],
     },
     {
       type: "line",
-      name: "LTC",
+      name: "Cheque",
       data: [45, 52, 38, 24, 33, 65, 45, 75, 54, 18, 28, 10],
     },
   ],
@@ -54,7 +54,7 @@ const wallet = {
     {
       id: "#SK3215",
       date: "03 Mar, 2020",
-      type: "Buy",
+      type: "Maintenance Fee",
       currency: "Bitcoin",
       amount: "1.00952 BTC",
       amountinUSD: "$ 9067.62",
@@ -62,7 +62,7 @@ const wallet = {
     {
       id: "#SK3216",
       date: "04 Mar, 2020",
-      type: "Sell",
+      type: "Sinking Fund",
       currency: "Ethereum",
       amount: "0.00413 ETH",
       amountinUSD: "$ 2123.01",
@@ -70,7 +70,7 @@ const wallet = {
     {
       id: "#SK3217",
       date: "04 Mar, 2020",
-      type: "Buy",
+      type: "Water",
       currency: "Bitcoin",
       amount: "1.00952 BTC",
       amountinUSD: "$ 9067.62",
@@ -78,7 +78,7 @@ const wallet = {
     {
       id: "#SK3218",
       date: "03 Mar, 2020",
-      type: "Buy",
+      type: "Open credit",
       currency: "Bitcoin",
       amount: "1.00952 BTC",
       amountinUSD: "$ 9067.62",
@@ -86,7 +86,7 @@ const wallet = {
     {
       id: "#SK3219",
       date: "03 Mar, 2020",
-      type: "Buy",
+      type: "Deposit Renovation ",
       currency: "Bitcoin",
       amount: "1.00952 BTC",
       amountinUSD: "$ 9067.62",
@@ -94,7 +94,7 @@ const wallet = {
     {
       id: "#SK3220",
       date: "03 Mar, 2020",
-      type: "Buy",
+      type: "Access card ",
       currency: "Bitcoin",
       amount: "1.00952 BTC",
       amountinUSD: "$ 9067.62",
@@ -102,7 +102,7 @@ const wallet = {
     {
       id: "#SK3221",
       date: "03 Mar, 2020",
-      type: "Buy",
+      type: "Access card ",
       currency: "Bitcoin",
       amount: "1.00952 BTC",
       amountinUSD: "$ 9067.62",
@@ -110,7 +110,7 @@ const wallet = {
     {
       id: "#SK3222",
       date: "03 Mar, 2020",
-      type: "Buy",
+      type: "Deposit Renovation ",
       currency: "Bitcoin",
       amount: "1.00952 BTC",
       amountinUSD: "$ 9067.62",
@@ -118,7 +118,7 @@ const wallet = {
     {
       id: "#SK3223",
       date: "03 Mar, 2020",
-      type: "Buy",
+      type: "Maintenance Fee",
       currency: "Bitcoin",
       amount: "1.00952 BTC",
       amountinUSD: "$ 9067.62",
@@ -126,7 +126,7 @@ const wallet = {
     {
       id: "#SK3224",
       date: "03 Mar, 2020",
-      type: "Buy",
+      type: "Maintenance Fee",
       currency: "Bitcoin",
       amount: "1.00952 BTC",
       amountinUSD: "$ 9067.62",
@@ -134,7 +134,7 @@ const wallet = {
     {
       id: "#SK3225",
       date: "03 Mar, 2020",
-      type: "Buy",
+      type: "Maintenance Fee",
       currency: "Bitcoin",
       amount: "1.00952 BTC",
       amountinUSD: "$ 9067.62",
@@ -142,7 +142,7 @@ const wallet = {
     {
       id: "#SK3226",
       date: "03 Mar, 2020",
-      type: "Buy",
+      type: "Deposit Renovation ",
       currency: "Bitcoin",
       amount: "1.00952 BTC",
       amountinUSD: "$ 9067.62",
@@ -153,7 +153,7 @@ const wallet = {
 const cryptoOrders = [
   {
     date: "03 Mar, 2020",
-    type: "Buy",
+    type: "Maintenance Fee",
     coin: "Bitcoin",
     value: "1.00952 BTC",
     valueinUSD: "$ 9067.62",

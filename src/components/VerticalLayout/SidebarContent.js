@@ -167,12 +167,40 @@ class SidebarContent extends Component {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <Link to="/debtcollection" className="">
                   <i className='bx bx-credit-card-alt'></i>
-                  <span>{this.props.t("Debt Collection Summary")}</span>
+                  <span>{this.props.t("Debtor & Collection")}</span>
                 </Link>
-              </li> 
+              </li>  */}
+
+
+           
+              <li>
+                <Link to="/#" className="has-arrow">
+                  <i className="bx bx-store" />
+                  <span>{this.props.t("Financial")}</span>
+                </Link>
+                <ul className="sub-menu" aria-expanded="false">
+                  <li>
+                    <Link to="/daily-collection-report">
+                      {this.props.t("Daily Collection Report ")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/debtor-collection">
+                      {this.props.t("Debtor & Collection ")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ecommerce-customers">
+                      {this.props.t("Financial Overview")}
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+
+
 
 
               

@@ -173,29 +173,29 @@ class TasksListnew extends Component {
             </>
           ),
         },
-        {
-          dataField: "img",
-          text: "#",
-          formatter: (cellContent, user) => (
-            <>
-              {!user.img ? (
-                <div className="avatar-xs">
-                  <span className="avatar-title rounded-circle">
-                    {user.name.charAt(0)}
-                  </span>
-                </div>
-              ) : (
-                <div>
-                  <img
-                    className="rounded-circle avatar-xs"
-                    src={images[user.img]}
-                    alt=""
-                  />
-                </div>
-              )}
-            </>
-          ),
-        },
+        // {
+        //   dataField: "img",
+        //   text: "#",
+        //   formatter: (cellContent, user) => (
+        //     <>
+        //       {!user.img ? (
+        //         <div className="avatar-xs">
+        //           <span className="avatar-title rounded-circle">
+        //             {user.name.charAt(0)}
+        //           </span>
+        //         </div>
+        //       ) : (
+        //         <div>
+        //           <img
+        //             className="rounded-circle avatar-xs"
+        //             src={images[user.img]}
+        //             alt=""
+        //           />
+        //         </div>
+        //       )}
+        //     </>
+        //   ),
+        // },
         {
           text: "Files",
           dataField: "name",
@@ -207,15 +207,15 @@ class TasksListnew extends Component {
                   {user.name}
                 </Link>
               </h5>
-              <p className="text-muted mb-0">{user.designation}</p>
+              {/* <p className="text-muted mb-0">{user.designation}</p> */}
             </>
           ),
         },
-        {
-          dataField: "email",
-          text: "Email",
-          sort: true,
-        },
+        // {
+        //   dataField: "email",
+        //   text: "Email",
+        //   sort: true,
+        // },
         {
           dataField: "date",
           text: "Date",
@@ -233,7 +233,7 @@ class TasksListnew extends Component {
                   index < 1 && (
                     <Link
                       to="#"
-                      className="badge badge-soft-primary font-size-11 m-1"
+                      className={ "badge font-size-11 m-1 " + this.buttonColor(tag)}
                       key={"_skill_" + user.id + index}
                     >
                       {tag}
@@ -278,6 +278,24 @@ class TasksListnew extends Component {
     this.handleUserClicks = this.handleUserClicks.bind(this)
   }
 
+  buttonColor(tag) {
+    let className = "";
+    if(tag == "Warning"){
+      className = "badge-soft-warning";
+    }
+    else if(tag == "Late"){
+      className = "badge-soft-danger";
+    }
+    else if(tag == "Done"){
+      className = "badge-soft-success";
+      
+    }
+    else if(tag == "Compound"){
+      className = "badge-soft-primary";
+    }
+    return className;
+
+  }
 
   componentDidMount() {
     const { onGetTasks } = this.props
@@ -423,7 +441,7 @@ class TasksListnew extends Component {
                             </h5>
                           </td>
                           <td>1st Jan 2021</td>
-                          <td><span class="badge badge-soft-warning font-size-12">Waiting </span></td>
+                          <td><span class="badge badge-soft-danger font-size-12">Late </span></td>
                           <td>
                             <div class="text-center">
                               <a class="btn btn-primary" href="#" role="button">
@@ -443,7 +461,7 @@ class TasksListnew extends Component {
                           <td>
                           1st Jan 2021
                           </td>
-                          <td><span class="badge badge-soft-warning font-size-12">Waiting </span></td>
+                          <td><span class="badge badge-soft-danger font-size-12">Late </span></td>
                           <td>
                             <div class="text-center">
                               <a class="btn btn-primary" href="#" role="button">
@@ -453,7 +471,7 @@ class TasksListnew extends Component {
                           </td>
                         </tr>
                         <tr>
-                          <td>
+                          <td width="49%"> 
                             <h5 class="text-truncate font-size-14 m-0">
                               <Link class="text-dark" to="/tasks-page">
                               December 2020 - Monthly Minutes Of Meeting 
@@ -463,7 +481,7 @@ class TasksListnew extends Component {
                           <td>
                           1st Dec 2021	
                           </td>
-                          <td><span class="badge badge-soft-warning font-size-12">Waiting </span></td>
+                          <td><span class="badge badge-soft-danger font-size-12">Late </span></td>
                           <td>
                             <div class="text-center">
                               <a class="btn btn-primary" href="#" role="button">
@@ -486,7 +504,7 @@ class TasksListnew extends Component {
                   <table class="table table-nowrap align-middle mb-0">
                       <tbody>
                         <tr>
-                          <td>
+                          <td width="00">
                             <h5 class="text-truncate font-size-14 m-0">
                               <Link class="text-dark" to="/tasks-page">
                               December 2020 - AGM Minutes 
@@ -545,7 +563,7 @@ class TasksListnew extends Component {
                             </h5>
                           </td>
                           <td>1st Jan 2021</td>
-                          <td><span class="badge badge-soft-warning font-size-12">Waiting </span></td>
+                          <td><span class="badge badge-soft-primary font-size-12">Compund </span></td>
                           <td>
                             <div class="text-center">
                               <a class="btn btn-primary" href="#" role="button">
@@ -565,7 +583,7 @@ class TasksListnew extends Component {
                           <td>
                           1st Jan 2021
                           </td>
-                          <td><span class="badge badge-soft-warning font-size-12">Waiting </span></td>
+                          <td><span class="badge badge-soft-primary font-size-12">Compund </span></td>
                           <td>
                             <div class="text-center">
                               <a class="btn btn-primary" href="#" role="button">

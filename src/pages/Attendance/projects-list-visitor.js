@@ -197,7 +197,7 @@ class ProjectsList extends Component {
                         <td>
                           <th scope="col">
                             <span class="bg-danger badge badge-success">
-                              Late
+                              Delivery
                             </span>                           
                           </th>
                         </td>
@@ -238,7 +238,7 @@ class ProjectsList extends Component {
                         <td>
                           <th scope="col">
                             <span class="bg-danger badge badge-warning">
-                              Late
+                              Pickup
                             </span>
                           </th>
                         </td>
@@ -284,7 +284,7 @@ class ProjectsList extends Component {
                           <th scope="col">
                            
                             <span class="bg-success badge badge-success">
-                              Leave Early
+                            Renovation
                             </span>{" "}
                           </th>
                         </td>
@@ -326,7 +326,7 @@ class ProjectsList extends Component {
                         <td>
                           <th scope="col">
                             <span class="bg-danger badge badge-warning">
-                              Late
+                              Mover
                             </span>
                           </th>
                         </td>
@@ -368,7 +368,7 @@ class ProjectsList extends Component {
                         <td>
                           <th scope="col">
                             <span class="bg-success badge badge-success">
-                              Leave Early
+                              DropOff
                             </span>
                           </th>
                         </td>

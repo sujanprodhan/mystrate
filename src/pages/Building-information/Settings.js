@@ -165,10 +165,9 @@ export default class Settings extends Component {
 
                 <Row className="justify-content-center">
                   <Col xl={10}>
-                    <h4 className="text-primary">TYPO</h4>
+                    <h4 className="text-primary">Get Building Report</h4>
                     <p className="text-muted font-size-14 mb-4">
-                      Download Full building report in your email
-                      update.
+                    Download full building report in your email daily.
                     </p>
 
                     <div className="input-group bg-light rounded">

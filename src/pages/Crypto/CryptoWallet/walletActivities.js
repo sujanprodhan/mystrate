@@ -23,36 +23,40 @@ const WalletActivities = ({ walletHistory, activeTab, toggleTab }) => {
   }, {
     dataField: 'type',
     text: 'Type'
-  }, {
+  }, 
+  {
     dataField: 'coin',
-    text: 'Currency'
-  },{
+    text: 'Method'
+  },
+  {
     dataField: 'amount',
-    text: 'Amount'
-  },{
-    dataField: 'valueInUsd',
-    text: 'value in USD'
-  }];
+    text: 'Amount In RM'
+  },
+  // {
+  //   dataField: 'valueInUsd',
+  //   text: 'value in USD'
+  // }
+];
 
   // Table Data
 const productData = [
-  { id: 1, idno:"#SK3226", pdate : "03 Mar, 2020",type:"Buy",coin:"Litecoin",amount:"0.00413 LTC",valueInUsd:"$ 1773.01"},
-  { id: 2, idno:"#SK3336", pdate : "03 Mar, 2020",type:"Sell",coin:"Ethereum",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
-  { id: 3, idno:"#SK3226", pdate : "13 Jun, 2020",type:"Sell",coin:"Litecoin",amount:"0.00413 LTC",valueInUsd:"$ 1773.01"},
-  { id: 4, idno:"#SK3226", pdate : "03 Mar, 2020",type:"Buy",coin:"Ethereum",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
-  { id: 5, idno:"#SK3226", pdate : "23 Mar, 2020",type:"Buy",coin:"Litecoin",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
-  { id: 6, idno:"#SK3116", pdate : "03 Mar, 2020",type:"Sell",coin:"Ethereum",amount:"0.00413 LTC",valueInUsd:"$ 1773.01"},
-  { id: 7, idno:"#SK3336", pdate : "13 Mar, 2020",type:"Buy",coin:"Ethereum",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
-  { id: 8, idno:"#SK3226", pdate : "03 Mar, 2020",type:"Buy",coin:"Litecoin",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
-  { id: 9, idno:"#SK3226", pdate : "23 Mar, 2020",type:"Buy",coin:"Litecoin",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
-  { id: 10, idno:"#SK3226", pdate : "03 Mar, 2020",type:"Sell",coin:"Litecoin",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
-  { id: 11, idno:"#SK3226", pdate : "08 Mar, 2020",type:"Sell",coin:"Litecoin",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
-  { id: 12, idno:"#SK3226", pdate : "03 Mar, 2020",type:"Buy",coin:"Litecoin",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
-  { id: 13, idno:"#SK3336", pdate : "03 Mar, 2020",type:"Buy",coin:"Ethereum",amount:"0.00413 LTC",valueInUsd:"$ 1773.01"},
-  { id: 14, idno:"#SK3336", pdate : "07 Mar, 2020",type:"Sell",coin:"Litecoin",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
-  { id: 15, idno:"#SK3226", pdate : "13 Mar, 2020",type:"Buy",coin:"Litecoin",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
-  { id: 16, idno:"#SK3226", pdate : "03 Mar, 2020",type:"Buy",coin:"Ethereum",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
-  { id: 17, idno:"#SK3336", pdate : "03 Mar, 2020",type:"Buy",coin:"Litecoin",amount:"0.00413 LTC",valueInUsd:"$ 1773.01"},
+  { id: 1, idno:"#SK3226", pdate : "03 Mar, 2020",type:"Maintenance Fee",coin:"Cash",amount:"RM 120:00",valueInUsd:"RM 320:00"},
+  { id: 2, idno:"#SK3336", pdate : "03 Mar, 2020",type:"Sinking Fund",coin:"Online",amount:"RM 220:00",valueInUsd:"$ 1773.01"},
+  { id: 3, idno:"#SK3226", pdate : "13 Jun, 2020",type:"Maintenance Fee",coin:"Cheque",amount:"RM 120:00",valueInUsd:"$ 1773.01"},
+  { id: 4, idno:"#SK3226", pdate : "03 Mar, 2020",type:"Water",coin:"Cheque",amount:"RM 320:00",valueInUsd:"$ 1773.01"},
+  { id: 5, idno:"#SK3226", pdate : "23 Mar, 2020",type:"Open credit ",coin:"Cash",amount:"RM 220:00",valueInUsd:"$ 1773.01"},
+  { id: 6, idno:"#SK3116", pdate : "03 Mar, 2020",type:"Deposit Renovation ",coin:"Cheque",amount:"RM 120:00",valueInUsd:"$ 1773.01"},
+  { id: 7, idno:"#SK3336", pdate : "13 Mar, 2020",type:"Access card ",coin:"Cash",amount:"RM 320:00",valueInUsd:"$ 1773.01"},
+  { id: 8, idno:"#SK3226", pdate : "03 Mar, 2020",type:"Sinking Fund",coin:"Cheque",amount:"RM 220:00",valueInUsd:"$ 1773.01"},
+  { id: 9, idno:"#SK3226", pdate : "23 Mar, 2020",type:"Maintenance Fee",coin:"Online",amount:"RM 320:00",valueInUsd:"$ 1773.01"},
+  { id: 10, idno:"#SK3226", pdate : "03 Mar, 2020",type:"Open credit ",coin:"Cheque",amount:"RM 120:00",valueInUsd:"$ 1773.01"},
+  { id: 11, idno:"#SK3226", pdate : "08 Mar, 2020",type:"Water",coin:"Cash",amount:"0.00413 ETH",valueInUsd:"$ 1773.01"},
+  { id: 12, idno:"#SK3226", pdate : "03 Mar, 2020",type:"Sinking Fund",coin:"Cash",amount:"RM 220:00",valueInUsd:"$ 1773.01"},
+  { id: 13, idno:"#SK3336", pdate : "03 Mar, 2020",type:"Open credit ",coin:"Cheque",amount:"RM 120:00",valueInUsd:"$ 1773.01"},
+  { id: 14, idno:"#SK3336", pdate : "07 Mar, 2020",type:"Water",coin:"Cash",amount:"RM 420:00",valueInUsd:"$ 1773.01"},
+  { id: 15, idno:"#SK3226", pdate : "13 Mar, 2020",type:"Maintenance Fee",coin:"Cash",amount:"RM 420:00",valueInUsd:"$ 1773.01"},
+  { id: 16, idno:"#SK3226", pdate : "03 Mar, 2020",type:"Maintenance Fee",coin:"Online",amount:"RM 120:00",valueInUsd:"$ 1773.01"},
+  { id: 17, idno:"#SK3336", pdate : "03 Mar, 2020",type:"Sinking Fund",coin:"Cash",amount:"RM 220:00",valueInUsd:"$ 1773.01"},
  
   ];
 
@@ -74,7 +78,7 @@ const productData = [
               All
             </NavLink>
           </NavItem>
-          <NavItem>
+          {/* <NavItem>
             <NavLink
               className={classnames({
                 active: activeTab === "2",
@@ -85,8 +89,8 @@ const productData = [
             >
               Buy
             </NavLink>
-          </NavItem>
-          <NavItem>
+          </NavItem> */}
+          {/* <NavItem>
             <NavLink
               className={classnames({
                 active: activeTab === "3",
@@ -97,7 +101,7 @@ const productData = [
             >
               Sell
             </NavLink>
-          </NavItem>
+          </NavItem> */}
         </ul>
 
         <div className="mt-4">

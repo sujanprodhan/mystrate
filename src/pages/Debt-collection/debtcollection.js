@@ -94,7 +94,7 @@ class Debtcollection extends Component {
           </MetaTags>
           <Container fluid>
             {/* Render Breadcrumb */}
-            <Breadcrumbs breadcrumbItem="Debt Collection Summary" />
+            <Breadcrumbs breadcrumbItem="Debtor & Collection" />
 
             <Row className="justify-content-center mt-lg-5">
               <Col xl="5" sm="8">
@@ -104,7 +104,7 @@ class Debtcollection extends Component {
                       <Row className="justify-content-center">
                         <Col lg="10">
                           <h4 className="mt-4 font-weight-semibold">
-                            Debt Collection Summary
+                          Debtor & Collection
                           </h4>
                           <p className="text-muted mt-3">
                             Itaque earum rerum hic tenetur a sapiente delectus

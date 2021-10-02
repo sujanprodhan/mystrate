@@ -1,0 +1,141 @@
+import React from "react"
+import PropTypes from "prop-types"
+import {
+  Card,
+  CardBody,
+  Col,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  Media,
+  Row,
+  Button
+} from "reactstrap"
+import { Link } from "react-router-dom"
+
+const WalletStats = ({ wallet, isMenu, toggleMenu }) => {
+  return (
+    <Card>
+      <CardBody>
+        <Media>
+          <div className="me-4">
+            <i className="mdi mdi-account-circle text-primary h1" />
+          </div>
+
+          <Media body>
+            <div className="text-muted">
+              <h5>Daily Collection Report</h5>
+              <p className="mb-1"> Payment Slip : Uploaded 7:30 PM </p>
+              <a className="btn btn-primary" color="link" href="">
+                  View
+              </a>
+            </div>
+          </Media>
+
+          <Dropdown isOpen={isMenu} toggle={toggleMenu} className="ms-2">
+            <DropdownToggle tag="a" className="text-muted">
+              <i className="mdi mdi-dots-horizontal font-size-18" />
+            </DropdownToggle>
+            <DropdownMenu className="dropdown-menu-end">
+              <DropdownItem href="#">Action</DropdownItem>
+              <DropdownItem href="#">Another action</DropdownItem>
+              <DropdownItem href="#">Something else</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </Media>
+      </CardBody>
+      <CardBody className="border-top">
+        <Row>
+          <Col sm="6">
+            <div>
+              <p className="text-muted mb-2">RM 2745.00</p>
+              <h5>RM 2745.00</h5>
+            </div>
+          </Col>
+          <Col sm="6">
+            <div className="text-sm-end mt-4 mt-sm-0">
+              <p className="text-muted mb-2">Since Yesterday
+
+ </p>
+              <h5>
+              + RM 275.00
+                <span className="badge bg-success ms-1 align-bottom">
+                  {wallet.lastMonthDifferencePercent}
+                </span> 
+              </h5>
+            </div>
+          </Col>
+        </Row>
+      </CardBody>
+      <CardBody className="border-top">
+        <p className="text-muted mb-4">Accumulated This Month 
+</p>
+{/* <p>Cash  |  Online | Cheque | Other 
+</p> */}
+        <div className="text-center">
+          <Row>
+            <Col sm="4">
+              <div>
+                <div className="font-size-24 text-primary mb-2">
+                  <i className="bx bx-send" />
+                </div>
+
+                <p className="text-muted mb-2">Cash </p>
+                <h5>{wallet.send}</h5>
+
+                <div className="mt-3">
+                  <Link to="#" className="btn btn-primary btn-sm w-md">
+                  Cash 
+                  </Link>
+                </div>
+              </div>
+            </Col>
+            <Col sm="4">
+              <div className="mt-4 mt-sm-0">
+                <div className="font-size-24 text-primary mb-2">
+                  <i className="bx bx-import" />
+                </div>
+
+                <p className="text-muted mb-2">Online
+</p>
+                <h5>{wallet.receive}</h5>
+
+                <div className="mt-3">
+                  <Link to="#" className="btn btn-primary btn-sm w-md">
+                  Online
+
+                  </Link>
+                </div>
+              </div>
+            </Col>
+            <Col sm="4">
+              <div className="mt-4 mt-sm-0">
+                <div className="font-size-24 text-primary mb-2">
+                  <i className="bx bx-wallet" />
+                </div>
+
+                <p className="text-muted mb-2">Cheque</p>
+                <h5>{wallet.withdraw}</h5>
+
+                <div className="mt-3">
+                  <Link to="#" className="btn btn-primary btn-sm w-md">
+                  Cheque
+                  </Link>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </div>
+      </CardBody>
+    </Card>
+  )
+}
+
+WalletStats.propTypes = {
+  wallet: PropTypes.any,
+  isMenu: PropTypes.bool,
+  toggleMenu: PropTypes.func,
+}
+
+export default WalletStats

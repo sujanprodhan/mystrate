@@ -83,6 +83,9 @@ import DashboardBlog from "../pages/Dashboard-blog/index"
 
 //Crypto
 import CryptoWallet from "../pages/Crypto/CryptoWallet/crypto-wallet"
+
+import DailyCollectionReport from "../pages/Crypto/CryptoWallet/dailyCollectionReport"
+
 import CryptoBuySell from "../pages/Crypto/crypto-buy-sell"
 import CryptoExchange from "../pages/Crypto/crypto-exchange"
 import CryptoLending from "../pages/Crypto/crypto-lending"
@@ -92,6 +95,7 @@ import CryptoIcoLanding from "../pages/Crypto/CryptoIcoLanding/index"
 
 // Charts
 import ChartApex from "../pages/Charts/Apexcharts"
+import DebtorCollection from "../pages/Charts/DebtorCollection"
 import ChartistChart from "../pages/Charts/ChartistChart"
 import ChartjsChart from "../pages/Charts/ChartjsChart"
 import EChart from "../pages/Charts/EChart"
@@ -229,6 +233,8 @@ const authProtectedRoutes = [
   // { path: "/dashboard-blog", component: DashboardBlog },
 
   //Crypto
+  { path: "/daily-collection-report", component: DailyCollectionReport },
+
   { path: "/crypto-wallet", component: CryptoWallet },
   { path: "/crypto-buy-sell", component: CryptoBuySell },
   { path: "/crypto-exchange", component: CryptoExchange },
@@ -339,6 +345,7 @@ const authProtectedRoutes = [
   { path: "/blog-details", component: BlogDetails },
 
   //Charts
+  { path: "/debtor-collection", component: DebtorCollection },
   { path: "/apex-charts", component: ChartApex },
   { path: "/chartist-charts", component: ChartistChart },
   { path: "/chartjs-charts", component: ChartjsChart },

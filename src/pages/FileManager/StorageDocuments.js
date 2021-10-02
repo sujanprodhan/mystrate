@@ -11,7 +11,7 @@ export default class Storage extends Component {
   render() {
     return (
       <React.Fragment>
-        <Card className="filemanager-sidebar ms-lg-2">
+        <Card className="filemanager-sidebar ms-lg-3">
           <CardBody>
             <div className="text-center">
               <h5 className="font-size-15 mb-4">Storage</h5>
