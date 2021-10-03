@@ -193,7 +193,7 @@ class SidebarContent extends Component {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/ecommerce-customers">
+                    <Link to="/financial-overview">
                       {this.props.t("Financial Overview")}
                     </Link>
                   </li>

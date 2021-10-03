@@ -96,6 +96,7 @@ import CryptoIcoLanding from "../pages/Crypto/CryptoIcoLanding/index"
 // Charts
 import ChartApex from "../pages/Charts/Apexcharts"
 import DebtorCollection from "../pages/Charts/DebtorCollection"
+import FinancialOVerview from "../pages/Charts/FinancialOverview"
 import ChartistChart from "../pages/Charts/ChartistChart"
 import ChartjsChart from "../pages/Charts/ChartjsChart"
 import EChart from "../pages/Charts/EChart"
@@ -345,7 +346,8 @@ const authProtectedRoutes = [
   { path: "/blog-details", component: BlogDetails },
 
   //Charts
-  { path: "/debtor-collection", component: DebtorCollection },
+  { path: "/financial-overview", component: DebtorCollection },
+  { path: "/debtor-collection", component: FinancialOVerview },
   { path: "/apex-charts", component: ChartApex },
   { path: "/chartist-charts", component: ChartistChart },
   { path: "/chartjs-charts", component: ChartjsChart },

@@ -8,17 +8,17 @@ class LineColumnArea extends Component {
     this.state = {
       series: [
         {
-          name: "Team A",
+          name: "Income",
           type: "column",
           data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30],
         },
         {
-          name: "Team B",
+          name: "Expenditure",
           type: "area",
           data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
         },
         {
-          name: "Team C",
+          name: "surplus/deficit",
           type: "line",
           data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39],
         },

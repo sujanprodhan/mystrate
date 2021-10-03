@@ -8,17 +8,37 @@ class Apaexlinecolumn extends Component {
     this.state = {
       series: [
         {
-          name: "Income",
+          name: "Open Credit",
           data: [46, 57, 59, 54, 62, 58, 64, 60, 66],
         },
         {
-          name: "Expenses",
-          data: [74, 83, 102, 97, 86, 106, 93, 114, 94],
+          name: "5 Months >",
+          data: [86, 28, 23, 13, 56, 65, 29, 65, 156],
         },
         {
-          name: "Surplus/deficit",
+          name: "4 Months",
           data: [37, 42, 38, 26, 47, 50, 54, 55, 43],
         },
+        {
+            name: "3 Months ",
+            data: [74, 83, 102, 97, 86, 106, 93, 114, 94],
+          },
+          {
+            name: "2 Months ",
+            data: [52, 96, 80, 77, 96, 80, 73, 114, 110],
+          },
+          {
+            name: "1 Month",
+            data: [21, 100, 65, 54, 99, 154, 65, 145, 188],
+          },
+          {
+            name: "Current",
+            data: [55, 72, 80, 90, 96, 122, 99, 133, 123],
+          },
+          {
+            name: "Total",
+            data: [74, 83, 102, 97, 86, 106, 93, 114, 94],
+          },
       ],
       options: {
         chart: {
