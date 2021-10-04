@@ -44,7 +44,7 @@ class LineBar extends Component {
       xAxis: [
         {
           type: "category",
-          data: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+          data: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug","Sep", "Oct", "Nov", "Dec"],
           axisPointer: {
             type: "shadow",
           },
@@ -86,18 +86,18 @@ class LineBar extends Component {
         {
           name: "Contractual  Expenses",
           type: "bar",
-          data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2],
+          data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 172, 176,182, 190],
         },
         {
           name: "Non Contractual  Expenses",
           type: "bar",
-          data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2],
+          data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 182, 186,192, 240],
         },
         {
           name: "",
           type: "line",
           yAxisIndex: 1,
-          data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4],
+          data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4,24, 22,21, 23],
         },
       ],
       textStyle: {

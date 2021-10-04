@@ -60,17 +60,18 @@ class FinancialOverview extends Component {
                         <thead>
                           <tr>
                             <th></th>                           
-                            <td>Jan, 2021</td>
-                            <td>Feb, 2021</td>
-                            <td>Mar, 2021</td>
-                            <td>Apr, 2021</td>
-                            <td>May, 2021</td>
-                            <td>Jun, 2021</td>
-                            <td>Jul, 2021</td>
-                            <td>Ayg, 2021</td>
-                            <td>Sep, 2021</td>
-                            <td>Oct, 2021</td>
-                            <td>Nov, 2021</td>
+                            <td>Jan 2021</td>
+                            <td>Feb 2021</td>
+                            <td>Mar 2021</td>
+                            <td>Apr 2021</td>
+                            <td>May 2021</td>
+                            <td>Jun 2021</td>
+                            <td>Jul 2021</td>
+                            <td>Ayg 2021</td>
+                            <td>Sep 2021</td>
+                            <td>Oct 2021</td>
+                            <td>Nov 2021</td>
+                            <td>Dec 2021</td>
       
                           </tr>
                         </thead>
@@ -88,6 +89,7 @@ class FinancialOverview extends Component {
                             <td>123</td>
                             <td>123</td>
                             <td>123</td>
+                            <td>125</td>
              
         
                           </tr>
@@ -104,6 +106,7 @@ class FinancialOverview extends Component {
                             <td>84 </td>
                             <td>84 </td>
                             <td>84 </td>
+                            <td>90 </td>
 
                           </tr>
                           <tr>
@@ -119,6 +122,7 @@ class FinancialOverview extends Component {
                             <td>59</td>
                             <td>59</td>
                             <td>59</td>
+                            <td>56</td>
                           </tr>
                         </tbody>
                       </Table>
@@ -148,17 +152,17 @@ class FinancialOverview extends Component {
                         <thead>
                           <tr>
                             <th></th>
-                            <td>Jan, 2021</td>
-                            <td>Feb, 2021</td>
-                            <td>Mar, 2021</td>
-                            <td>Apr, 2021</td>
-                            <td>May, 2021</td>
-                            <td>Jun, 2021</td>
-                            <td>Jul, 2021</td>
-                            <td>Ayg, 2021</td>
-                            <td>Sep, 2021</td>
-                            <td>Oct, 2021</td>
-                            <td>Nov, 2021</td>
+                            <td>Jan 2021</td>
+                            <td>Feb 2021</td>
+                            <td>Mar 2021</td>
+                            <td>Apr 2021</td>
+                            <td>May 2021</td>
+                            <td>Jun 2021</td>
+                            <td>Jul 2021</td>
+                            <td>Ayg 2021</td>
+                            <td>Sep 2021</td>
+                            <td>Oct 2021</td>
+                            <td>Nov 2021</td>
       
                           </tr>
                         </thead>
@@ -306,17 +310,18 @@ class FinancialOverview extends Component {
                         <thead>
                           <tr>
                             <th></th>
-                            <td>Jan, 2021</td>
-                            <td>Feb, 2021</td>
-                            <td>Mar, 2021</td>
-                            <td>Apr, 2021</td>
-                            <td>May, 2021</td>
-                            <td>Jun, 2021</td>
-                            <td>Jul, 2021</td>
-                            <td>Ayg, 2021</td>
-                            <td>Sep, 2021</td>
-                            <td>Oct, 2021</td>
-                            <td>Nov, 2021</td>
+                            <td>Jan 2021</td>
+                            <td>Feb 2021</td>
+                            <td>Mar 2021</td>
+                            <td>Apr 2021</td>
+                            <td>May 2021</td>
+                            <td>Jun 2021</td>
+                            <td>Jul 2021</td>
+                            <td>Ayg 2021</td>
+                            <td>Sep 2021</td>
+                            <td>Oct 2021</td>
+                            <td>Nov 2021</td>
+                            <td>Dec 2021</td>
       
                           </tr>
                         </thead>
@@ -334,6 +339,7 @@ class FinancialOverview extends Component {
                             <td>454</td>
                             <td>54454</td>
                             <td>787</td>
+                            <td>564</td>
                           </tr>
                           <tr>
                             <th scope="row"><div className="custom-circle btn-success"></div> 5 Months >  </th>
@@ -348,6 +354,7 @@ class FinancialOverview extends Component {
                             <td>12344 </td>
                             <td>4444 </td>
                             <td>3651 </td>
+                            <td>456 </td>
                           </tr>
                           <tr>
                             <th scope="row"> <div className="custom-circle btn-info"></div> 4 Months</th>
@@ -362,6 +369,7 @@ class FinancialOverview extends Component {
                             <td>23111</td>
                             <td>1111</td>
                             <td>52111</td>
+                            <td>6854</td>
                           </tr>
                           <tr>
                             <th scope="row"> <div className="custom-circle btn-dark"></div> 3 Months</th>
@@ -376,6 +384,7 @@ class FinancialOverview extends Component {
                             <td>2332</td>
                             <td>123213</td>
                             <td>10012</td>
+                            <td>5468</td>
                           </tr>
 
                           <tr>
@@ -391,6 +400,7 @@ class FinancialOverview extends Component {
                             <td>456454</td>
                             <td>45645</td>
                             <td>455</td>
+                            <td>4550</td>
                           </tr>
 
                           <tr>
@@ -406,6 +416,7 @@ class FinancialOverview extends Component {
                             <td>2130</td>
                             <td>10000</td>
                             <td>250000</td>
+                            <td>30000</td>
                           </tr>
                           <tr>
                             <th scope="row"> <div className="custom-circle blue-color"></div> Current</th>
@@ -420,6 +431,7 @@ class FinancialOverview extends Component {
                             <td>65465</td>
                             <td>123123</td>
                             <td>45646</td>
+                            <td>15646</td>
                           </tr>
                           <tr>
                             <th scope="row"> <div className="custom-circle btn-danger"></div> Total Receivables</th>
@@ -434,6 +446,7 @@ class FinancialOverview extends Component {
                             <td>85212</td>
                             <td>85212</td>
                             <td>85212</td>
+                            <td>1100</td>
                           </tr>
                         </tbody>
                       </Table>

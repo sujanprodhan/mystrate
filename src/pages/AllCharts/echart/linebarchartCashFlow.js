@@ -34,7 +34,7 @@ class LineBar extends Component {
         //   saveAsImage: { show: true },
         },
       },
-      color: ["#556ee6", "#34c38f", "#50a5f1", "#343a40", "#aa0000"],   
+      color: ["#556ee6", "#34c38f", "#50a5f1", "#343a40", "#f46a6a"],   
       legend: {
         data: ["Receipts", "Payments", "Surplus/Deflict","Commulative Cashflow", "Ending cash value"],
         textStyle: {
@@ -44,7 +44,7 @@ class LineBar extends Component {
       xAxis: [
         {
           type: "category",
-          data: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+          data: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
           axisPointer: {
             type: "shadow",
           },
@@ -86,35 +86,35 @@ class LineBar extends Component {
         {
           name: "Receipts",
           type: "bar",
-          data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2],
+          data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 135,145,155,165],
         },
         {
           name: "Payments",
           type: "bar",
-          data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2],
+          data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 142,177,195,188],
         },
         
         {
             name: "Surplus/Deflict",
             type: "bar",
-            data: [2.6, 5.9, 9.0, 26.4, 29.7, 70.7, 175.6, 186.2],
+            data: [2.6, 5.9, 9.0, 26.4, 29.7, 70.7, 175.6, 186.2, 115,175,145,165],
           },
                   
         {
             name: "Commulative Cashflow",
             type: "bar",
-            data: [2.6, 7, 12.0, 26.4, 29.7, 70.7, 196.6, 165],
+            data: [2.6, 7, 12.0, 26.4, 29.7, 70.7, 196.6, 165, 125,152,159,185],
           },
           {
             name: "Ending cash value",
             type: "bar",
-            data: [2.6, 7, 19.0, 20.4, 29.7, 50.7, 180.6, 180],
+            data: [2.6, 7, 19.0, 20.4, 29.7, 50.7, 180.6, 180, 155,175,185,195],
           },
         {
             name: "",
             type: "line",
             yAxisIndex: 1,
-            data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4],
+            data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 20,20,23,24],
           },
       ],
       textStyle: {

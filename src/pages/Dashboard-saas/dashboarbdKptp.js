@@ -444,7 +444,7 @@ class Dashboard extends Component {
           </MetaTags>
           <Container fluid>
             {/* Render Breadcrumb */}
-            <Breadcrumbs breadcrumbItem="KPTP Dashboard" title="Dashboard" />
+            <Breadcrumbs breadcrumbItem="KPKT Dashboard" title="Dashboard" />
 
             {/* Card User */}
             <CardUser />

@@ -7,8 +7,8 @@ class chartapex extends Component {
 
     this.state = {
       series: [
-        { name: "High - 2018", data: [26, 24, 32, 36, 33, 31, 33] },
-        { name: "Low - 2018", data: [14, 11, 16, 12, 17, 13, 12] },
+        { name: "High - 2019", data: [26, 24, 32, 36, 33, 31, 33,45,48,42,36,44] },
+        { name: "Low - 2020", data: [14, 11, 16, 12, 17, 13, 12,18,22,24,19,24] },
       ],
       options: {
         chart: { zoom: { enabled: !1 }, toolbar: { show: !1 } },
@@ -22,10 +22,10 @@ class chartapex extends Component {
         },
         markers: { style: "inverted", size: 6 },
         xaxis: {
-          categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+          categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug","Sep", "Oct", "Nov", "Dec"],
           title: { text: "Month" },
         },
-        yaxis: { title: { text: "" }, min: 5, max: 40 },
+        yaxis: { title: { text: "" }, min: 5, max: 50 },
         legend: {
           position: "top",
           horizontalAlign: "right",

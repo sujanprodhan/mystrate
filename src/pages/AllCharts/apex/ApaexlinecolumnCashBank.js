@@ -9,27 +9,27 @@ class Apaexlinecolumn extends Component {
       series: [
         {
           name: "Maintenance Funds -  CIMB",
-          data: [46, 57, 59, 54, 62, 58, 64, 60, 66],
+          data: [46, 57, 59, 54, 62, 58, 64, 60, 66, 70, 75, 80],
         },
         {
           name: "Sinking Funds-CIMB",
-          data: [74, 65, 102, 97, 96, 106, 93, 125, 70],
+          data: [74, 65, 102, 97, 96, 106, 93, 125, 70, 90, 85, 90],
         },
         {
             name: "Maintenance Funds-UOB",
-            data: [80, 96, 90, 90, 86, 106, 93, 108, 80],
+            data: [80, 96, 90, 90, 86, 106, 93, 108, 80, 80, 55, 60],
           },
           {
             name: "Fixed Deposit",
-            data: [68, 58, 102, 97, 96, 106, 93, 156, 96],
+            data: [68, 58, 102, 97, 96, 106, 93, 156, 96, 70, 65, 90],
           },
           {
             name: "Pretty Cash",
-            data: [65, 83, 109, 97, 86, 109, 93, 114, 89],
+            data: [65, 83, 109, 97, 86, 109, 93, 114, 89, 75, 75, 55],
           },
           {
             name: "Total",
-            data: [102, 140, 109, 155, 125, 120, 140, 114, 123],
+            data: [102, 140, 109, 155, 125, 120, 140, 114, 123, 130, 135, 140],
           },
       ],
       options: {
@@ -41,7 +41,7 @@ class Apaexlinecolumn extends Component {
         plotOptions: {
           bar: {
             horizontal: false,
-            columnWidth: "45%",
+            columnWidth: "80%",
             endingShape: "rounded",
           },
         },
@@ -53,10 +53,11 @@ class Apaexlinecolumn extends Component {
           width: 2,
           colors: ["transparent"],
         },
-
-        colors: ["#556ee6", "#34c38f", "#50a5f1", "#343a40","#f1b44c", "#f46a6a"],   
+ 
+        colors: ["#556ee6", "#34c38f", "#50a5f1", "#343a40", "#f46a6a", "#f1b44c"],   
         xaxis: {
           categories: [
+            "Jan",
             "Feb",
             "Mar",
             "Apr",
@@ -66,6 +67,8 @@ class Apaexlinecolumn extends Component {
             "Aug",
             "Sep",
             "Oct",
+            "Nov",
+            "Dec",
           ],
         },
         yaxis: {
