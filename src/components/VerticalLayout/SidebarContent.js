@@ -174,8 +174,43 @@ class SidebarContent extends Component {
                 </Link>
               </li>  */}
 
+  
+              
+              <li>
+                <Link to="/visitormanagement" className="">
+                  <i className='bx bxs-user-pin'></i>
+                  <span>{this.props.t("Visitor Management")}</span>
+                </Link>
+              </li>    
 
-           
+              <li>
+                <Link to="/accesscards" className="">
+                  <i className='bx bxs-id-card' ></i>
+                  <span>{this.props.t("Access Card summary")}</span>
+                </Link>
+              </li>     
+
+              {/* <li>
+                <Link to="/accountingreport" className="">
+                 <i className='bx bx-file'></i>
+                  <span>{this.props.t("Accounting Report")}</span>
+                </Link>
+              </li> */}
+
+              <li>
+                <Link to="/serviceproviderlog" className="">
+                  <i className='bx bx-log-in-circle' ></i>
+                  <span>{this.props.t("Service Provider Log")}</span>
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/assetstagging" className="">
+                  <i className='bx bx-purchase-tag-alt' ></i>
+                  <span>{this.props.t("Asset Tagging")}</span>
+                </Link>
+              </li>
+
               <li>
                 <Link to="/#" className="has-arrow">
                   <i className="bx bx-store" />
@@ -201,43 +236,6 @@ class SidebarContent extends Component {
               </li>
 
 
-
-
-              
-              <li>
-                <Link to="/visitormanagement" className="">
-                  <i className='bx bxs-user-pin'></i>
-                  <span>{this.props.t("Visitor Management")}</span>
-                </Link>
-              </li>    
-
-              <li>
-                <Link to="/accesscards" className="">
-                  <i className='bx bxs-id-card' ></i>
-                  <span>{this.props.t("Access Card summary")}</span>
-                </Link>
-              </li>     
-
-              <li>
-                <Link to="/accountingreport" className="">
-                 <i className='bx bx-file'></i>
-                  <span>{this.props.t("Accounting Report")}</span>
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/serviceproviderlog" className="">
-                  <i className='bx bx-log-in-circle' ></i>
-                  <span>{this.props.t("Service Provider Log")}</span>
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/assetstagging" className="">
-                  <i className='bx bx-purchase-tag-alt' ></i>
-                  <span>{this.props.t("Asset Tagging")}</span>
-                </Link>
-              </li>
 
               <li className="menu-title">{this.props.t("Important Information")}</li>
 

@@ -16,7 +16,7 @@ import DonutChart from "../AllCharts/apex/dountchart"
 import LineBar from "../AllCharts/echart/linebarchart"
 import LineBarCashFlow from "../AllCharts/echart/linebarchartCashFlow"
 import LineBarContructual from "../AllCharts/echart/linebarchartDebtorContructual"
-import LineBarFinancial from "../AllCharts/echart/linebarchartDebtorCollection"
+import LineBarFinancial from "../AllCharts/echart/linebarchartFinancialOveriew"
 
 import { Card, CardBody, CardTitle, Col, Row,  Table} from "reactstrap"
 //Import Breadcrumb
@@ -192,7 +192,7 @@ class FinancialOverview extends Component {
                             <td>3651 </td>
                           </tr>
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-danger"></div> 4 Months</th>
+                            <th scope="row"> <div className="custom-circle btn-info"></div> 4 Months</th>
                             <td>25100</td>
                             <td>25100</td>
                             <td>25100</td>
@@ -206,7 +206,7 @@ class FinancialOverview extends Component {
                             <td>52111</td>
                           </tr>
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-danger"></div> 3 Months</th>
+                            <th scope="row"> <div className="custom-circle btn-dark"></div> 3 Months</th>
                             <td>45120</td>
                             <td>45000</td>
                             <td>45000</td>
@@ -221,7 +221,7 @@ class FinancialOverview extends Component {
                           </tr>
 
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-danger"></div> 2 Months</th>
+                            <th scope="row"> <div className="custom-circle green-color"></div> 2 Months</th>
                             <td>12400</td>
                             <td>45000</td>
                             <td>45000</td>
@@ -236,7 +236,7 @@ class FinancialOverview extends Component {
                           </tr>
 
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-danger"></div> 1 Month</th>
+                            <th scope="row"> <div className="custom-circle btn-warning"></div> 1 Month</th>
                             <td>32541</td>
                             <td>1500</td>
                             <td>1500</td>
@@ -250,7 +250,7 @@ class FinancialOverview extends Component {
                             <td>250000</td>
                           </tr>
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-danger"></div> Current</th>
+                            <th scope="row"> <div className="custom-circle blue-color"></div> Current</th>
                             <td>21320</td>
                             <td>5600</td>
                             <td>5600</td>
@@ -350,7 +350,7 @@ class FinancialOverview extends Component {
                             <td>3651 </td>
                           </tr>
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-danger"></div> 4 Months</th>
+                            <th scope="row"> <div className="custom-circle btn-info"></div> 4 Months</th>
                             <td>25100</td>
                             <td>25100</td>
                             <td>25100</td>
@@ -364,7 +364,7 @@ class FinancialOverview extends Component {
                             <td>52111</td>
                           </tr>
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-danger"></div> 3 Months</th>
+                            <th scope="row"> <div className="custom-circle btn-dark"></div> 3 Months</th>
                             <td>45120</td>
                             <td>45000</td>
                             <td>45000</td>
@@ -379,7 +379,7 @@ class FinancialOverview extends Component {
                           </tr>
 
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-danger"></div> 2 Months</th>
+                            <th scope="row"> <div className="custom-circle green-color"></div> 2 Months</th>
                             <td>12400</td>
                             <td>45000</td>
                             <td>45000</td>
@@ -394,7 +394,7 @@ class FinancialOverview extends Component {
                           </tr>
 
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-danger"></div> 1 Month</th>
+                            <th scope="row"> <div className="custom-circle btn-warning"></div> 1 Month</th>
                             <td>32541</td>
                             <td>1500</td>
                             <td>1500</td>
@@ -408,7 +408,7 @@ class FinancialOverview extends Component {
                             <td>250000</td>
                           </tr>
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-danger"></div> Current</th>
+                            <th scope="row"> <div className="custom-circle blue-color"></div> Current</th>
                             <td>21320</td>
                             <td>5600</td>
                             <td>5600</td>

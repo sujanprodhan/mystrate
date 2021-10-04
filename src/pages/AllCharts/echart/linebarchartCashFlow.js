@@ -34,7 +34,7 @@ class LineBar extends Component {
         //   saveAsImage: { show: true },
         },
       },
-      color: ["#556ee6", "#b58739", "##27926b","#4084c1","#c35555"],
+      color: ["#556ee6", "#34c38f", "#50a5f1", "#343a40", "#aa0000"],   
       legend: {
         data: ["Receipts", "Payments", "Surplus/Deflict","Commulative Cashflow", "Ending cash value"],
         textStyle: {

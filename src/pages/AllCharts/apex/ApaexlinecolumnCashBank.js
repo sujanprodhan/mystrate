@@ -13,23 +13,23 @@ class Apaexlinecolumn extends Component {
         },
         {
           name: "Sinking Funds-CIMB",
-          data: [74, 65, 102, 97, 96, 106, 93, 125, 102],
+          data: [74, 65, 102, 97, 96, 106, 93, 125, 70],
         },
         {
             name: "Maintenance Funds-UOB",
-            data: [80, 96, 90, 90, 86, 106, 93, 108, 122],
+            data: [80, 96, 90, 90, 86, 106, 93, 108, 80],
           },
           {
             name: "Fixed Deposit",
-            data: [68, 58, 102, 97, 96, 106, 93, 156, 115],
+            data: [68, 58, 102, 97, 96, 106, 93, 156, 96],
           },
           {
             name: "Pretty Cash",
-            data: [65, 83, 109, 97, 86, 109, 93, 114, 125],
+            data: [65, 83, 109, 97, 86, 109, 93, 114, 89],
           },
           {
             name: "Total",
-            data: [102, 183, 109, 155, 186, 159, 193, 114, 189],
+            data: [102, 140, 109, 155, 125, 120, 140, 114, 123],
           },
       ],
       options: {
@@ -54,7 +54,7 @@ class Apaexlinecolumn extends Component {
           colors: ["transparent"],
         },
 
-        colors: ["##50a5f1", "#27926b", "#575a6a","#2A3042","#f1b44c", "#f46a6a"],
+        colors: ["#556ee6", "#34c38f", "#50a5f1", "#343a40","#f1b44c", "#f46a6a"],   
         xaxis: {
           categories: [
             "Feb",

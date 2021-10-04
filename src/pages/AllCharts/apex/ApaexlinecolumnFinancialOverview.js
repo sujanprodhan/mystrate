@@ -62,7 +62,7 @@ class Apaexlinecolumn extends Component {
           colors: ["transparent"],
         },
 
-        colors: ["#34c38f", "#556ee6", "#f46a6a"],
+        colors: ["#556ee6", "#34c38f", "#50a5f1", "#343a40","#00aa00","#f1b44c","#0000aa","#f46a6a"],
         xaxis: {
           categories: [
             "Feb",

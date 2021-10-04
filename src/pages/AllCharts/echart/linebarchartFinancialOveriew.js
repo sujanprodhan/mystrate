@@ -34,9 +34,9 @@ class LineBar extends Component {
         //   saveAsImage: { show: true },
         },
       },
-      color: ["#556ee6", "#b58739", "#575a6a","#556ee6","#3c7cb5", "#27926b", "#343a40","#b75050"],
+      color: ["#556ee6", "#34c38f", "#50a5f1", "#343a40","#00aa00","#f1b44c","#0000aa","#f46a6a", "#f46a6a"],      
       legend: {
-        data: ["Maintenance Lift", "Property Management Fee", "Management Staff Cost","Services, Cleaning and Landscaping", "Services-Security", "Facing System", "Others","Money"],
+        data: ["Open Credit", "5 Months >", "4 Months","3 Months", "2 Months", "1 Month", "Current","Total Receivables"],
         textStyle: {
           color: ["#8791af"],
         },
@@ -84,47 +84,48 @@ class LineBar extends Component {
       ],
       series: [
         {
-          name: "Maintenance Lift",
+          name: "Open Credit",
           type: "bar",
           data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2],
         },
         {
-          name: "Property Management Fee",
+          name: "5 Months >",
           type: "bar",
           data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2],
         },
         
         {
-            name: "Management Staff Cost",
+            name: "4 Months",
             type: "bar",
             data: [2.6, 5.9, 9.0, 26.4, 29.7, 70.7, 175.6, 186.2],
           },
                   
         {
-            name: "Services, Cleaning and Landscaping",
+            name: "3 Months",
             type: "bar",
             data: [2.6, 7, 12.0, 26.4, 29.7, 70.7, 196.6, 165],
           },
           {
-            name: "Services-Security",
+            name: "2 Months",
             type: "bar",
             data: [2.6, 7, 19.0, 20.4, 29.7, 50.7, 180.6, 180],
           },
           {
-            name: "Facing System",
+            name: "1 Month",
             type: "bar",
             data: [4.6, 7, 19.0, 30.4, 26.7, 60.7, 160.6, 140],
           },
           {
-            name: "Others",
+            name: "Current",
+            type: "bar",
+            data: [4.6, 7, 19.0, 30.4, 26.7, 60.7, 160.6, 140],
+          },
+          {
+            name: "Total Receivables",
             type: "bar",
             data: [5, 7, 10.0, 30.4, 26.7, 90.7, 160.6, 190],
           },
-        {
-            name: "Total",
-            type: "bar",
-            data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4],
-          },
+
         {
             name: "",
             type: "line",

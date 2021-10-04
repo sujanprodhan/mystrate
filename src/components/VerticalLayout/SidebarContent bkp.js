@@ -194,13 +194,13 @@ class SidebarContent extends Component {
                   <span>{this.props.t("Access Card summary")}</span>
                 </Link>
               </li>     
-
+{/* 
               <li>
                 <Link to="/accountingreport" className="">
                  <i className='bx bx-file'></i>
                   <span>{this.props.t("Accounting Report")}</span>
                 </Link>
-              </li>
+              </li> */}
 
               <li>
                 <Link to="/serviceproviderlog" className="">

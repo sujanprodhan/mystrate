@@ -34,7 +34,7 @@ class LineBar extends Component {
         //   saveAsImage: { show: true },
         },
       },
-      color: ["#556ee6", "#b58739", "#575a6a","#556ee6","#3c7cb5", "#27926b", "#343a40","#b75050"],
+      color: ["#556ee6", "#34c38f", "#50a5f1", "#343a40","#00aa00","#f1b44c","#0000aa","#f46a6a", "#f46a6a"],   
       legend: {
         data: ["Maintenance Lift", "Property Management Fee", "Management Staff Cost","Services, Cleaning and Landscaping", "Services-Security", "Facing System", "Others","Money"],
         textStyle: {
@@ -91,39 +91,39 @@ class LineBar extends Component {
         {
           name: "Property Management Fee",
           type: "bar",
-          data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2],
+          data: [2.6, 5.9, 9.0, 26.4, 28.7, 80.7, 175.6, 182.2],
         },
         
         {
             name: "Management Staff Cost",
             type: "bar",
-            data: [2.6, 5.9, 9.0, 26.4, 29.7, 70.7, 175.6, 186.2],
+            data: [2.6, 5.9, 9.0, 26.4, 29.7, 90.7, 175.6, 186.2],
           },
                   
         {
             name: "Services, Cleaning and Landscaping",
             type: "bar",
-            data: [2.6, 7, 12.0, 26.4, 29.7, 70.7, 196.6, 165],
+            data: [2.6, 11, 12.0, 6.4, 29.7, 90.7, 196.6, 165],
           },
           {
             name: "Services-Security",
             type: "bar",
-            data: [2.6, 7, 19.0, 20.4, 29.7, 50.7, 180.6, 180],
+            data: [2.6, 7, 19.0, 20.4, 29.7, 20.7, 200.6, 180],
           },
           {
             name: "Facing System",
             type: "bar",
-            data: [4.6, 7, 19.0, 30.4, 26.7, 60.7, 160.6, 140],
+            data: [4.6, 7, 19.0, 50.4, 26.7, 60.7, 180.6, 140],
           },
           {
             name: "Others",
             type: "bar",
-            data: [5, 7, 10.0, 30.4, 26.7, 90.7, 160.6, 190],
+            data: [5, 7, 10.0, 40.4, 26.7, 110.7, 190.6, 190],
           },
         {
             name: "Total",
             type: "bar",
-            data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4],
+            data: [2.0, 2.2, 3.3, 6.5, 6.3, 30.2, 40.3, 93.4],
           },
         {
             name: "",

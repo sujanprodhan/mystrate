@@ -311,7 +311,7 @@ class DebtorCollection extends Component {
                             <td>704</td>
                           </tr>
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-warning"></div>  Property Management Fee </th>
+                            <th scope="row"> <div className="custom-circle btn-success"></div>  Property Management Fee </th>
                             <td>11000 </td>
                             <td>11000 </td>
                             <td>11000 </td>
@@ -333,7 +333,7 @@ class DebtorCollection extends Component {
                             <td>11000 </td>
                           </tr>
                           <tr>
-                            <th scope="row"><div className="custom-circle btn-secondary"></div> Management Staff Cost</th>
+                            <th scope="row"><div className="custom-circle btn-info"></div> Management Staff Cost</th>
                             <td>15854</td>
                             <td>15854</td>
                             <td>15854</td>
@@ -355,7 +355,7 @@ class DebtorCollection extends Component {
                             <td>15854</td>
                           </tr>
                           <tr>
-                            <th scope="row"><div className="custom-circle btn-outline-primary"></div> Services, Cleaning and Landscaping</th>
+                            <th scope="row"><div className="custom-circle btn-dark"></div> Services, Cleaning and Landscaping</th>
                             <td>31940</td>
                             <td>31940</td>
                             <td>31940</td>
@@ -377,7 +377,7 @@ class DebtorCollection extends Component {
                             <td>31940</td>
                           </tr>
                           <tr>
-                            <th scope="row"><div className="custom-circle btn-info"></div> Services-Security</th>
+                            <th scope="row"><div className="custom-circle green-color"></div> Services-Security</th>
                             <td>4519</td>
                             <td>4519</td>
                             <td>4519</td>
@@ -399,7 +399,7 @@ class DebtorCollection extends Component {
                             <td>4519</td>
                           </tr>
                           <tr>
-                            <th scope="row"><div className="custom-circle btn-success"></div> Facing System</th>
+                            <th scope="row"><div className="custom-circle btn-warning"></div> Facing System</th>
                             <td>2109</td>
                             <td>2109</td>
                             <td>2109</td>
@@ -421,7 +421,7 @@ class DebtorCollection extends Component {
                             <td>2109</td>
                           </tr>
                           <tr>
-                            <th scope="row"><div className="custom-circle btn-dark"></div> Others</th>
+                            <th scope="row"><div className="custom-circle blue-color"></div> Others</th>
                             <td>35200</td>
                             <td>35200</td>
                             <td>35200</td>
@@ -661,7 +661,7 @@ class DebtorCollection extends Component {
                             <td>704</td>
                           </tr>
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-warning"></div>  Payments </th>
+                            <th scope="row"> <div className="custom-circle btn-success"></div>  Payments </th>
                             <td>11000 </td>
                             <td>11000 </td>
                             <td>11000 </td>
@@ -683,7 +683,7 @@ class DebtorCollection extends Component {
                             <td>11000 </td>
                           </tr>
                           <tr>
-                            <th scope="row"><div className="custom-circle btn-success"></div> Surplus/Deflict </th>
+                            <th scope="row"><div className="custom-circle btn-info"></div> Surplus/Deflict </th>
                             <td>15854</td>
                             <td>15854</td>
                             <td>15854</td>
@@ -705,7 +705,7 @@ class DebtorCollection extends Component {
                             <td>15854</td>
                           </tr>
                           <tr>
-                            <th scope="row"><div className="custom-circle btn-info"></div> Commulative cash flow </th>
+                            <th scope="row"><div className="custom-circle btn-dark"></div> Commulative cash flow </th>
                             <td>31940</td>
                             <td>31940</td>
                             <td>31940</td>
@@ -727,7 +727,7 @@ class DebtorCollection extends Component {
                             <td>31940</td>
                           </tr>
                           <tr>
-                            <th scope="row"><div className="custom-circle btn-danger"></div> Ending cash value</th>
+                            <th scope="row"><div className="custom-circle red-color"></div> Ending cash value</th>
                             <td>4519</td>
                             <td>4519</td>
                             <td>4519</td>
@@ -788,7 +788,7 @@ class DebtorCollection extends Component {
                         </thead>
                         <tbody>
                           <tr>
-                            <th scope="row"> <div className="custom-circle btn-info"></div> Maintenance Funds -  CIMB </th>
+                            <th scope="row"> <div className="custom-circle btn-primary"></div> Maintenance Funds -  CIMB </th>
                             <td>704</td>
                             <td>704</td>
                             <td>704</td>
@@ -814,7 +814,7 @@ class DebtorCollection extends Component {
                             <td>11000 </td>
                           </tr>
                           <tr>
-                            <th scope="row"><div className="custom-circle btn-secondary"></div> Maintenance Funds-UOB </th>
+                            <th scope="row"><div className="custom-circle btn-info"></div> Maintenance Funds-UOB </th>
                             <td>15854</td>
                             <td>15854</td>
                             <td>15854</td>
