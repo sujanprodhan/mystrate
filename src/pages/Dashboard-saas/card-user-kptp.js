@@ -50,7 +50,7 @@ class CardUser extends Component {
                       <Media className="align-self-center" body>
                         <div className="text-muted">
                           <p className="mb-2">Welcome to Mystrata</p>
-                          <h5 className="mb-1">KPTP</h5>
+                          <h5 className="mb-1">KPKT</h5>
                           <p className="mb-0">Kementerian Perumahan Dan Kerajaan Tempatan</p>
                         </div>
                       </Media>

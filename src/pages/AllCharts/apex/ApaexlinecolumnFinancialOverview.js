@@ -8,17 +8,37 @@ class Apaexlinecolumn extends Component {
     this.state = {
       series: [
         {
-          name: "Income",
-          data: [46, 57, 59, 54, 62, 58, 64, 60, 66],
+          name: "Open Credit",
+          data: [46, 57, 59, 54, 62, 58, 64, 60, 66, 45, 55,65],
         },
         {
-          name: "Expenses",
-          data: [74, 83, 102, 97, 86, 106, 93, 114, 94],
+          name: "5 Months >",
+          data: [86, 28, 23, 13, 56, 65, 29, 65, 156, 85, 85,55],
         },
         {
-          name: "Surplus/deficit",
-          data: [37, 42, 38, 26, 47, 50, 54, 55, 43],
+          name: "4 Months",
+          data: [37, 42, 38, 26, 47, 50, 54, 55, 43, 45, 55,65],
         },
+        {
+            name: "3 Months ",
+            data: [74, 83, 102, 97, 86, 106, 93, 114, 94, 75, 55,65],
+          },
+          {
+            name: "2 Months ",
+            data: [52, 96, 80, 77, 96, 80, 73, 114, 110,45, 55,65],
+          },
+          {
+            name: "1 Month",
+            data: [21, 100, 65, 54, 99, 154, 65, 145, 188,65, 85,85],
+          },
+          {
+            name: "Current",
+            data: [55, 72, 80, 90, 96, 122, 99, 133, 123,35, 85,65],
+          },
+          {
+            name: "Total",
+            data: [74, 83, 102, 97, 86, 106, 93, 114, 94,95, 85,75],
+          },
       ],
       options: {
         chart: {
@@ -29,7 +49,6 @@ class Apaexlinecolumn extends Component {
         plotOptions: {
           bar: {
             horizontal: false,
-            columnWidth: "45%",
             endingShape: "rounded",
           },
         },
@@ -42,21 +61,21 @@ class Apaexlinecolumn extends Component {
           colors: ["transparent"],
         },
 
-        colors: ["#34c38f", "#556ee6", "#f46a6a"],
+        colors: ["#556ee6", "#34c38f", "#50a5f1", "#B8F2E6","#05B2DC","#f1b44c","#343a40","#f46a6a"],
         xaxis: {
           categories: [
-            "Jan 2019",
-            "Feb 2019",
-            "Mar 2019",
-            "Apr 2019",
-            "May 2019",
-            "Jun 2019",
-            "Jul 2019",
-            "Aug 2019",
-            "Sep 2019",
-            "Oct 2019",
-            "Nov 2019",
-            "Dec 2019",
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
           ],
         },
         yaxis: {
