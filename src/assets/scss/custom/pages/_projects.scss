@@ -13,7 +13,8 @@
 }
 
 .custom-dropdown-nav {
-  background-color: $sidebar-dark-bg;
+ // background-color: $sidebar-dark-bg;
+  background-color: #2a3042;
   color: $white;
   border-radius: 15px;
   height: 28px;
@@ -39,7 +40,8 @@
     width: auto !important;
   }
   .react-datepicker__header {
-    background-color: $sidebar-dark-bg;
+   // background-color: $sidebar-dark-bg;
+    background-color: #2a3042;
   }
   .react-datepicker__current-month,
   .react-datepicker-time__header,
@@ -65,4 +67,49 @@
     border-top: none;
     border-bottom-color: $sidebar-dark-bg;
   }
+}
+
+
+
+
+
+// new tooltip 
+
+.my-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.my-tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #0d1116;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 122%;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.my-tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+
+ 
+}
+.my-tooltip:hover .tooltiptext {
+  visibility: visible;
+
+  opacity: 1;
 }

@@ -17,12 +17,18 @@ $sidebar-width-sm:  160px;
 $layout-collapsed-min-height: 1760px;
 
 // Vertical Sidebar - Dark
-$sidebar-dark-bg: #2a3042; //2c313a
-$sidebar-dark-menu-item-color: #a6b0cf;
-$sidebar-dark-menu-sub-item-color: #79829c;
-$sidebar-dark-menu-item-icon-color: #6a7187;
-$sidebar-dark-menu-item-hover-color: #ffffff;
-$sidebar-dark-menu-item-active-color: #ffffff;
+// $sidebar-dark-bg: #2a3042; //2c313a
+$sidebar-dark-bg: #ffffff; //2c313a
+// $sidebar-dark-menu-item-color: #a6b0cf;
+
+$sidebar-dark-menu-item-color: #3a3a3a;
+$sidebar-dark-menu-sub-item-color: #3a3a3a;
+$sidebar-dark-menu-item-icon-color: #3a3a3a;
+// $sidebar-dark-menu-item-hover-color: #ffffff;
+// $sidebar-dark-menu-item-active-color: #ffffff;
+
+$sidebar-dark-menu-item-hover-color: #00365a;
+$sidebar-dark-menu-item-active-color: #00365a;
 
 // Topbar - Deafult Light
 $header-height: 70px;
@@ -1420,3 +1426,7 @@ $kbd-bg:                            $gray-900;
 $pre-color:                         $gray-900;
 
 
+// New order 3/6/22 
+// Menu design changed
+$sidebar-new-bg: #fff;
+$menu-new-text-color: #8591a4;
