@@ -12,6 +12,9 @@ import { Link } from "react-router-dom"
 //i18n
 import { withTranslation } from "react-i18next"
 
+import * as Icon from 'react-feather';
+
+
 class SidebarContent extends Component {
   constructor(props) {
     super(props)
@@ -112,9 +115,11 @@ class SidebarContent extends Component {
               
 
               <li>
-                <Link to="/dashboard" className="">
-                  <i className="bx bx-calendar" />
-                  <span>{this.props.t("Dashboards")}</span>
+                <Link to="/dashboard" className="my-tooltip">
+                  {/* <i className="bx bx-calendar" /> */}
+                  <Icon.Mail color="#999" size={20} strokeWidth={1}/>
+                  <span class="tooltiptext">{this.props.t("Dashboards")}</span>
+
                 </Link>
               </li>
 
@@ -124,8 +129,12 @@ class SidebarContent extends Component {
 
               <li>
                 <Link to="/attendance-page" className="">
-                  <i className="bx bx bx-user" />
+                <Icon.Phone color="#aaa" size={20} strokeWidth={1}/>
+                  {/* <i className="bx bx bx-user" /> */}
+                  <Icon.Edit color="#aaa" size={20} strokeWidth={1}/>
                   <span>{this.props.t("Attendance")}</span>
+
+                  
                 </Link>
               </li>
 
@@ -135,6 +144,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/complaints" className="">
                   <i className="bx  bx-comment" />
+                  <Icon.Tag color="#999" size={20} strokeWidth={1}/>
                   <span>{this.props.t("Complaints")}</span>
                 </Link>
               </li>  
