@@ -45,6 +45,9 @@
   @media (max-width: 991.98px) {
     top: $header-height;
     padding-top: 0px;
+    .my-tooltip{
+ visibility: hidden;
+    }
   }
 
   .navbar-brand-box{
@@ -215,6 +218,7 @@
 
 // Enlarge menu
 .vertical-collpsed {
+ 
   .main-content {
     margin-left: $sidebar-collapsed-width;
   }
@@ -281,7 +285,7 @@
         > li {
           position: relative;
           white-space: nowrap;
-          border: 1px solid red;
+          // border: 1px solid red;
 
           > a {
             padding: 15px 20px;
@@ -312,7 +316,7 @@
               position: relative;
               width: calc(190px + #{$sidebar-collapsed-width});
               color: $primary;
-              background-color: darken($sidebar-bg, 4%);
+              // background-color: darken($sidebar-bg, 4%);
               transition: none;
 
               // i {
@@ -356,7 +360,7 @@
           padding: 5px 0;
           z-index: 9999;
           display: none;
-          background-color: $sidebar-bg;
+          // background-color: $sidebar-bg;
 
           li {
             &:hover {
@@ -393,8 +397,8 @@
 
 body[data-sidebar="dark"] {
   .vertical-menu {
-    //background: $sidebar-dark-bg;
-    background: $sidebar-new-bg;
+    // background: $sidebar-dark-bg;
+    // background: $sidebar-new-bg;
   }
 
   #sidebar-menu {
@@ -438,7 +442,7 @@ body[data-sidebar="dark"] {
     // Side menu
     .vertical-menu {
       .navbar-brand-box {
-        background: $sidebar-dark-bg;
+        // background: $sidebar-dark-bg;
     }
       // Sidebar Menu
       #sidebar-menu {
@@ -446,7 +450,7 @@ body[data-sidebar="dark"] {
           > li {
             &:hover {
               > a {
-                background: lighten($sidebar-dark-bg, 2%);
+                // background: lighten($sidebar-dark-bg, 2%);
                 color: $sidebar-dark-menu-item-hover-color;
                 i {
                   color: $sidebar-dark-menu-item-hover-color;

@@ -117,9 +117,10 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/dashboard" className="my-tooltip">
                   {/* <i className="bx bx-calendar" /> */}
-                  <Icon.Mail color="#999" size={20} strokeWidth={1}/>
-                  <span class="tooltiptext">{this.props.t("Dashboards")}</span>
-
+                  <Icon.Mail color="#999" size={20} strokeWidth={1} />
+                  
+                  <span class="tooltiptext">{this.props.t("Dashboard")}</span>
+                  
                 </Link>
               </li>
 
@@ -128,11 +129,10 @@ class SidebarContent extends Component {
               <li className="menu-title">{this.props.t("Daily Operation")}</li>
 
               <li>
-                <Link to="/attendance-page" className="">
-                <Icon.Phone color="#aaa" size={20} strokeWidth={1}/>
+                <Link to="/attendance-page" className="my-tooltip">
                   {/* <i className="bx bx bx-user" /> */}
                   <Icon.Edit color="#aaa" size={20} strokeWidth={1}/>
-                  <span>{this.props.t("Attendance")}</span>
+                  <span class="tooltiptext">{this.props.t("Attendance")}</span>
 
                   
                 </Link>
@@ -142,38 +142,42 @@ class SidebarContent extends Component {
               
 
               <li>
-                <Link to="/complaints" className="">
-                  <i className="bx  bx-comment" />
+                <Link to="/complaints" className="my-tooltip">
+                  {/* <i className="bx  bx-comment" /> */}
                   <Icon.Tag color="#999" size={20} strokeWidth={1}/>
-                  <span>{this.props.t("Complaints")}</span>
+                  <span class="tooltiptext">{this.props.t("Complaints")}</span>
                 </Link>
               </li>  
 
               <li>
-                <Link to="/tasks-page" className="">
-                  <i className="bx bx-task" />
-                  <span>{this.props.t("Tasks")}</span>
+                <Link to="/tasks-page" className="my-tooltip">
+                  {/* <i className="bx bx-task" /> */}
+                  <Icon.List color="#aaa" size={20} strokeWidth={1}/>
+                  <span class="tooltiptext">{this.props.t("Tasks")}</span>
                 </Link>
               </li>
 
               <li>
-                <Link to="/schedule-maintain" className="">
-                  <i className="bx bx-calendar" />
-                  <span>{this.props.t("Schedule Preventive")}</span>
+                <Link to="/schedule-maintain" className="my-tooltip">
+                  {/* <i className="bx bx-calendar" /> */}
+                  <Icon.Calendar color="#aaa" size={20} strokeWidth={1}/>
+                  <span class="tooltiptext">{this.props.t("Schedule Preventive")}</span>
                 </Link>
               </li>
 
               <li>
-                <Link to="/incidentreport" className="">
-                  <i className="bx bxs-folder-open" />
-                  <span>{this.props.t("Incident Report")}</span>
+                <Link to="/incidentreport" className="my-tooltip">
+                  {/* <i className="bx bxs-folder-open" /> */}
+                  <Icon.Folder color="#aaa" size={20} strokeWidth={1}/>
+                  <span class="tooltiptext">{this.props.t("Incident Report")}</span>
                 </Link>
               </li> 
 
               <li>
-                <Link to="/cleaningreport" className="">
-                  <i className="bx bx-brush" />
-                  <span>{this.props.t("Cleaning Report")}</span>
+                <Link to="/cleaningreport" className="my-tooltip">
+                  {/* <i className="bx bx-brush" /> */}
+                  <Icon.Printer color="#aaa" size={20} strokeWidth={1}/>
+                  <span class="tooltiptext">{this.props.t("Cleaning Report")}</span>
                 </Link>
               </li>
 
@@ -187,16 +191,18 @@ class SidebarContent extends Component {
   
               
               <li>
-                <Link to="/visitormanagement" className="">
-                  <i className='bx bxs-user-pin'></i>
-                  <span>{this.props.t("Visitor Management")}</span>
+                <Link to="/visitormanagement" className="my-tooltip">
+                  {/* <i className='bx bxs-user-pin'></i> */}
+                  <Icon.User color="#aaa" size={20} strokeWidth={1}/>
+                  <span class="tooltiptext">{this.props.t("Visitor Management")}</span>
                 </Link>
               </li>    
 
               <li>
-                <Link to="/accesscards" className="">
-                  <i className='bx bxs-id-card' ></i>
-                  <span>{this.props.t("Access Card summary")}</span>
+                <Link to="/accesscards" className="my-tooltip">
+                  {/* <i className='bx bxs-id-card' ></i> */}
+                  <Icon.CreditCard color="#aaa" size={20} strokeWidth={1}/>
+                  <span class="tooltiptext">{this.props.t("Access Card summary")}</span>
                 </Link>
               </li>     
 
@@ -208,24 +214,27 @@ class SidebarContent extends Component {
               </li> */}
 
               <li>
-                <Link to="/serviceproviderlog" className="">
-                  <i className='bx bx-log-in-circle' ></i>
-                  <span>{this.props.t("Service Provider Log")}</span>
+                <Link to="/serviceproviderlog" className="my-tooltip">
+                  {/* <i className='bx bx-log-in-circle' ></i> */}
+                  <Icon.LogOut color="#aaa" size={20} strokeWidth={1}/>
+                  <span class="tooltiptext">{this.props.t("Service Provider Log")}</span>
                 </Link>
               </li>
 
               <li>
-                <Link to="/assetstagging" className="">
-                  <i className='bx bx-purchase-tag-alt' ></i>
-                  <span>{this.props.t("Asset Tagging")}</span>
+                <Link to="/assetstagging" className="my-tooltip">
+                  {/* <i className='bx bx-purchase-tag-alt' ></i> */}
+                  <Icon.ShoppingCart color="#aaa" size={20} strokeWidth={1}/>
+                  <span class="tooltiptext">{this.props.t("Asset Tagging")}</span>
                 </Link>
               </li>
 
               <li>
-                <Link to="/#" className="has-arrow">
-                  <i className="bx bx-store" />
-                  <span>{this.props.t("Financial")}</span>
-                </Link>
+                <Link to="/#" className="has-arrow my-tooltip">
+                  {/* <i className="bx bx-store" /> */}
+                  <Icon.Home color="#aaa" size={20} strokeWidth={1}/>
+                  <span class="tooltiptext">{this.props.t("Financial")}</span>
+                </Link >
                 <ul className="sub-menu" aria-expanded="false">
                   <li>
                     <Link to="/daily-collection-report">
