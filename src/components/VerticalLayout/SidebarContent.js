@@ -117,7 +117,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/dashboard" className="my-tooltip">
                   {/* <i className="bx bx-calendar" /> */}
-                  <Icon.Mail color="#999" size={20} strokeWidth={1} />
+                  <Icon.Mail color="#888" size={20} strokeWidth={1} />
                   
                   <span class="tooltiptext">{this.props.t("Dashboard")}</span>
                   
@@ -131,7 +131,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/attendance-page" className="my-tooltip">
                   {/* <i className="bx bx bx-user" /> */}
-                  <Icon.Edit color="#aaa" size={20} strokeWidth={1}/>
+                  <Icon.Edit color="#888" size={20} strokeWidth={1}/>
                   <span class="tooltiptext">{this.props.t("Attendance")}</span>
 
                   
@@ -144,7 +144,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/complaints" className="my-tooltip">
                   {/* <i className="bx  bx-comment" /> */}
-                  <Icon.Tag color="#999" size={20} strokeWidth={1}/>
+                  <Icon.Tag color="#888" size={20} strokeWidth={1}/>
                   <span class="tooltiptext">{this.props.t("Complaints")}</span>
                 </Link>
               </li>  
@@ -152,7 +152,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/tasks-page" className="my-tooltip">
                   {/* <i className="bx bx-task" /> */}
-                  <Icon.List color="#aaa" size={20} strokeWidth={1}/>
+                  <Icon.List color="#888" size={20} strokeWidth={1}/>
                   <span class="tooltiptext">{this.props.t("Tasks")}</span>
                 </Link>
               </li>
@@ -160,7 +160,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/schedule-maintain" className="my-tooltip">
                   {/* <i className="bx bx-calendar" /> */}
-                  <Icon.Calendar color="#aaa" size={20} strokeWidth={1}/>
+                  <Icon.Calendar color="#888" size={20} strokeWidth={1}/>
                   <span class="tooltiptext">{this.props.t("Schedule Preventive")}</span>
                 </Link>
               </li>
@@ -168,7 +168,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/incidentreport" className="my-tooltip">
                   {/* <i className="bx bxs-folder-open" /> */}
-                  <Icon.Folder color="#aaa" size={20} strokeWidth={1}/>
+                  <Icon.Folder color="#888" size={20} strokeWidth={1}/>
                   <span class="tooltiptext">{this.props.t("Incident Report")}</span>
                 </Link>
               </li> 
@@ -176,7 +176,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/cleaningreport" className="my-tooltip">
                   {/* <i className="bx bx-brush" /> */}
-                  <Icon.Printer color="#aaa" size={20} strokeWidth={1}/>
+                  <Icon.Printer color="#888" size={20} strokeWidth={1}/>
                   <span class="tooltiptext">{this.props.t("Cleaning Report")}</span>
                 </Link>
               </li>
@@ -193,7 +193,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/visitormanagement" className="my-tooltip">
                   {/* <i className='bx bxs-user-pin'></i> */}
-                  <Icon.User color="#aaa" size={20} strokeWidth={1}/>
+                  <Icon.User color="#888" size={20} strokeWidth={1}/>
                   <span class="tooltiptext">{this.props.t("Visitor Management")}</span>
                 </Link>
               </li>    
@@ -201,7 +201,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/accesscards" className="my-tooltip">
                   {/* <i className='bx bxs-id-card' ></i> */}
-                  <Icon.CreditCard color="#aaa" size={20} strokeWidth={1}/>
+                  <Icon.CreditCard color="#888" size={20} strokeWidth={1}/>
                   <span class="tooltiptext">{this.props.t("Access Card summary")}</span>
                 </Link>
               </li>     
@@ -216,7 +216,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/serviceproviderlog" className="my-tooltip">
                   {/* <i className='bx bx-log-in-circle' ></i> */}
-                  <Icon.LogOut color="#aaa" size={20} strokeWidth={1}/>
+                  <Icon.LogOut color="#888" size={20} strokeWidth={1}/>
                   <span class="tooltiptext">{this.props.t("Service Provider Log")}</span>
                 </Link>
               </li>
@@ -224,7 +224,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/assetstagging" className="my-tooltip">
                   {/* <i className='bx bx-purchase-tag-alt' ></i> */}
-                  <Icon.ShoppingCart color="#aaa" size={20} strokeWidth={1}/>
+                  <Icon.ShoppingCart color="#888" size={20} strokeWidth={1}/>
                   <span class="tooltiptext">{this.props.t("Asset Tagging")}</span>
                 </Link>
               </li>
@@ -232,7 +232,7 @@ class SidebarContent extends Component {
               <li>
                 <Link to="/#" className="has-arrow my-tooltip">
                   {/* <i className="bx bx-store" /> */}
-                  <Icon.Home color="#aaa" size={20} strokeWidth={1}/>
+                  <Icon.Home color="#888" size={20} strokeWidth={1}/>
                   <span class="tooltiptext">{this.props.t("Financial")}</span>
                 </Link >
                 <ul className="sub-menu" aria-expanded="false">
@@ -259,9 +259,10 @@ class SidebarContent extends Component {
               <li className="menu-title">{this.props.t("Important Information")}</li>
 
               <li>
-                <Link to="/buildinginformation" className="">
-                  <i className='bx bxs-file-find' ></i>
-                  <span>{this.props.t("Building Information")}</span>
+                <Link to="/buildinginformation" className="my-tooltip">
+                  {/* <i className='bx bxs-file-find' ></i> */}
+                  <Icon.Filter color="#888" size={20} strokeWidth={1}/>
+                  <span class="tooltiptext">{this.props.t("Building Information")}</span>
                 </Link>
               </li>
 
@@ -273,9 +274,10 @@ class SidebarContent extends Component {
               </li> */}
 
               <li>
-                <Link to="/importantfiles" className="">
-                  <i className='bx bx-file' ></i>
-                  <span>{this.props.t("Important Files")}</span>
+                <Link to="/importantfiles" className="my-tooltip">
+                  {/* <i className='bx bx-file' ></i> */}
+                  <Icon.File color="#888" size={20} strokeWidth={1}/>
+                  <span class="tooltiptext">{this.props.t("Important Files")}</span>
                 </Link>
               </li>
 

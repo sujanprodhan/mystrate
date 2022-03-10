@@ -247,7 +247,8 @@
   // Side menu
   .vertical-menu {
     position: absolute;
-    width: $sidebar-collapsed-width !important;
+    //width: $sidebar-collapsed-width !important;
+    width: 64px !important;
     z-index: 5;
 
     .simplebar-mask,
@@ -288,7 +289,7 @@
           // border: 1px solid red;
 
           > a {
-            padding: 15px 20px;
+            padding: 20px 20px;
             min-height: 55px;
             transition: none;
 
